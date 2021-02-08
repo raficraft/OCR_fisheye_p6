@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #911c1c;
+  font-family: "DM sans", sans-serif;
+}
+
+h1 {
+  font-family: "DM sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2.5rem 1.5rem 2.5rem;
+  justify-content: space-between;
+}
+@media screen and (min-width: 728px) {
+  .header__wrapper {
+    inline-size: 1440px;
+    margin: auto;
+    align-content: center;
+    padding: 2.5rem 4rem;
+  }
+}
+.header__wrapper .header__logo {
+  order: 1;
+}
+.header__wrapper .header__logo a {
+  height: 2.125rem;
+  flex-basis: 50%;
+}
+.header__wrapper h1 {
+  order: 2;
+  flex-basis: 50%;
+  font-size: 0.875rem;
+  color: #911c1c;
+  display: flex;
+  align-self: center;
+  justify-content: flex-end;
+}
+@media screen and (min-width: 728px) {
+  .header__wrapper h1 {
+    order: 3;
+    flex-basis: auto;
+    font-size: 2.125rem;
+  }
+}
+.header__wrapper .nav {
+  order: 3;
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2.125rem;
+}
+@media screen and (min-width: 728px) {
+  .header__wrapper .nav {
+    order: 2;
+    flex: 1 1 auto;
+    margin: 0 0 0.5rem;
+  }
+}
+.header__wrapper .nav span {
+  border: 0.5px solid #c4c4c4;
+  border-radius: 11px;
+  margin: 0 0.3125rem 0.375rem 0;
+  padding: 3px 6px;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 12px;
+  font-weight: bold;
+}
+.header__wrapper .nav a {
+  color: #911c1c;
+}
+
+.redirect__link {
+  width: 100%;
+  height: 30px;
+  width: 182px;
+  border-radius: 5px;
+  background: #DB8876;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 9px;
+  left: calc((100% - 182px) / 2);
+}
+.redirect__link a {
+  font-size: 18px;
+  font-weight: bold;
+}
+@media screen and (max-width: 728px) {
+  .redirect__link {
+    display: none;
+  }
+}
+
+.main__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .main__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 4rem 0 4rem;
+    justify-content: space-between;
+    inline-size: 1440px;
+    margin: auto;
+  }
+}
+
+.sticker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .sticker:nth-child(2) {
+    margin: 0 200px;
+  }
+}
+.sticker .flexImg {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.sticker .flexImg .imgFlex {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sticker h2 {
+  font-size: 2.125rem;
+  color: #d3573c;
+  font-family: "DM Sans", sans-serif;
+  padding-bottom: 0.75rem;
+}
+.sticker p:nth-child(2) {
+  font-size: 13px;
+  color: #901C1C;
+  font-weight: normal;
+  font-style: normal;
+  padding-bottom: 0.5rem;
+  font-family: "DM Sans", sans-serif;
+}
+.sticker p:nth-child(3) {
+  font-size: 10px;
+  font-weight: 400;
+  padding-bottom: 0.5rem;
+  font-family: "DM Sans", sans-serif;
+}
+.sticker p:nth-child(4) {
+  font-size: 9px;
+  color: #757575;
+  font-weight: normal;
+  font-style: normal;
+  padding-bottom: 0.5rem;
+  font-family: "DM Sans", sans-serif;
+}
+.sticker .nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.sticker .nav span {
+  border: 0.5px solid #c4c4c4;
+  border-radius: 11px;
+  margin: 0 0.3125rem 0.375rem 0;
+  padding: 3px 6px;
+}
+.sticker .nav a {
+  color: #911c1c;
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: "DM Sans", sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */
