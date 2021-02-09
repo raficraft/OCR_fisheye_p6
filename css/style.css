@@ -75,6 +75,7 @@ body {
   width: 100%;
   min-width: 100%;
   min-height: 100%;
+  background-color: darkkhaki;
 }
 
 .header__wrapper {
@@ -82,13 +83,14 @@ body {
   flex-wrap: wrap;
   padding: 2.5rem 1.5rem 2.5rem;
   justify-content: space-between;
+  background-color: white;
 }
 @media screen and (min-width: 728px) {
   .header__wrapper {
     inline-size: 1440px;
     margin: auto;
     align-content: center;
-    padding: 2.5rem 4rem;
+    padding: 2.5rem 4rem 5rem;
   }
 }
 .header__wrapper .header__logo {
@@ -97,6 +99,16 @@ body {
 .header__wrapper .header__logo a {
   height: 2.125rem;
   flex-basis: 50%;
+}
+.header__wrapper .header__logo a svg {
+  width: 150px;
+  height: 34.5px;
+}
+@media screen and (min-width: 728px) {
+  .header__wrapper .header__logo a svg {
+    width: 200px;
+    height: 50px;
+  }
 }
 .header__wrapper h1 {
   order: 2;
@@ -127,6 +139,7 @@ body {
     order: 2;
     flex: 1 1 auto;
     margin: 0 0 0.5rem;
+    align-items: center;
   }
 }
 .header__wrapper .nav span {
@@ -138,6 +151,7 @@ body {
   line-height: 1rem;
   font-size: 12px;
   font-weight: bold;
+  height: 22px;
 }
 .header__wrapper .nav a {
   color: #911c1c;
@@ -159,6 +173,7 @@ body {
 .redirect__link a {
   font-size: 18px;
   font-weight: bold;
+  color: black;
 }
 @media screen and (max-width: 728px) {
   .redirect__link {
@@ -171,6 +186,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  background-color: white;
 }
 @media screen and (min-width: 768px) {
   .main__wrapper {
