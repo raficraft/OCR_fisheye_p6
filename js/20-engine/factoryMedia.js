@@ -9,6 +9,7 @@ function mediaFactory() {
     let tabName = thisData.name.split(' ');
     let name = tabName[0]
     
+    
     //Repertoire ou ce trouve l'image
     let entries1 ="dirMedia"
     let entries1Val = `img/${name}/`    
