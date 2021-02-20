@@ -7,7 +7,7 @@ function identityFactory(){
         //Repetroire ou ce trouve l'image du photographe
      
         let entries1 =    `dirImg`
-        let entriesVal1 = `img/Photographers_photos/`
+        let entriesVal1 = `img/Photographers_photo/`
 
         //Entrées de controle permettant de savoir si on est sur la
         //page index ou dans la page photographer (renommée en gallery).
