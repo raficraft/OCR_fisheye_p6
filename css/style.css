@@ -78,10 +78,40 @@ body {
   background-color: darkkhaki;
 }
 
+.redirect__link {
+  width: 100%;
+  height: 30px;
+  width: 182px;
+  border-radius: 5px;
+  background: #DB8876;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 9px;
+  left: calc((100% - 182px) / 2);
+}
+.redirect__link a {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+@media screen and (max-width: 728px) {
+  .redirect__link {
+    display: none;
+  }
+}
+
+.imgFlex {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .header__wrapper {
   display: flex;
   flex-wrap: wrap;
-  padding: 2.5rem 1.5rem 2.5rem;
+  padding: 2.5rem 1.25rem 2.5rem;
   justify-content: space-between;
   background-color: white;
 }
@@ -157,30 +187,6 @@ body {
   color: #911c1c;
 }
 
-.redirect__link {
-  width: 100%;
-  height: 30px;
-  width: 182px;
-  border-radius: 5px;
-  background: #DB8876;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 9px;
-  left: calc((100% - 182px) / 2);
-}
-.redirect__link a {
-  font-size: 18px;
-  font-weight: bold;
-  color: black;
-}
-@media screen and (max-width: 728px) {
-  .redirect__link {
-    display: none;
-  }
-}
-
 .main__wrapper {
   display: flex;
   flex-direction: column;
@@ -204,7 +210,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 1rem;
+  margin: 1.25rem;
 }
 @media screen and (min-width: 768px) {
   .sticker:nth-child(2) {
@@ -219,18 +225,14 @@ body {
   overflow: hidden;
   margin-bottom: 1rem;
 }
-.sticker .flexImg .imgFlex {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 .sticker h2 {
   font-size: 2.125rem;
+  line-height: 1.5rem;
   color: #d3573c;
   font-family: "DM Sans", sans-serif;
   padding-bottom: 0.75rem;
 }
-.sticker p:nth-child(2) {
+.sticker .info__city {
   font-size: 13px;
   color: #901C1C;
   font-weight: normal;
@@ -238,13 +240,13 @@ body {
   padding-bottom: 0.5rem;
   font-family: "DM Sans", sans-serif;
 }
-.sticker p:nth-child(3) {
+.sticker .info__tagline {
   font-size: 10px;
   font-weight: 400;
   padding-bottom: 0.5rem;
   font-family: "DM Sans", sans-serif;
 }
-.sticker p:nth-child(4) {
+.sticker .info__price {
   font-size: 9px;
   color: #757575;
   font-weight: normal;
@@ -270,6 +272,34 @@ body {
   font-size: 12px;
   font-weight: bold;
   font-family: "DM Sans", sans-serif;
+}
+
+.main__wrapper--photographe .sticker {
+  flex-direction: row-reverse;
+  text-align: left;
+}
+.main__wrapper--photographe .sticker header {
+  align-self: flex-start;
+}
+.main__wrapper--photographe .sticker .identity {
+  height: 100px;
+  width: 100px;
+}
+.main__wrapper--photographe .sticker .nav {
+  justify-content: flex-start;
+}
+.main__wrapper--photographe .sticker .info__price {
+  display: none;
+}
+
+.photography .sticker__media {
+  padding: 0.5rem 1.125rem;
+}
+.photography .sticker__media .flexImg {
+  height: 190px;
+}
+.photography .sticker__media .flexImg .imgFlex {
+  border-radius: 0.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

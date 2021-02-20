@@ -1,0 +1,105 @@
+
+.main__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width : 100%;
+
+    //optionnel
+
+    background-color: white;
+
+    @media screen and (min-width : 768px){
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding : 0 4rem 0 4rem;
+        justify-content: space-between;
+        inline-size: 1440px;
+        margin : auto;
+    }
+}
+
+
+.sticker{
+
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin : 1.25rem;
+    @media screen and (min-width : 768px){
+        &:nth-child(2){
+            margin : 0 200px;
+        }
+    }
+
+    .flexImg{
+        border-radius: 50%;
+        height : 200px;
+        width : 200px;
+        display: flex;
+        overflow: hidden;
+        margin-bottom: 1rem;
+
+      
+    }    
+
+    h2{
+        font-size: 2.125rem;
+        line-height: 1.5rem;
+        color : $first_color;
+        font-family: 'DM Sans', sans-serif;
+        padding-bottom : 0.75rem;
+    }
+
+    .info__city{
+        font-size : 13px;
+        color : $first_background;
+        font-weight: normal;
+        font-style: normal;
+        padding-bottom : 0.5rem;
+        font-family: 'DM Sans', sans-serif
+    }
+    .info__tagline{
+        font-size : 10px;
+        font-weight: 400;
+        padding-bottom : 0.5rem;
+        font-family: 'DM Sans', sans-serif
+        
+    }
+    .info__price{
+        font-size : 9px;
+        color : #757575;
+        font-weight: normal;
+        font-style: normal;
+        padding-bottom : 0.5rem;
+        font-family: 'DM Sans', sans-serif
+    }
+
+    .nav{
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        span{
+            border: 0.5px solid #c4c4c4;
+            border-radius: 11px;
+            margin : 0 0.3125rem 0.375rem 0;
+            padding : 3px 6px;
+         
+        }
+
+        a{
+            color: $first_color--other;
+            font-weight: 500;
+            line-height: 1rem;
+            font-size: 12px;
+            font-weight: bold;
+            font-family: 'DM Sans', sans-serif
+        }
+   
+    }
+
+}
+

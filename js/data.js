@@ -1,4 +1,4 @@
-data = {
+let data = {
     "photographers": [
       {
         "name": "Mimi Keel",
@@ -9,7 +9,6 @@ data = {
         "tagline": "Voir le beau dans le quotidien",
         "price": 400,
         "portrait": "MimiKeel.jpg",
-        "imgDir" : "img/Photographers_Photos/"
       },
       {
         "name": "Ellie-Rose Wilkens",
@@ -20,7 +19,6 @@ data = {
         "tagline": "Capturer des compositions complexes",
         "price": 250,
         "portrait": "EllieRoseWilkens.jpg",
-        "imgDir" : "img/Photographers_Photos/"
       },
       {
         "name": "Tracy Galindo",
@@ -31,7 +29,6 @@ data = {
         "tagline": "Photographe freelance",
         "price": 500,
         "portrait": "TracyGalindo.jpg",
-        "imgDir" : "img/Photographers_Photos/"
       },
       {
         "name": "Nabeel Bradford",
@@ -42,7 +39,6 @@ data = {
         "tagline": "Toujours aller de l'avant",
         "price": 350,
         "portrait": "NabeelBrandford.jpg",
-        "imgDir" : "img/Photographers_Photos/"
       },
       {
         "name": "Rhode Dubois",
@@ -53,7 +49,6 @@ data = {
         "tagline": "Je crée des souvenirs",
         "price": 275,
         "portrait": "RhodeDubois.jpg",
-        "imgDir" : "img/Photographers_Photos/"
       },
       {
         "name": "Marcel Nikolic",
@@ -64,7 +59,6 @@ data = {
         "tagline": "Toujours à la recherche de LA photo",
         "price": 300,
         "portrait": "MarcelNikolic.jpg",
-        "imgDir" : "img/Photographers_Photos/"
       }
     ],
     "media": [
@@ -98,7 +92,7 @@ data = {
       {
         "id": 9275938,
         "photographerId": 82,
-        "image": "Event-_eddingGazebo.jpg",
+        "image": "Event_WeddingGazebo.jpg",
         "tags": ["events"],
         "likes": 69,
         "date": "2018-02-22",
@@ -198,7 +192,7 @@ data = {
       {
         "id": 725639493,
         "photographerId": 925,
-        "image": "Event_ProductPitchjpg",
+        "image": "Event_ProductPitch.jpg",
         "tags": ["events"],
         "likes": 3,
         "date": "2019-05-20",
@@ -330,7 +324,8 @@ data = {
         "tags": ["travel"],
         "likes": 88,
         "date": "2019-02-03",
-        "price": 45
+        "price": 45,
+        "alt" : 'voyager seul'
       },
       {
         "id": 625025343,
@@ -339,7 +334,8 @@ data = {
         "tags": ["travel"],
         "likes": 85,
         "date": "2019-04-03",
-        "price": 45
+        "price": 45,
+        "alt" : 'A flanc de colline'
       },
       {
         "id": 2525345343,
@@ -348,7 +344,8 @@ data = {
         "tags": ["portait"],
         "likes": 34,
         "date": "2019-04-07",
-        "price": 45
+        "price": 45,
+        "alt" : "Grimace d'enfant"
       },
       {
         "id": 2523434634,
@@ -357,7 +354,8 @@ data = {
         "tags": ["portait"],
         "likes": 63,
         "date": "2019-04-07",
-        "price": 45
+        "price": 45,
+        "alt" : "Nora"
       },
       {
         "id": 398847109,
@@ -366,7 +364,8 @@ data = {
         "tags": ["portait"],
         "likes": 55,
         "date": "2019-06-20",
-        "price": 45
+        "price": 45,
+        "alt" : "Portrait noir et blanc"
       },
       {
         "id": 2534342,
@@ -375,7 +374,9 @@ data = {
         "tags": ["events"],
         "likes": 25,
         "date": "2019-06-21",
-        "price": 45
+        "price": 45,
+        "alt" : "Mariage à la mer"
+
       },
       {
         "id": 65235234,
@@ -384,7 +385,8 @@ data = {
         "tags": ["events"],
         "likes": 52,
         "date": "2019-06-25",
-        "price": 45
+        "price": 45,
+        "alt" : "Ensemble pour toujours"
       },
       {
         "id": 23523434,
@@ -393,7 +395,8 @@ data = {
         "tags": ["events"],
         "likes": 77,
         "date": "2019-06-28",
-        "price": 45
+        "price": 45,
+        "alt" : "Mariés heureux"
       },
       {
         "id": 5234343,
@@ -402,16 +405,18 @@ data = {
         "tags": ["animals"],
         "likes": 142,
         "date": "2019-08-23",
-        "price": 60
+        "price": 60,
+        "alt" : "Hordes de chevaux"
       },
       {
         "id": 95234343,
         "photographerId": 243,
-        "image": "Animals_Rainbow.jpg.jpg",
+        "image": "Animals_Rainbow.jpg",
         "tags": ["animals"],
         "likes": 59,
         "date": "2019-07-02",
-        "price": 60
+        "price": 60,
+        "alt" : "colibri arc en ciel"
       },
   
       {
@@ -512,7 +517,8 @@ data = {
         "tags": ["sport"],
         "likes": 150,
         "date": "2018-02-30",
-        "price": 70
+        "price": 70,
+        "alt" : "Danseuse volante"
       },
       {
         "id": 235234343,
@@ -521,7 +527,8 @@ data = {
         "tags": ["sport"],
         "likes": 101,
         "date": "2018-03-05",
-        "price": 65
+        "price": 65,
+        "alt" : "Escalade"
       },
       {
         "id": 235343222,
@@ -530,7 +537,8 @@ data = {
         "tags": ["sport"],
         "likes": 103,
         "date": "2018-03-10",
-        "price": 70
+        "price": 70,
+        "alt" : "Surfeur"
       },
       {
         "id": 7775342343,
@@ -539,7 +547,8 @@ data = {
         "tags": ["sport"],
         "likes": 77,
         "date": "2018-04-16",
-        "price": 50
+        "price": 50,
+        "alt" : "Saut en skies"
       },
       {
         "id": 9253445784,
@@ -548,7 +557,8 @@ data = {
         "tags": ["sport"],
         "likes": 88,
         "date": "2018-04-22",
-        "price": 65
+        "price": 65,
+        "alt" : "Sprinter"
       },
       {
         "id": 22299394,
@@ -557,7 +567,8 @@ data = {
         "tags": ["sport"],
         "likes": 95,
         "date": "2018-04-27",
-        "price": 70
+        "price": 70,
+        "alt" : "Skateur en l'air"
       },
       {
         "id": 3452342633,
@@ -566,7 +577,8 @@ data = {
         "tags": ["architecture"],
         "likes": 52,
         "date": "2018-05-03",
-        "price": 75
+        "price": 75,
+        "alt" : "Architecture blanche"
       },
       {
         "id": 939234243,
@@ -575,7 +587,8 @@ data = {
         "tags": ["architecture"],
         "likes": 55,
         "date": "2018-05-10",
-        "price": 72
+        "price": 72,
+        "alt" : "Architecture moderne"
       },
       {
         "id": 222959233,
@@ -584,7 +597,8 @@ data = {
         "tags": ["architecture"],
         "likes": 85,
         "date": "2018-05-15",
-        "price": 71
+        "price": 71,
+        "alt" : "Architecture en fer à cheval"
       },
       {
         "id": 965933434,
@@ -593,7 +607,8 @@ data = {
         "tags": ["architecture"],
         "likes": 66,
         "date": "2018-05-20",
-        "price": 58
+        "price": 58,
+        "alt" : "architecture en croix"
       },
       {
         "id": 777723343,
@@ -602,7 +617,8 @@ data = {
         "tags": ["architecture"],
         "likes": 79,
         "date": "2018-05-21",
-        "price": 80
+        "price": 80,
+        "alt" : "Architecture courbe"
       }
     ]
   }

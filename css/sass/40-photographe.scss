@@ -1,0 +1,42 @@
+.main__wrapper--photographe{
+
+    .sticker{
+        flex-direction: row-reverse;
+        text-align: left;
+
+        header{
+            align-self: flex-start;
+        }
+
+        .identity{
+            height : 100px;
+            width : 100px;
+        }
+        .nav{
+            justify-content: flex-start;
+        }
+
+        .info__price{
+            display: none;            
+        }
+
+    
+    }
+
+}
+
+
+.photography{
+
+.sticker__media {
+padding : 0.5rem 1.125rem;
+
+.flexImg{
+    height : 190px;
+    .imgFlex{
+    border-radius: 0.5rem;
+    }
+    }
+}
+
+}
