@@ -26,7 +26,10 @@ function getJson(url, callback) {
     return fetch(url).then(function(response) {
         return response.json();
     });
-  }
+}
+
+
+
 
   const getData = {
     getAll: async function() {
@@ -36,40 +39,36 @@ function getJson(url, callback) {
   }
 
 
-
-
-
-
-
-
- 
-
 function identityFactory(){
     this.createIdentity = function(dataIdentity,method){
         let makeStickerIdentity = [];
         //Repetroire ou ce trouve l'image du photographe
      
-        let entries1 =    `dirImg`
-        let entriesVal1 = `img/Photographers_photos/`
+        let dirImg =    `dirImg`
+        let srcImg = `img/Photographers_photos/`
 
         //Entrées de controle permettant de savoir si on est sur la
         //page index ou dans la page photographer (renommée en gallery).
-        let entries2 = `dirURL`
-        let entriesVal2 = false
+        let dirURL = `dirURL`
+        let dirURL_trueORfalse = false
 
 
         //Boucle for permettant d'ajouter les entrées
      
-        //On ajoute des entrées au tableau passés en argument
-        for(var i = 0; i < dataIdentity.length; i++){
+     
+
+        if(method === 'all')
+
+
+           //On ajoute des entrées au tableau passés en argument
+           for(var i = 0; i < dataIdentity.length; i++){
     
-            dataIdentity[i][entries1] = entriesVal1
-            dataIdentity[i][entries2] = entriesVal2
+            dataIdentity[i][dirImg] = srcImg
+            dataIdentity[i][dirURL] = dirURL_trueORfalse
         }
 
         i=0;
 
-        if(method === 'all')
             //On boucle sur les identités
             dataIdentity.map(function(identitys){  
                 makeStickerIdentity[i++] = new createSticker(identitys);
@@ -79,18 +78,15 @@ function identityFactory(){
         if(method === 'justOne'){
 
             //On recupe une seul Identité
-            dataIdentity[entries1] = entriesVal1
+            dataIdentity[dirImg] = srcImg
             // la propriété dirURL est redifinie à true pour dire à l'atelier 
             // de créer le bouton de contact
-            entriesVal2 = true
-            dataIdentity[entries2] = entriesVal2
+            dirURL_trueORfalse = true
+            dataIdentity[dirURL] = dirURL_trueORfalse
             makeStickerIdentity = new createSticker(dataIdentity);
         
            
         }
-
-
-
 
         return makeStickerIdentity
     }

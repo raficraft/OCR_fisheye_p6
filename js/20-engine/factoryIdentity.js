@@ -26,6 +26,8 @@ function identityFactory(){
 
         i=0;
 
+        console.log(dataIdentity);
+
         if(method === 'all')
             //On boucle sur les identités
             dataIdentity.map(function(identitys){  
@@ -85,7 +87,7 @@ let createSticker = function(thisData){
 
     thisData.tags.forEach(tag =>{    
         this.elHTML +=  
-                 `<span class="filter"><a href="${tag}">#${tag}</a></span>`    
+                 `<span class="filter"><a href="index.html?tags=${tag}" data-js="tagURL">#${tag}</a></span>`    
     }) 
         this.elHTML += 
                 '</footer></article></article>'  
@@ -107,7 +109,6 @@ function showIdentity(showThis){
         
     }else{
         showThis.map(function(thisIdentity){
-            console.log(thisIdentity.elHtml);
             showElHtml += thisIdentity.elHTML
         })
     }
@@ -140,15 +141,35 @@ if(idURL !== false){
     showIdentity(newIdentity)
 }else{
 
-    let identity = getData.getAllIdentity(data,idURL)
-    console.log(identity);
-    //on passe l'identité dans l'usine
-    let newIdentity = factory2.createIdentity(identity,'all')
-    console.log(newIdentity);
-     showIdentity(newIdentity)
+    if(tagURL !== false){
+
+
+        console.log(getData.getAllIdentityByTag(tagURL));
+
+        //On instancie une usine 
+        let identity = getData.getAllIdentityByTag(tagURL)
+        console.log(identity);
+        //on passe l'identité dans l'usine
+        let newIdentity = factory2.createIdentity(identity,'all')
+        console.log(newIdentity);
+        showIdentity(newIdentity)
+
+
+
+
+    }else{
+        let identity = getData.getAllIdentity()
+        console.log(identity);
+        //on passe l'identité dans l'usine
+        let newIdentity = factory2.createIdentity(identity,'all')
+        console.log(newIdentity);
+        showIdentity(newIdentity)
+    }
 
 
 }
+
+
 
 
 

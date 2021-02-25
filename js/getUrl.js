@@ -4,6 +4,7 @@ console.log(window.location.search);
 
 
 let idURL = false
+let tagURL = false
 
 if(window.location.search){
     //On récupere les paramètres passer dans l'url (?id=number)
@@ -12,9 +13,22 @@ if(window.location.search){
     paramRequest = get[0];
     valueRequest = get[1];
 
-    //On transforme la valeur string en number
-    idURL =parseInt(valueRequest)
+    //On transforme la valeur string en number  
 
+
+    if(paramRequest === 'id'){
+        
+        console.log(paramRequest);
+        console.log(valueRequest); 
+        //On transforme la valeur string en number
+        idURL =parseInt(valueRequest)
+
+    }else if(paramRequest === 'tags'){
+
+        console.log(paramRequest);
+        console.log(valueRequest);
+        tagURL = valueRequest
+    }
     
 }
 
