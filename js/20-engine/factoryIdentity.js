@@ -1,6 +1,3 @@
-
- 
-
 function identityFactory(){
     this.createIdentity = function(dataIdentity,method){
         let makeStickerIdentity = [];
@@ -43,13 +40,9 @@ function identityFactory(){
             // de créer le bouton de contact
             entriesVal2 = true
             dataIdentity[entries2] = entriesVal2
-            makeStickerIdentity = new createSticker(dataIdentity);
-        
+            makeStickerIdentity = new createSticker(dataIdentity);        
            
         }
-
-
-
 
         return makeStickerIdentity
     }
@@ -74,7 +67,7 @@ let createSticker = function(thisData){
 
     if(thisData.idURL !== false){            
         this.elHTML += 
-                `<button type="button">Me contacter</button>`
+                `<button class="btn btn--highRes" type="button"  data-js="openFormContact">Contactez-moi</button>`
     }
         this.elHTML+=  
                 `<article class="sticker__info">                        
@@ -90,8 +83,10 @@ let createSticker = function(thisData){
                  `<span class="filter"><a href="index.html?tags=${tag}" data-js="tagURL">#${tag}</a></span>`    
     }) 
         this.elHTML += 
-                '</footer></article></article>'  
-           
+                `</footer>
+                    </article>
+                        </article>`
+   
       
 }
 
@@ -131,8 +126,7 @@ let factory2 = new identityFactory
 
 
 if(idURL !== false){
-//On récupère l'identités liés à l'id passé en url 
-       
+    //On récupère l'identités liés à l'id passé en url        
     let identity = getData.getIdentity(data,idURL)
     console.log(identity);
     //on passe l'identité dans l'usine
@@ -168,42 +162,3 @@ if(idURL !== false){
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// l'usine (factory) permet de passer une commande aux ateliers (workShop)
-// Les ateliers fabrique les bloc HTML (produits)
-// la commande store (magasin/site Web) permet d'afficher les produits dans les étals (rayonnage/contentant HTML)
-
- 
-
-
-// L'on construit une seul usine qui prend deux paramètres
-// @data 
-// @method
-
-
-    //@makeAll
-    // créer les miniatures de tous les photographes.  
-    //@makeUnique  
-    // créer la miniature d'un seul photographe (contient le bouton "Me contacter").
-
-    //@makeImage
-    // créer la miniature pour chaque images.
-    //@makeVideo
-    // créer la miniature pour les videos.
-
-
-
-  

@@ -54,8 +54,10 @@ function mediaFactory() {
 
 let createImage = function (thisData) {
   this.elHTML = `<article class="sticker__media sticker__media--img ${thisData.class}">
-                      <header class="flexImg">     
-                          <img class="imgFlex" src="${thisData.dirMedia}${thisData.image}"/>
+                      <header >     
+                          <a href="#">
+                            <p class="flexImg"><img class="imgFlex" src="${thisData.dirMedia}${thisData.image}" data-js="openCaroussel"/></p>
+                          </a>
                       </header>
                       <article>   
                         <p>${thisData.alt}</p>
@@ -72,9 +74,11 @@ let createImage = function (thisData) {
 // La fonction est appellée par l'usine
 let createVideo = function (thisData) {
   this.elHTML =  `<article class="sticker__media sticker__media--video ${thisData.class}">
-                      <header class="flexImg">
-                          <video class="imgFlex" controls width="100%">
-                          <source src="${thisData.dirMedia}${thisData.video}" type="video/mp4"></video>
+                      <header>
+                        <a href="#" class="flexImg">
+                            <video class="imgFlex" width="100%" data-js="openCaroussel">
+                            <source src="${thisData.dirMedia}${thisData.video}" type="video/mp4"></video>
+                        </a>
                       </header>
                       <article>   
                         <p>${thisData.alt}</p>
@@ -84,6 +88,11 @@ let createVideo = function (thisData) {
                   </article>` 
   
 };
+
+
+
+
+
 
 //On instancie l'usine
 let factory = new mediaFactory()
