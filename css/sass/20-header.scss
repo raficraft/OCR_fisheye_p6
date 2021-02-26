@@ -9,31 +9,36 @@
     background-color: white;
 
 
-    @media screen and(min-width : 728px) {
-        inline-size: 1440px;
+    @media screen and(min-width : 768px) {
+        inline-size: 768px;
         margin:auto;
         align-content: center;
-        padding : 2.5rem 4rem 5rem;;
+        padding : 2.5rem 6.5rem 6rem 5.25rem;
         
+    }
+    @media screen and(min-width : 1024px) {
+        inline-size: 1024px; 
+    }
+    @media screen and(min-width : 1440px) {
+        inline-size: 1440px;
     }
 
 
     .header__logo{
 
         order : 1;      
+        align-self: flex-start;
       
 
         & a{
             height: 2.125rem;
             flex-basis: 50%;
-            svg{
+            img{
                 width:150px;
-                height:34.5px;
+                height:37px;
                 @media screen and(min-width : 728px) {
-
                     width:200px;
-                height:50px;
-                
+                    height:50px;                
                 }
             }
         }
@@ -48,10 +53,19 @@
         display: flex;
         align-self: center;
         justify-content: flex-end;
-        @media screen and(min-width : 728px) {
-            order : 3;
+        @media screen and(min-width : 475px) {
+            order : 2;
+            font-size: 1.5rem;            
+        } 
+
+        @media screen and(min-width : 768px) {
+            order : 2;
+            font-size: 2.125rem;            
+        } 
+        @media screen and(min-width : 1440px) {
+            order : 2;
             flex-basis: auto;
-            font-size: 2.125rem;;
+            font-size: 2.125rem;
         } 
     }
 
@@ -63,9 +77,16 @@
         justify-content: center;
         margin-top: 2.125rem;
         @media screen and(min-width : 728px) {
+            order : 3;
+            flex : 1 1 40%;
+            margin : 1rem 0 0.25rem;
+            align-items: center;
+        } 
+
+        @media screen and(min-width : 1440px) {
             order : 2;
             flex : 1 1 auto;
-            margin : 0 0 0.5rem;
+            margin : 0 0 0.25rem;
             align-items: center;
         } 
 
@@ -79,6 +100,10 @@
             font-size: 12px;
             font-weight: bold;
             height: 22px;
+           
+            @media screen and(min-width :1024px){
+                margin-bottom : 0;
+            }
 
 
         }
@@ -92,5 +117,9 @@
 
 
 
+    //page gallery
+    &--gallery{
+        padding-bottom: 18px;;
+    }
 
 }

@@ -35,12 +35,12 @@ function mediaFactory() {
 
       if(media.image)
       //On construit l'élément HTML pour les images
-      makeMedia[i++] = new createImage(media);
+      makeMedia[i++] = new createImage(media,i);
 
       if(media.video)
 
       //On construit l'élément HTML pour les video
-       makeMedia[i++] = new createVideo(media);
+       makeMedia[i++] = new createVideo(media,i);
     })
 
       return makeMedia;
@@ -52,17 +52,17 @@ function mediaFactory() {
 //Creation du bloc HTML pour les Images
 // La fonction est appellée par l'usine
 
-let createImage = function (thisData) {
+let createImage = function (thisData,inc) {
   this.elHTML = `<article class="sticker__media sticker__media--img ${thisData.class}">
                       <header >     
                           <a href="#">
-                            <p class="flexImg"><img class="imgFlex" src="${thisData.dirMedia}${thisData.image}" data-js="openCaroussel"/></p>
+                            <p class="flexImg"><img class="imgFlex" src="${thisData.dirMedia}${thisData.image}" data-js="openCaroussel" data-item="${inc}"/></p>
                           </a>
                       </header>
-                      <article>   
+                      <article class="sticker__media--info">   
                         <p>${thisData.alt}</p>
                         <p>${thisData.price}€</p>
-                        <p>${thisData.likes}</p>
+                        <p>${thisData.likes}<i class="fas fa-heart fontIcon"></i></p>
                       </article>
                 </article>`   
   
@@ -72,11 +72,11 @@ let createImage = function (thisData) {
 
 //Creation du bloc HTML pour les Videos
 // La fonction est appellée par l'usine
-let createVideo = function (thisData) {
+let createVideo = function (thisData,inc) {
   this.elHTML =  `<article class="sticker__media sticker__media--video ${thisData.class}">
                       <header>
                         <a href="#" class="flexImg">
-                            <video class="imgFlex" width="100%" data-js="openCaroussel">
+                            <video class="imgFlex" width="100%" data-js="openCaroussel" data-item="${inc}">
                             <source src="${thisData.dirMedia}${thisData.video}" type="video/mp4"></video>
                         </a>
                       </header>

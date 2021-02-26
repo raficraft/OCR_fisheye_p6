@@ -6,10 +6,7 @@ body{
     width : 100%;
     min-width : 100%;
     min-height: 100%;
-    background-color: darkkhaki;
 }
-
-
 
 
 .redirect__link{
@@ -40,13 +37,31 @@ body{
 
 }
 
-
 .imgFlex{
     width :100%;
     height : 100%;
     object-fit: cover;
 }
 
+
+/*Repères vertical*/
+body:after{
+    position: fixed;
+    left : 20.25rem; /*Positionne le repère à droite utilisez right pour ce repérer par apport à la gauche*/
+    content : '';
+    width: 1px;
+    height : 100%;
+    background-color: red;
+    }
+    /*Repère horizontal*/
+    body:before{
+    position: fixed;
+    top : 25.5rem; /*Utilisez bottom pour ce repérer par les bas*/
+    content : '';
+    width: 100%;
+    height : 1px;
+    background-color: red;
+    }
 
 
 

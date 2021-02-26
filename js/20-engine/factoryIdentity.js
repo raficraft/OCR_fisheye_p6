@@ -111,6 +111,35 @@ function showIdentity(showThis){
     
     let identityContainer = document.getElementById("main__wrapper");    
     identityContainer.innerHTML = showElHtml;
+
+
+    // Considérant que l'on affiche seulement 6 fiches de photographe
+    // maximum sur la page d'index et qu'au delà un systèmre de pagination
+    // serait pertinent. On gère l'affichage en fonction du nombre de fiche
+    // que l'on affiche, pour garder un rendu visuelle cohérent.
+
+    let stickerEl = document.querySelectorAll('.sticker')
+    console.log(stickerEl.length)
+
+    if(stickerEl.length <= 2 || stickerEl.length === 5 || stickerEl.length === 4){
+        console.log('on change les styles')
+        
+        document.querySelector('.main__wrapper--index').style.justifyContent  = 'center';
+        for(let i = 0; i < stickerEl.length; i++){
+            stickerEl[i].style.marginLeft  = '2rem';
+            stickerEl[i].style.marginRight  = '2rem';
+        }
+    }else{
+
+        document.querySelector('.main__wrapper--index').style.justifyContent  = 'space-between';
+        for(let i = 0; i < stickerEl.length; i++){
+            stickerEl[i].style.marginLeft  = '0rem';
+            stickerEl[i].style.marginRight  = '0rem';
+        }
+
+    }
+
+
     
   }
 
@@ -145,6 +174,7 @@ if(idURL !== false){
         console.log(identity);
         //on passe l'identité dans l'usine
         let newIdentity = factory2.createIdentity(identity,'all')
+        console.log(newIdentity.length);
         console.log(newIdentity);
         showIdentity(newIdentity)
 
