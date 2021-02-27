@@ -33,7 +33,7 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1;
   position: relative;
-  scroll-behavior: smooth;
+  font-family: "DM sans", sans-serif;
 }
 
 ol, ul {
@@ -67,6 +67,78 @@ h1 {
 
 * {
   box-sizing: border-box;
+}
+
+/*Repères vertical*/
+.repere--X {
+  position: fixed;
+  content: "";
+  width: 1px;
+  height: 100%;
+  background-color: red;
+  z-index: 1000;
+}
+
+/*Repères horizontal*/
+.repere--Y {
+  position: fixed;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: red;
+  z-index: 1000;
+}
+
+/*Repères page index*/
+/*Repère vertical*/
+.repere__1--X {
+  left: 6rem;
+}
+
+.repere__2--X {
+  left: 82.5rem;
+}
+
+/*Repère horizontal*/
+.repere__1--Y {
+  top: 24.375rem;
+  /*Utilisez bottom pour ce repérer par les bas*/
+}
+
+.repere__2--Y {
+  top: 11.8125rem;
+  /*Utilisez bottom pour ce repérer par les bas*/
+}
+
+.repere__3--Y {
+  top: 4.625rem;
+  /*Utilisez bottom pour ce repérer par les bas*/
+}
+
+/*Repères page gallery*/
+/*Repère vertical*/
+.repere__gal1--X {
+  left: 6rem;
+}
+
+.repere__gal2--X {
+  right: 4.875rem;
+}
+
+/*Repère horizontal*/
+.repere__gal1--Y {
+  top: 24.375rem;
+  /*Utilisez bottom pour ce repérer par les bas*/
+}
+
+.repere__gal2--Y {
+  top: 11.8125rem;
+  /*Utilisez bottom pour ce repérer par les bas*/
+}
+
+.repere__gal3--Y {
+  top: 4.625rem;
+  /*Utilisez bottom pour ce repérer par les bas*/
 }
 
 body {
@@ -109,53 +181,109 @@ body {
   object-fit: cover;
 }
 
-/*Repères vertical*/
-body:after {
-  position: fixed;
-  left: 20.25rem;
-  /*Positionne le repère à droite utilisez right pour ce repérer par apport à la gauche*/
-  content: "";
-  width: 1px;
-  height: 100%;
-  background-color: red;
-}
-
-/*Repère horizontal*/
-body:before {
-  position: fixed;
-  top: 25.5rem;
-  /*Utilisez bottom pour ce repérer par les bas*/
-  content: "";
-  width: 100%;
-  height: 1px;
-  background-color: red;
-}
-
+/*Positionnemt Structurelle des élements ce trouvant à la racine du DOM*/
+/*HEADER*/
 .header__wrapper {
   display: flex;
   flex-wrap: wrap;
-  padding: 2.5rem 1.25rem 2.5rem;
   justify-content: space-between;
-  background-color: white;
+  padding: 3rem 1.25rem 1.375rem;
+  margin: auto;
+  /*Gallery page*/
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
   .header__wrapper {
     inline-size: 768px;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .header__wrapper {
+    inline-size: 1024px;
+    padding: 2.25rem 3rem;
+  }
+}
+@media screen and (min-width: 1439px) {
+  .header__wrapper {
+    inline-size: 1440px;
+    padding: 2.25rem 7.5rem 2.25rem 6rem;
+  }
+}
+.header__wrapper--gallery {
+  padding-bottom: 0.6875rem;
+}
+
+/*MAIN*/
+.main__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+@media screen and (min-width: 767px) {
+  .main__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    inline-size: 768px;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .main__wrapper {
+    inline-size: 1024px;
+    padding: 4rem 1.5rem 4rem 1rem;
+  }
+}
+@media screen and (min-width: 1439px) {
+  .main__wrapper {
+    inline-size: 1440px;
+  }
+  .main__wrapper--gallery {
+    padding: 2.0625rem 6rem 0.5rem 6rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .photography {
+    display: flex;
+    flex-wrap: wrap;
+    inline-size: 768px;
     margin: auto;
-    align-content: center;
-    padding: 2.5rem 6.5rem 6rem 5.25rem;
+    justify-content: space-between;
   }
 }
 @media screen and (min-width: 1024px) {
-  .header__wrapper {
+  .photography {
     inline-size: 1024px;
   }
 }
-@media screen and (min-width: 1440px) {
-  .header__wrapper {
+@media screen and (min-width: 1439px) {
+  .photography {
     inline-size: 1440px;
+    padding: 1rem 6rem;
   }
 }
+
+.header__wrapper {
+  background-color: #b6b6b6;
+}
+
+.main__wrapper {
+  background-color: lightslategray;
+}
+
+.sticker {
+  background-color: #005c80;
+}
+
+.photography {
+  background-color: #00805a;
+}
+
+span {
+  background-color: white;
+}
+
 .header__wrapper .header__logo {
   order: 1;
   align-self: flex-start;
@@ -245,37 +373,6 @@ body:before {
 .header__wrapper .nav a {
   color: #911c1c;
 }
-.header__wrapper--gallery {
-  padding-bottom: 18px;
-}
-
-.main__wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  background-color: white;
-}
-@media screen and (min-width: 768px) {
-  .main__wrapper {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    inline-size: 768px;
-    margin: auto;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .main__wrapper {
-    inline-size: 1024px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .main__wrapper {
-    inline-size: 1440px;
-  }
-}
 
 .sticker {
   display: flex;
@@ -286,7 +383,6 @@ body:before {
 }
 @media screen and (min-width: 768px) {
   .sticker {
-    flex: 0 1 48%;
     margin-bottom: 3rem;
   }
 }
@@ -352,14 +448,10 @@ body:before {
   font-family: "DM Sans", sans-serif;
 }
 
-.header__wrapper--gallery {
-  padding: 2rem 0 3rem;
-}
-
 .main__wrapper--gallery .sticker {
   flex-direction: row-reverse;
   text-align: left;
-  margin: 0 0 1.25rem;
+  margin-bottom: 0;
   width: 100%;
   flex-basis: 100%;
   justify-content: space-between;
@@ -369,7 +461,8 @@ body:before {
     justify-content: flex-end;
     background-color: #f4f4f4;
     border-radius: 5px;
-    padding-top: 4rem;
+    padding-top: 4.5rem;
+    padding-bottom: 2.625rem;
   }
   .main__wrapper--gallery .sticker .btn--highRes {
     align-self: flex-start;
@@ -390,6 +483,7 @@ body:before {
     display: flex;
     font-size: 4rem;
     margin-bottom: 1.5rem;
+    margin-left: 0.0625rem;
   }
 }
 .main__wrapper--gallery .sticker header {
@@ -418,6 +512,13 @@ body:before {
 .main__wrapper--gallery .sticker .nav {
   justify-content: flex-start;
 }
+.main__wrapper--gallery .sticker .nav .filter {
+  margin-right: 5px;
+}
+.main__wrapper--gallery .sticker .nav a {
+  font-size: 1rem;
+  font-weight: 600;
+}
 .main__wrapper--gallery .sticker .info__city {
   font-weight: 400;
 }
@@ -425,6 +526,7 @@ body:before {
   .main__wrapper--gallery .sticker .info__city {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
+    padding-bottom: 0;
   }
 }
 .main__wrapper--gallery .sticker .info__tagline {
@@ -433,6 +535,7 @@ body:before {
 @media screen and (min-width: 768px) {
   .main__wrapper--gallery .sticker .info__tagline {
     font-size: 1.125rem;
+    padding-bottom: 1.5rem;
     font-weight: 400;
   }
 }
@@ -440,67 +543,48 @@ body:before {
   display: none;
 }
 
-@media screen and (min-width: 768px) {
-  .photography {
-    display: flex;
-    width: 768px;
-    margin: auto;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .photography {
-    width: 1024px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .photography {
-    width: 1440px;
-  }
-}
-.photography .sticker__media {
-  padding: 0.5rem 1.25rem;
+.sticker__media {
+  padding: 0.5rem 0rem;
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .photography .sticker__media {
+  .sticker__media {
     flex: 0 1 45%;
   }
 }
-.photography .sticker__media--info {
+.sticker__media--info {
   display: flex;
   color: #901C1C;
   font-size: 0.875rem;
 }
-@media screen and (min-width: 768px) {
-  .photography .sticker__media {
+@media screen and (min-width: 1439px) {
+  .sticker__media {
     padding: 0rem;
     width: 30%;
     margin-bottom: 1.5rem;
   }
-  .photography .sticker__media .flexImg {
+  .sticker__media .flexImg {
     height: 300px !important;
     margin-bottom: 1rem;
   }
-  .photography .sticker__media--info {
+  .sticker__media--info {
     font-size: 24px;
   }
 }
-.photography .sticker__media .flexImg, .photography .sticker__media .flexImg video {
+.sticker__media .flexImg, .sticker__media .flexImg video {
   height: 190px;
 }
-.photography .sticker__media .flexImg .imgFlex, .photography .sticker__media .flexImg video .imgFlex {
+.sticker__media .flexImg .imgFlex, .sticker__media .flexImg video .imgFlex {
   border-radius: 0.5rem;
 }
-.photography .sticker__media--video a {
+.sticker__media--video a {
   display: flex;
   justify-content: center;
   align-content: center;
   align-items: center;
 }
-.photography .sticker__media--video a:before {
+.sticker__media--video a:before {
   position: absolute;
   content: "";
   z-index: 10;
@@ -509,7 +593,7 @@ body:before {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 50%;
 }
-.photography .sticker__media--video a:after {
+.sticker__media--video a:after {
   position: absolute;
   content: "";
   z-index: 10;

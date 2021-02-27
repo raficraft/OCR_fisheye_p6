@@ -1,30 +1,4 @@
 
-.main__wrapper{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width : 100%;
-
-    //optionnel
-
-    background-color: white;
-
-    @media screen and (min-width : 768px){
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-        inline-size: 768px;
-        margin : auto;
-    }
-    @media screen and (min-width : 1024px){      
-        inline-size: 1024px;       
-    }
-    @media screen and (min-width : 1440px){      
-        inline-size: 1440px;       
-    }
-}
-
 
 .sticker{
 
@@ -34,7 +8,7 @@
     text-align: center;
     margin-bottom : 1.75rem;
     @media screen and (min-width : 768px){
-     flex: 0 1 48%;
+     //flex: 0 1 48%;
      margin-bottom : 3rem;
 
     }
