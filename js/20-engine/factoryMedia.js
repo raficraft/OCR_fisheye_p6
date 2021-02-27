@@ -18,9 +18,9 @@ function mediaFactory() {
     //Un nombre est ajouté à la fin de la class dans la boucle for
     let entries2Val = `media__${name}--`;
     
-    
+    let limit = dataMedia.length
         // On ajoute Les nouvelles entrées au tableau
-        for(var i = 0; i < dataMedia.length; i++){
+        for(var i = 0; i < limit; i++){
     
           dataMedia[i][entries1] = entries1Val
           dataMedia[i][entries2] = entries2Val+i
@@ -52,19 +52,23 @@ function mediaFactory() {
 //Creation du bloc HTML pour les Images
 // La fonction est appellée par l'usine
 
-let createImage = function (thisData,inc) {
-  this.elHTML = `<article class="sticker__media sticker__media--img ${thisData.class}">
-                      <header >     
-                          <a href="#">
-                            <p class="flexImg"><img class="imgFlex" src="${thisData.dirMedia}${thisData.image}" data-js="openCaroussel" data-item="${inc}"/></p>
-                          </a>
-                      </header>
-                      <article class="sticker__media--info">   
-                        <p>${thisData.alt}</p>
-                        <p>${thisData.price}€</p>
-                        <p>${thisData.likes}<i class="fas fa-heart fontIcon"></i></p>
-                      </article>
-                </article>`   
+let createImage = function (thisData,inc,) {
+
+
+  this.elHTML = 
+
+      `<article class="sticker__media sticker__media--img ${thisData.class} "> 
+            <header >     
+                <a href="#">
+                  <p class="flexImg"><img class="imgFlex" src="${thisData.dirMedia}${thisData.image}" data-js="openCaroussel" data-item="${inc}"/></p>
+                </a>
+            </header>
+            <article class="sticker__media--info">   
+              <p class="info--title">${thisData.alt}</p>
+              <p class="info--price">${thisData.price} €</p>
+              <p class="info-like">${thisData.likes}<i class="fas fa-heart fontIcon"></i></p>
+            </article>
+      </article>`   
   
 };
 
@@ -73,19 +77,22 @@ let createImage = function (thisData,inc) {
 //Creation du bloc HTML pour les Videos
 // La fonction est appellée par l'usine
 let createVideo = function (thisData,inc) {
-  this.elHTML =  `<article class="sticker__media sticker__media--video ${thisData.class}">
-                      <header>
-                        <a href="#" class="flexImg">
-                            <video class="imgFlex" width="100%" data-js="openCaroussel" data-item="${inc}">
-                            <source src="${thisData.dirMedia}${thisData.video}" type="video/mp4"></video>
-                        </a>
-                      </header>
-                      <article>   
-                        <p>${thisData.alt}</p>
-                        <p>${thisData.price}€</p>
-                        <p>${thisData.likes}</p>
-                      </article>
-                  </article>` 
+
+  this.elHTML =  
+
+      `<article class="sticker__media sticker__media--video ${thisData.class}">
+          <header>
+            <a href="#" class="flexImg">
+                <video class="imgFlex" width="100%" data-js="openCaroussel" data-item="${inc}">
+                <source src="${thisData.dirMedia}${thisData.video}" type="video/mp4"></video>
+            </a>
+          </header>
+          <article class="sticker__media--info">   
+            <p class="info--title">${thisData.alt}</p>
+            <p class="info--price">${thisData.price} €</p>
+            <p class="info-like">${thisData.likes}<i class="fas fa-heart fontIcon"></i></p>
+          </article>
+      </article>` 
   
 };
 
@@ -104,15 +111,25 @@ let newMedia =  factory.createMedia(medias)
 function showMedia(showThis){
   
   let showElHtml = ""
-  
+
+  console.log(showThis);
+
+
+  let i = 0;
   showThis.map(function(media){  
+
+ 
+
     
     showElHtml += media.elHTML
+    i++;
     
   })
   
-  let mediaContainer = document.getElementById("photography");
+  let mediaContainer = document.getElementById("photography"); 
   
+  console.log(mediaContainer.length);
+
   mediaContainer.innerHTML = showElHtml;
   
 }

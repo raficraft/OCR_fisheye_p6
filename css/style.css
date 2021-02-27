@@ -127,12 +127,12 @@ h1 {
 
 /*Repère horizontal*/
 .repere__gal1--Y {
-  top: 24.375rem;
+  top: 25.375rem;
   /*Utilisez bottom pour ce repérer par les bas*/
 }
 
 .repere__gal2--Y {
-  top: 11.8125rem;
+  top: 12.8125rem;
   /*Utilisez bottom pour ce repérer par les bas*/
 }
 
@@ -169,7 +169,7 @@ body {
   font-weight: bold;
   color: black;
 }
-@media screen and (max-width: 728px) {
+@media screen and (max-width: 727px) {
   .redirect__link {
     display: none;
   }
@@ -243,7 +243,36 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
+/*Système de filtre*/
+@media screen and (max-width: 767px) {
+  .selectFilter {
+    display: none;
+  }
+}
+.selectFilter--inner {
+  height: 65px;
+}
+@media screen and (min-width: 767px) {
+  .selectFilter--inner {
+    padding: 0 6rem;
+    margin: auto;
+    inline-size: 768px;
+    padding-bottom: 0.5rem;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .selectFilter--inner {
+    inline-size: 1024px;
+  }
+}
+@media screen and (min-width: 1439px) {
+  .selectFilter--inner {
+    inline-size: 1440px;
+  }
+}
+
+/*Gallerie photo*/
+@media screen and (min-width: 767px) {
   .photography {
     display: flex;
     flex-wrap: wrap;
@@ -252,7 +281,7 @@ body {
     justify-content: space-between;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1023px) {
   .photography {
     inline-size: 1024px;
   }
@@ -273,7 +302,11 @@ body {
 }
 
 .sticker {
-  background-color: #005c80;
+  background-color: #0089be;
+}
+
+.selectFilter--inner {
+  background-color: #6466ff;
 }
 
 .photography {
@@ -284,20 +317,20 @@ span {
   background-color: white;
 }
 
+.breakPoint {
+  flex-basis: 100%;
+  height: 0;
+}
+
 .header__wrapper .header__logo {
   order: 1;
-  align-self: flex-start;
 }
-.header__wrapper .header__logo a {
-  height: 2.125rem;
-  flex-basis: 50%;
-}
-.header__wrapper .header__logo a img {
+.header__wrapper .header__logo img {
   width: 150px;
   height: 37px;
 }
-@media screen and (min-width: 728px) {
-  .header__wrapper .header__logo a img {
+@media screen and (min-width: 778px) {
+  .header__wrapper .header__logo img {
     width: 200px;
     height: 50px;
   }
@@ -323,7 +356,7 @@ span {
     font-size: 2.125rem;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1439px) {
   .header__wrapper h1 {
     order: 2;
     flex-basis: auto;
@@ -331,14 +364,17 @@ span {
   }
 }
 .header__wrapper .nav {
-  order: 3;
-  flex-basis: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 2.125rem;
+  order: 3;
+  flex-basis: 100%;
+  margin-top: 2rem;
+  margin-bottom: 1.4375rem;
+  padding-left: 1.125rem;
+  padding-right: 1.125rem;
 }
-@media screen and (min-width: 728px) {
+@media screen and (min-width: 727px) {
   .header__wrapper .nav {
     order: 3;
     flex: 1 1 40%;
@@ -346,12 +382,10 @@ span {
     align-items: center;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1439px) {
   .header__wrapper .nav {
     order: 2;
-    flex: 1 1 auto;
     margin: 0 0 0.25rem;
-    align-items: center;
   }
 }
 .header__wrapper .nav span {
@@ -365,7 +399,7 @@ span {
   font-weight: bold;
   height: 22px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1023px) {
   .header__wrapper .nav span {
     margin-bottom: 0;
   }
@@ -386,104 +420,104 @@ span {
     margin-bottom: 3rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1023px) {
   .sticker {
     flex: 0 1 26%;
     margin-bottom: 3rem;
   }
 }
 .sticker .flexImg {
-  border-radius: 50%;
+  display: flex;
   height: 200px;
   width: 200px;
-  display: flex;
   overflow: hidden;
-  margin-bottom: 1rem;
+  margin-bottom: 1.75rem;
+  border-radius: 50%;
   cursor: pointer;
 }
 .sticker h2 {
-  font-size: 2.125rem;
   color: #d3573c;
+  font-size: 2.125rem;
   font-family: "DM Sans", sans-serif;
 }
 .sticker .info__city {
-  font-size: 13px;
+  padding-bottom: 0.5rem;
+  font-family: "DM Sans", sans-serif;
   color: #901C1C;
+  font-size: 13px;
   font-weight: normal;
   font-style: normal;
-  padding-bottom: 0.5rem;
-  font-family: "DM Sans", sans-serif;
 }
 .sticker .info__tagline {
-  font-size: 10px;
-  font-weight: 400;
   padding-bottom: 0.5rem;
   font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
 }
 .sticker .info__price {
+  padding-bottom: 0.5rem;
+  font-family: "DM Sans", sans-serif;
   font-size: 9px;
   color: #757575;
   font-weight: normal;
   font-style: normal;
-  padding-bottom: 0.5rem;
-  font-family: "DM Sans", sans-serif;
 }
 .sticker .nav {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .sticker .nav span {
-  border: 0.5px solid #c4c4c4;
-  border-radius: 11px;
   margin: 0 0.3125rem 0.375rem 0;
   padding: 3px 6px;
+  border: 0.5px solid #c4c4c4;
+  border-radius: 11px;
 }
 .sticker .nav a {
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
   color: #911c1c;
   font-weight: 500;
   line-height: 1rem;
-  font-size: 12px;
   font-weight: bold;
-  font-family: "DM Sans", sans-serif;
 }
 
 .main__wrapper--gallery .sticker {
   flex-direction: row-reverse;
-  text-align: left;
+  justify-content: space-between;
+  flex-basis: 100%;
   margin-bottom: 0;
   width: 100%;
-  flex-basis: 100%;
-  justify-content: space-between;
+  text-align: left;
 }
 @media screen and (min-width: 768px) {
   .main__wrapper--gallery .sticker {
     justify-content: flex-end;
-    background-color: #f4f4f4;
-    border-radius: 5px;
     padding-top: 4.5rem;
     padding-bottom: 2.625rem;
+    border-radius: 5px;
+    background-color: #f4f4f4;
   }
   .main__wrapper--gallery .sticker .btn--highRes {
     align-self: flex-start;
   }
 }
 .main__wrapper--gallery .sticker__info {
-  margin-top: 1.125rem;
   display: flex;
   flex-direction: column;
+  margin-top: 1.125rem;
   width: 420px;
 }
 @media screen and (min-width: 768px) {
   .main__wrapper--gallery .sticker__info {
-    margin: 0 1rem 0 2rem;
     align-self: flex-start;
+    margin: 0 1rem 0 2rem;
   }
   .main__wrapper--gallery .sticker__info h2 {
     display: flex;
-    font-size: 4rem;
     margin-bottom: 1.5rem;
     margin-left: 0.0625rem;
+    font-size: 4rem;
   }
 }
 .main__wrapper--gallery .sticker header {
@@ -496,9 +530,9 @@ span {
     align-self: flex-start;
   }
   .main__wrapper--gallery .sticker header .identity {
+    margin-right: 3rem;
     width: 200px;
     height: 200px;
-    margin-right: 3rem;
   }
   .main__wrapper--gallery .sticker header img {
     width: 200px;
@@ -524,9 +558,9 @@ span {
 }
 @media screen and (min-width: 768px) {
   .main__wrapper--gallery .sticker .info__city {
-    font-size: 1.5rem;
     margin-bottom: 1.5rem;
     padding-bottom: 0;
+    font-size: 1.5rem;
   }
 }
 .main__wrapper--gallery .sticker .info__tagline {
@@ -534,9 +568,9 @@ span {
 }
 @media screen and (min-width: 768px) {
   .main__wrapper--gallery .sticker .info__tagline {
-    font-size: 1.125rem;
     padding-bottom: 1.5rem;
     font-weight: 400;
+    font-size: 1.125rem;
   }
 }
 .main__wrapper--gallery .sticker .info__price {
@@ -557,11 +591,12 @@ span {
   display: flex;
   color: #901C1C;
   font-size: 0.875rem;
+  background-color: white;
 }
 @media screen and (min-width: 1439px) {
   .sticker__media {
     padding: 0rem;
-    width: 30%;
+    width: 28%;
     margin-bottom: 1.5rem;
   }
   .sticker__media .flexImg {
@@ -574,6 +609,11 @@ span {
 }
 .sticker__media .flexImg, .sticker__media .flexImg video {
   height: 190px;
+}
+@media screen and (min-width: 768px) {
+  .sticker__media .flexImg, .sticker__media .flexImg video {
+    height: 300px;
+  }
 }
 .sticker__media .flexImg .imgFlex, .sticker__media .flexImg video .imgFlex {
   border-radius: 0.5rem;
@@ -698,6 +738,118 @@ figure img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.selectFilter--inner {
+  display: flex;
+  align-items: center;
+}
+.selectFilter--inner label {
+  size: 18px;
+  font-weight: 700;
+  margin-right: 1.5625rem;
+}
+
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none;
+  /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: #901C1C;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 0rem 0.625rem;
+  width: 170px;
+  text-indent: 0.625rem;
+}
+.select-selected:hover {
+  background-color: rgba(211, 87, 60, 0.8);
+}
+.select-selected > div {
+  padding: 1.25rem 0rem;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 20px;
+  right: 30px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+  height: 16px;
+  width: 16px;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  content: "";
+  top: 20px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div, .select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  padding: 0rem 0.625rem;
+  background-color: #901C1C;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.select-items > div:first-child {
+  background-color: #901C1C;
+  padding: 1.25rem 0rem;
+  text-indent: 0.625rem;
+  border-bottom: 1px solid white;
+}
+.select-items > div:last-child {
+  background-color: #901C1C;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 1.25rem 0rem;
+  text-indent: 0.625rem;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(211, 87, 60, 0.8);
+}
+
+.switchBorder {
+  border-bottom-left-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+}
+
+.customSelect--padding {
+  padding: 0rem 0.625rem;
+}
+
+.customSelect-border {
+  border-bottom: 1px solid white;
 }
 
 .btn {

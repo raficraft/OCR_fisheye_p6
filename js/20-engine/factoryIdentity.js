@@ -121,22 +121,24 @@ function showIdentity(showThis){
     let stickerEl = document.querySelectorAll('.sticker')
     console.log(stickerEl.length)
 
-    if(stickerEl.length <= 2 || stickerEl.length === 5 || stickerEl.length === 4){
-        console.log('on change les styles')
-        
-        document.querySelector('.main__wrapper--index').style.justifyContent  = 'center';
-        for(let i = 0; i < stickerEl.length; i++){
-            stickerEl[i].style.marginLeft  = '2rem';
-            stickerEl[i].style.marginRight  = '2rem';
-        }
-    }else{
+    if(idURL === false){
+        if(stickerEl.length <= 2 || stickerEl.length === 5 || stickerEl.length === 4){
+            console.log('on change les styles')
+            
+            document.querySelector('.main__wrapper--index').style.justifyContent  = 'center';
+            for(let i = 0; i < stickerEl.length; i++){
+                stickerEl[i].style.marginLeft  = '2rem';
+                stickerEl[i].style.marginRight  = '2rem';
+            }
+        }else{
 
-        document.querySelector('.main__wrapper--index').style.justifyContent  = 'space-between';
-        for(let i = 0; i < stickerEl.length; i++){
-            stickerEl[i].style.marginLeft  = '0rem';
-            stickerEl[i].style.marginRight  = '0rem';
-        }
+            document.querySelector('.main__wrapper--index').style.justifyContent  = 'space-between';
+            for(let i = 0; i < stickerEl.length; i++){
+                stickerEl[i].style.marginLeft  = '0rem';
+                stickerEl[i].style.marginRight  = '0rem';
+            }
 
+        }
     }
 
 

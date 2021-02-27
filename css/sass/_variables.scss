@@ -1,7 +1,8 @@
 @use 'sass:math';
 
+$base-font-size : 16px!default;
 
-
+//Supprime l'unité de mesure
 @function strip-unit($number) {
     @if type-of($number) == 'number' and not unitless($number) {
       @return $number / ($number * 0 + 1);
@@ -11,9 +12,7 @@
   }
 
 
-//Couleur de fond
-$base-font-size : 16px!default;
-
+//Convertit le dimesionnement pixel -> rem
 @function rem($size, $base : $base-font-size){
     @return 1rem * $size / strip-unit($base)
 }

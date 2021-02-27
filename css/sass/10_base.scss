@@ -29,7 +29,7 @@ body{
         color : black;
     }
 
-    @media screen and(max-width : 728px) {
+    @media screen and(max-width : 727px) {
 
         display: none;
         
@@ -104,9 +104,35 @@ body{
     }
 }
 
+/*Système de filtre*/
+
+@media screen and (max-width : 767px) {
+    .selectFilter{
+        display : none;
+    }
+}
+.selectFilter--inner{
+   
+    height : 65px;
+    @media screen and (min-width : 767px) {  
+        padding : 0 rem(96);
+        margin : auto;    
+        inline-size: 768px;  
+        padding-bottom :0.5rem    
+    }
+    @media screen and(min-width : 1023px) {
+        inline-size: 1024px; 
+    }
+    @media screen and(min-width : 1439px) {
+        inline-size: 1440px;
+    }
+}
+
+
+/*Gallerie photo*/
 .photography{  
 
-    @media screen and (min-width : 768px){
+    @media screen and (min-width : 767px){
         display: flex;
         flex-wrap: wrap;
         inline-size : 768px;
@@ -114,7 +140,7 @@ body{
         justify-content: space-between;
     }
 
-    @media screen and (min-width : 1024px){
+    @media screen and (min-width : 1023px){
         inline-size : 1024px;
      
     }
@@ -127,10 +153,6 @@ body{
 
 
 
-
-
-
-
 .header__wrapper{
     background-color: rgb(182, 182, 182);
 }
@@ -138,14 +160,24 @@ body{
     background-color: lightslategray;
 }
 .sticker{    
-    background-color: rgb(0, 92, 128);
+    background-color: rgb(0, 137, 190);
 }
+
+.selectFilter--inner{
+    background-color: rgb(100, 102, 255);
+}
+
 .photography{
     background-color: rgb(0, 128, 90);
 }
-
 
 span{
     background-color: white;
 }
 
+
+
+.breakPoint {
+    flex-basis: 100%;
+    height: 0;
+  }

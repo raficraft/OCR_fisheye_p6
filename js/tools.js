@@ -21,3 +21,10 @@ function isEven(value) {
 	else
 		return false;
 }
+
+function multipleOfThree(value) {
+	if (value%3 == 0)
+		return true;
+	else
+		return false;
+}

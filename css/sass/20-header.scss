@@ -1,22 +1,18 @@
 
 .header__wrapper{
     .header__logo{
+        order : 1;           
 
-        order : 1;      
-        align-self: flex-start;      
-
-        & a{
-            height: 2.125rem;
-            flex-basis: 50%;
             img{
                 width:150px;
                 height:37px;
-                @media screen and(min-width : 728px) {
+
+                @media screen and(min-width : 778px) {
                     width:200px;
                     height:50px;                
                 }
             }
-        }
+        
     }
 
     h1{
@@ -36,7 +32,7 @@
             order : 2;
             font-size: 2.125rem;            
         } 
-        @media screen and(min-width : 1440px) {
+        @media screen and(min-width : 1439px) {
             order : 2;
             flex-basis: auto;
             font-size: 2.125rem;
@@ -44,24 +40,27 @@
     }
 
     .nav{
-        order :3;
-        flex-basis: 100%;
-          display: flex;
+        display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin-top: 2.125rem;
-        @media screen and(min-width : 728px) {
+        order :3;
+        flex-basis: 100%;
+        margin-top: 2rem;
+        margin-bottom: rem(23);
+        padding-left :rem(18);
+        padding-right :rem(18);
+
+        @media screen and(min-width : 727px) {
             order : 3;
             flex : 1 1 40%;
             margin : 1rem 0 0.25rem;
             align-items: center;
         } 
 
-        @media screen and(min-width : 1440px) {
-            order : 2;
-            flex : 1 1 auto;
+        @media screen and(min-width : 1439px) {
+            order : 2;            
             margin : 0 0 0.25rem;
-            align-items: center;
+           
         } 
 
         span{
@@ -75,16 +74,13 @@
             font-weight: bold;
             height: 22px;
            
-            @media screen and(min-width :1024px){
+            @media screen and(min-width :1023px){
                 margin-bottom : 0;
             }
-
-
         }
 
         a{
             color: $first_color--other;
-
         }
 
     }
