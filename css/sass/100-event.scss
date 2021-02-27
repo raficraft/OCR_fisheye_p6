@@ -1,0 +1,45 @@
+.btn {
+
+    background-color: $first_background;
+    font-family: $primary-font;
+    font-size : 1.25rem;
+    color : white;
+    font-weight: bold;
+    border : none;
+    padding : 0.5rem 1.375rem;
+    border-radius: 5px;
+  
+    &--smartphone{
+        @media screen and (max-width : 424px){      
+
+                position: fixed;
+                bottom : 30px;
+                left : calc((100% - 168px) /2);
+                
+        }
+
+        @media screen and (min-width : 425px){       
+
+            display: none;     
+        }
+
+    } 
+
+   
+    &--highRes{
+
+        @media screen and (max-width : 425px){
+        
+                display : none;       
+        
+        }
+
+        @media screen and (min-width : 425px){
+            padding : 1.375rem 0.725rem;
+        
+        }
+    }
+}
+
+
+

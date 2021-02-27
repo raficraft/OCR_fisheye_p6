@@ -1,0 +1,100 @@
+.slider{
+    position: fixed;
+    top : 0;
+    bottom :0;
+    width : 100%;
+    height : 100vh;
+    background-color: white;  
+    padding : 0;
+    z-index : 100;
+    padding : 2rem;
+    display: flex;
+    overflow: hidden;
+  
+
+    .dialogBox__close{
+        position: absolute;
+        top : 0;
+        right : 0;
+    }
+
+    .carousel{
+        
+        position : relative;
+        z-index: 1;
+        overflow: hidden;
+        width : 1050px;
+        height: 900px;
+        margin : auto;
+        border-radius: 5px;
+     
+
+        &__container{
+            transition : transform 0.3s;
+            transform : translate3d(0,0,0);
+        }
+
+        &__nav{
+            position : absolute;
+            z-index: 10;
+            color : black;
+            width : 40px;
+            height : 40px;
+            border-radius: 50%; 
+            top : 48%;          
+        }
+
+        &__prev{
+            bottom : 0;
+            left : 20px;
+
+            &--hidden{
+                opacity: 0;
+            }
+            
+        }
+
+        &__next{
+            bottom : 0;
+            right : 20px;
+            
+            &--hidden{
+                opacity: 0;
+            }           
+        }
+
+
+      
+        // supprimer
+        
+        &__container::after{
+            content :'';
+            clear : both;
+            display: table;
+        }
+
+        &__item{
+            float : left;
+        }
+       
+    }
+
+  
+}
+
+figure{
+    width : 1050px;
+    height : 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    
+
+    img{
+        width :100%;
+        height: 100%;
+        object-fit:cover;
+    }
+}
+

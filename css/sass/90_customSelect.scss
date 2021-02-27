@@ -1,0 +1,118 @@
+.selectFilter--inner{
+    display : flex;
+    align-items: center;
+    label{
+        size : 18px;
+        font-weight: 700;
+        margin-right : rem(25);
+    }
+
+}
+
+
+/*the container must be positioned relative:*/
+.custom-select {
+    position: relative;
+    font-family: Arial;
+  }
+  
+  .custom-select select {
+    display: none; /*hide original SELECT element:*/
+    
+  }
+  
+  .select-selected {
+    background-color: $first_background ;
+    border-top-left-radius : 5px;
+    border-top-right-radius : 5px;
+    padding : rem(0) rem(10);
+    width : 170px;
+    text-indent: rem(10);
+    &:hover{
+        background-color: rgba(211,87,60,0.8);
+    }
+    & >div{
+        padding : rem(20) rem(0);
+    }
+  }
+  
+  /*style the arrow inside the select element:*/
+  .select-selected:after {
+    position: absolute;
+    //content: "\f078";
+    content : '';
+    top: 20px;
+    right: 30px;   
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f078";
+    height: 16px;
+    width : 16px;    
+  }
+  
+  /*point the arrow upwards when the select box is open (active):*/
+  .select-selected.select-arrow-active:after {
+   content: "\f077";
+    top: 20px;
+  }
+  
+  /*style the items (options), including the selected item:*/
+  .select-items div,.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  /*style items (options):*/
+  .select-items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    padding : rem(0) rem(10);
+    background-color: $first_background ;
+    border-bottom-left-radius : 5px;
+    border-bottom-right-radius : 5px;
+    
+    & > div:first-child{        
+        background-color: $first_background ;
+        padding : rem(20) rem(0);
+        text-indent: rem(10);
+        border-bottom: 1px solid white;
+    }
+    & > div:last-child{
+        background-color: $first_background;
+        border-bottom-left-radius : 5px;
+        border-bottom-right-radius : 5px;
+        padding : rem(20) rem(0);
+        text-indent: rem(10);
+    }
+    
+  }
+  
+  /*hide the items when the select box is closed:*/
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(211,87,60,0.8);
+  }
+  .switchBorder{
+
+    border-bottom-left-radius : 5px!important;
+    border-bottom-right-radius : 5px!important;
+
+  }
+
+  .customSelect--padding{
+      padding : rem(0) rem(10)
+  }
+
+  .customSelect-border{
+      border-bottom: 1px solid white;
+  }
