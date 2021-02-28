@@ -1,6 +1,8 @@
 // page gallery
 .main__wrapper--gallery{
 
+  
+
     .sticker{
         flex-direction: row-reverse;
         justify-content: space-between;
@@ -21,16 +23,15 @@
             }
         }
 
-        
+
         &__info{
             display: flex;
             flex-direction: column;
-            margin-top : 1.125rem;
-            width : 420px; // a controler ne doit pas rester en px
+            margin-top : rem(18);           
             
             @media screen and (min-width : 768px){
                 align-self: flex-start;
-                margin: 0 1rem 0 2rem;
+                margin: 0 4.5rem 0 2rem;
                 h2{
                     display: flex;
                     margin-bottom: 1.5rem;
@@ -69,12 +70,21 @@
             justify-content: flex-start;
 
             .filter{
-                margin-right : 5px
+                margin-right : 5px;
+                margin-bottom : 8px;
+                @media screen and (min-width : 767px){
+                    padding : 3px 6px;
+                    margin-bottom :0;
+                }
             }
 
             a{
-                font-size: 1rem;
+                font-size: rem(13);
                 font-weight: 600;
+
+                @media screen and (min-width : 767px){
+                    font-size: 1rem;
+                }
             }
         }
 
@@ -88,6 +98,7 @@
         }
         .info__tagline{
             font-size : 13px; 
+            color : #757575;
             @media screen and (min-width : 768px){
                 padding-bottom : 1.5rem;
                 font-weight: 400;

@@ -58,7 +58,7 @@ let createSticker = function(thisData){
             `<article class="sticker">
                 <header>
                     <a class="identity flexImg" href="gallery.html?id=${thisData.id}" alt="${thisData.name}">
-                    <img class="imgFlex" src="${thisData.dirImg}${thisData.portrait}" height="100px"/>
+                    <img class="identity__img imgFlex" src="${thisData.dirImg}${thisData.portrait}" height="100px"/>
                     </a>
                 </header>`
 

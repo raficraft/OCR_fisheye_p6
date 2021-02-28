@@ -1,84 +1,107 @@
 
     .sticker__media {
-        padding : 0.5rem 0rem;
         display: flex;
         flex-direction: column;
+        padding : 0 0 1rem;
+        
+        img,video{ 
+            border-radius: rem(5);
+        }   
+
+        a,.flexImg, .flexImg video{
+            display: flex;
+            height : 190px;  
+            width : 100%;
+           
+            @media screen and(min-width : 768px){
+                height : 300px;
+            }
+        }
+
     
         @media screen and(min-width : 768px) and (max-width : 1023px){
             flex : 0 1 45%
-        }
-    
-                &--info{
-                    display: flex;
-                    color : #901C1C;
-                    font-size: 0.875rem;
-                    background-color: white;
-                    
-                }
-        
+        }   
     
         @media screen and (min-width : 1439px){
             padding: 0rem;
             width: 28%;
-            margin-bottom: 1.5rem;
-    
-            .flexImg{
-                height: 300px !important;
-                margin-bottom: 1rem;
-            }
-            &--info{                
-                font-size: 24px;                
-            }
+            margin-bottom: 1.5rem;          
         }
-    
-      
-            .flexImg, .flexImg video{
-                height : 190px;   
-                @media screen and(min-width : 768px){
-                    height : 300px;
-                }
-                
-                .imgFlex{
-                border-radius: 0.5rem;
-                }
-            }
-          
-    
-            &--video{
-    
-                a{
-                    display : flex;
-                    justify-content: center;
-                    align-content: center;
-                    align-items: center;
-                    &:before{
-                        position : absolute;
-                        content : '';
-                        z-index : 10;
-                        width : 80px;
-                        height : 80px;
-                        background-color: rgba(255,255,255,0.8);                
-                        border-radius: 50%;
-                    }
-                    &:after{
-                        position : absolute;
-                        content : '';
-                        z-index : 10;
-                        width : 0px;
-                        height : 0px;
-                        border-top: 25px solid transparent;               
-                        border-left: 25px solid rgb(95, 95, 95);               
-                        border-bottom: 25px solid transparent;               
-                        border-right: 25px solid transparent;  
-                        margin-left: 2rem;             
-                        
-                    }
-    
-                }
 
-           
+        &--info{
+            display: flex;
+            flex-direction: row;
+            padding-top : rem(10);
+            font-size: rem(14);   
+            color : #901C1C;
+            background-color: white;
 
-
+            @media screen and (min-width : 1439px){
+                font-size: 24px; 
+            } 
+            
+            p{
+                flex-wrap: nowrap;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
             }
             
+        }        
+
+        &--title{
+            flex : 1;
+            text-align: left;
         }
+        &--price{
+            margin-left : 1rem;
+            margin-right : 1rem;
+        }
+
+        &--like{
+            cursor : pointer;
+            i{
+                margin-left : rem(6);
+            }
+        }
+       
+
+        &--video{
+
+            a{
+                display : flex;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                &:before{
+                    position : absolute;
+                    content : '';
+                    z-index : 10;
+                    width : 80px;
+                    height : 80px;
+                    background-color: rgba(255,255,255,0.8);                
+                    border-radius: 50%;
+                }
+                &:after{
+                    position : absolute;
+                    content : '';
+                    z-index : 10;
+                    width : 0px;
+                    height : 0px;
+                    border-top: 25px solid transparent;               
+                    border-left: 25px solid rgb(95, 95, 95);               
+                    border-bottom: 25px solid transparent;               
+                    border-right: 25px solid transparent;  
+                    margin-left: 2rem;             
+                    
+                }
+    
+            }
+    
+        }
+    
+    
+   
+            
+}

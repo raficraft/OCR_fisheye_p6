@@ -1,5 +1,5 @@
 
-/*Met le premier caractère en majuscule d'une chaine*/
+/*Met le premier caractère d'une chaine en majuscule*/
 function ucfirst(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
