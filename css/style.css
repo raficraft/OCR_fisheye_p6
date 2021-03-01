@@ -69,78 +69,6 @@ h1 {
   box-sizing: border-box;
 }
 
-/*Repères vertical*/
-.repere--X {
-  position: fixed;
-  content: "";
-  width: 1px;
-  height: 100%;
-  background-color: red;
-  z-index: 1000;
-}
-
-/*Repères horizontal*/
-.repere--Y {
-  position: fixed;
-  content: "";
-  width: 100%;
-  height: 1px;
-  background-color: red;
-  z-index: 1000;
-}
-
-/*Repères page index*/
-/*Repère vertical*/
-.repere__1--X {
-  left: 6rem;
-}
-
-.repere__2--X {
-  left: 82.5rem;
-}
-
-/*Repère horizontal*/
-.repere__1--Y {
-  top: 24.375rem;
-  /*Utilisez bottom pour ce repérer par les bas*/
-}
-
-.repere__2--Y {
-  top: 11.8125rem;
-  /*Utilisez bottom pour ce repérer par les bas*/
-}
-
-.repere__3--Y {
-  top: 4.625rem;
-  /*Utilisez bottom pour ce repérer par les bas*/
-}
-
-/*Repères page gallery*/
-/*Repère vertical*/
-.repere__gal1--X {
-  left: 6rem;
-}
-
-.repere__gal2--X {
-  right: 6rem;
-}
-
-/*Repère horizontal*/
-.repere__gal1--Y {
-  top: 25.375rem;
-  /*Utilisez bottom pour ce repérer par les bas*/
-}
-
-.repere__gal2--Y {
-  top: 12.8125rem;
-  /*Utilisez bottom pour ce repérer par les bas*/
-}
-
-.repere__gal3--Y {
-  top: 4.625rem;
-  /*Utilisez bottom pour ce repérer par les bas*/
-}
-
 body {
   font-size: 16px;
   display: flex;
@@ -193,19 +121,18 @@ body {
 }
 @media screen and (min-width: 767px) {
   .header__wrapper {
-    inline-size: 768px;
+    inline-size: 100%;
+    padding: 2.25rem 7.5rem 2.25rem 6rem;
   }
 }
 @media screen and (min-width: 1023px) {
   .header__wrapper {
     inline-size: 1024px;
-    padding: 2.25rem 3rem;
   }
 }
 @media screen and (min-width: 1439px) {
   .header__wrapper {
     inline-size: 1440px;
-    padding: 2.25rem 7.5rem 2.25rem 6rem;
   }
 }
 .header__wrapper--gallery {
@@ -225,7 +152,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    inline-size: 768px;
+    inline-size: 100%;
   }
 }
 @media screen and (min-width: 1023px) {
@@ -244,7 +171,7 @@ body {
 }
 @media screen and (min-width: 767px) {
   .main__wrapper--gallery {
-    padding: 2.0625rem 6rem 0.5rem 6rem;
+    padding: 2.0625rem 6rem 0.5625rem 6rem;
   }
 }
 
@@ -255,14 +182,14 @@ body {
   }
 }
 .selectFilter--inner {
-  height: 65px;
+  height: 68px;
 }
 @media screen and (min-width: 767px) {
   .selectFilter--inner {
     padding: 0 6rem;
     margin: auto;
-    inline-size: 768px;
-    padding-bottom: 0.5rem;
+    inline-size: 100%;
+    padding-bottom: 0.875rem;
   }
 }
 @media screen and (min-width: 1023px) {
@@ -284,7 +211,7 @@ body {
   .photography {
     display: flex;
     flex-wrap: wrap;
-    inline-size: 768px;
+    inline-size: 100%;
     margin: auto;
     justify-content: space-between;
     padding: 1rem 6rem;
@@ -301,39 +228,29 @@ body {
   }
 }
 
-.breakPoint {
-  flex-basis: 100%;
-  height: 0;
+.identity {
+  box-shadow: 0px 10px 11px 0px #bbbbbb;
 }
 
-.identity__img {
-  box-shadow: 0px 10px 11px 0px black;
+/*
+.header__wrapper{
+    background-color: rgb(182, 182, 182);
+}
+.main__wrapper{
+    background-color: pink
+}
+.sticker{    
+    background-color: rgb(0, 137, 190);
 }
 
-.header__wrapper {
-  background-color: #b6b6b6;
+.selectFilter--inner{
+    background-color: rgb(100, 102, 255);
 }
 
-.main__wrapper {
-  background-color: lightslategray;
+.photography{
+    background-color: rgb(0, 128, 90);
 }
-
-.sticker {
-  background-color: #0089be;
-}
-
-.selectFilter--inner {
-  background-color: #6466ff;
-}
-
-.photography {
-  background-color: #00805a;
-}
-
-span {
-  background-color: white;
-}
-
+*/
 .header__wrapper .header__logo {
   order: 1;
 }
@@ -501,6 +418,7 @@ span {
   margin-bottom: 0;
   width: 100%;
   text-align: left;
+  background-color: #FAFAFA;
 }
 @media screen and (min-width: 768px) {
   .main__wrapper--gallery .sticker {
@@ -791,115 +709,117 @@ figure img {
   align-items: center;
 }
 .selectFilter--inner label {
-  size: 18px;
-  font-weight: 700;
-  margin-right: 1.5625rem;
+  font-weight: bold;
+  margin-right: 1rem;
+  margin-top: 0.375rem;
+  font-size: 1.125rem;
 }
-
-/*the container must be positioned relative:*/
-.custom-select {
-  position: relative;
-  font-family: Arial;
-}
-
-.custom-select select {
-  display: none;
-  /*hide original SELECT element:*/
-}
-
-.select-selected {
+.selectFilter--inner button {
   background-color: #901C1C;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  padding: 0rem 0.625rem;
+  border: none;
+  color: white;
+  font-size: 1.125rem;
+  padding: 0.875rem 0.625rem;
+  outline: none;
+}
+.selectFilter--inner .custom-select-wrapper {
+  position: relative;
   width: 170px;
-  text-indent: 0.625rem;
+  display: block;
 }
-.select-selected:hover {
-  background-color: rgba(211, 87, 60, 0.8);
+.selectFilter--inner .custom-select-wrapper .open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
-.select-selected > div {
-  padding: 1.25rem 0rem;
+.selectFilter--inner .custom-select-wrapper .open .arrow:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
 }
-
-/*style the arrow inside the select element:*/
-.select-selected:after {
+.selectFilter--inner .custom-select {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #901C1C;
+  border-radius: 0.3125rem;
+  padding: 0.3125rem 0.625rem 0;
+  width: 170px;
+}
+.selectFilter--inner .custom-select__trigger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: #901C1C;
+  border: none;
+}
+.selectFilter--inner .custom-options {
   position: absolute;
-  content: "";
-  top: 20px;
-  right: 30px;
+  display: block;
+  top: 100%;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 0.5s;
+  pointer-events: none;
+  z-index: 2;
+  background-color: #901C1C;
+  padding: 0rem 0.625rem;
+  border-bottom-left-radius: 0.3125rem;
+  border-bottom-right-radius: 0.3125rem;
+}
+.selectFilter--inner .custom-select.open .custom-options {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+.selectFilter--inner .custom-option {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  width: 150px;
+  text-align: left;
+}
+.selectFilter--inner .custom-option:nth-child(1) {
+  padding-top: 0.9375rem;
+  padding-bottom: 0.9375rem;
+}
+.selectFilter--inner .custom-option:nth-child(2) {
+  padding-top: 0.9375rem;
+  padding-bottom: 0.9375rem;
+}
+.selectFilter--inner .custom-option:nth-child(3) {
+  padding-top: 0.9375rem;
+  padding-bottom: 1.1875rem;
+  border: none;
+}
+.selectFilter--inner .custom-option:hover {
+  cursor: pointer;
+}
+.selectFilter--inner .custom-option.selected {
+  color: #ffffff;
+}
+.selectFilter--inner .arrow:after {
+  position: relative;
+  height: 15px;
+  width: 15px;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "";
   height: 16px;
   width: 16px;
+  color: white;
 }
-
-/*point the arrow upwards when the select box is open (active):*/
-.select-selected.select-arrow-active:after {
-  content: "";
-  top: 20px;
-}
-
-/*style the items (options), including the selected item:*/
-.select-items div, .select-selected {
-  color: #ffffff;
-  padding: 8px 16px;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-  cursor: pointer;
-  user-select: none;
-}
-
-/*style items (options):*/
-.select-items {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
-  padding: 0rem 0.625rem;
-  background-color: #901C1C;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-.select-items > div:first-child {
-  background-color: #901C1C;
-  padding: 1.25rem 0rem;
-  text-indent: 0.625rem;
-  border-bottom: 1px solid white;
-}
-.select-items > div:last-child {
-  background-color: #901C1C;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  padding: 1.25rem 0rem;
-  text-indent: 0.625rem;
-}
-
-/*hide the items when the select box is closed:*/
-.select-hide {
+.selectFilter--inner .custom-hidden {
   display: none;
 }
 
-.select-items div:hover, .same-as-selected {
-  background-color: rgba(211, 87, 60, 0.8);
-}
-
-.switchBorder {
-  border-bottom-left-radius: 5px !important;
-  border-bottom-right-radius: 5px !important;
-}
-
-.customSelect--padding {
-  padding: 0rem 0.625rem;
-}
-
-.customSelect-border {
-  border-bottom: 1px solid white;
-}
-
 .btn {
-  padding: 0.5rem 0.6875rem;
+  padding: 0.25rem 0.6875rem;
   font-family: "DM Sans", sans-serif;
   font-size: 1.25rem;
   color: white;

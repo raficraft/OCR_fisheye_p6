@@ -61,16 +61,23 @@
       <div class="selectFilter">
         <div class="selectFilter--inner">
 
-              <label>Trier Par</label>
-              <div class="custom-select">
-                <select>
-                  <option value="popularity">Popularité</option>
-                  <option value="date">Date</option>
-                  <option value="title">Titre</option>         
-                </select>
-              </div>
+            <label for="customSelect">Trier Par</label>
+
+            <div class="custom-select-wrapper">
+                <div class="custom-select">
+                    <button class="custom-select__trigger" id="customSelect"><span>Popularité</span>
+                        <div class="arrow"></div>
+                    </button>
+                    <div class="custom-options">
+                        <button class="custom-option selected custom-hidden" data-value="popularity"><span>Popularité</span></button>
+                        <button class="custom-option" data-value="date"><span>Date</span></button>
+                        <button class="custom-option" data-value="titre"><span>Titre</span></button>
+                    </div>
+                </div>
+            </div>   
+                     
         </div>
-      </div>
+    </div>
 
       <section id="photography" class="photography">
 

@@ -58,15 +58,14 @@ body{
     margin : auto;
 
     @media screen and (min-width : 767px) {
-        inline-size: 768px;        
+        inline-size: 100%;  
+        padding : rem(36) rem(120) rem(36) rem(96) ;     
     }
     @media screen and(min-width : 1023px) {
-        inline-size: 1024px; 
-        padding : rem(36) rem(48) ;
+        inline-size: 1024px;       
     }
     @media screen and(min-width : 1439px) {
-        inline-size: 1440px;
-        padding : rem(36) rem(120) rem(36) rem(96) ;
+        inline-size: 1440px;       
     }
     /*Gallery page*/
     &--gallery{
@@ -89,7 +88,7 @@ body{
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: flex-start;
-        inline-size: 768px;      
+        inline-size: 100%;      
     }
     @media screen and(min-width : 1023px) {
         inline-size: 1024px; 
@@ -103,7 +102,7 @@ body{
             padding : 0rem rem(20);
 
             @media screen and (min-width : 767px) {      
-             padding :  rem(33) rem(96) rem(8) rem(96)
+             padding :  rem(33) rem(96) rem(9) rem(96)
             }
         }
     
@@ -118,12 +117,12 @@ body{
 }
 .selectFilter--inner{
    
-    height : 65px;
+    height : 68px;
     @media screen and (min-width : 767px) {  
         padding : 0 rem(96);
         margin : auto;    
-        inline-size: 768px;  
-        padding-bottom :0.5rem    
+        inline-size: 100%;  
+        padding-bottom : rem(14)    
     }
     @media screen and(min-width : 1023px) {
         inline-size: 1024px; 
@@ -142,7 +141,7 @@ body{
     @media screen and (min-width : 767px){
         display: flex;
         flex-wrap: wrap;
-        inline-size : 768px;
+        inline-size : 100%;
         margin : auto;
         justify-content: space-between;
         padding : rem(16) rem(96);
@@ -160,22 +159,20 @@ body{
 }
 
 
-.breakPoint {
-    flex-basis: 100%;
-    height: 0;
+
+  .identity{
+    box-shadow: 0px 10px 11px 0px rgb(187, 187, 187);
+    
+
   }
 
-  .identity__img{
-    box-shadow: 0px 10px 11px 0px rgba(0,0,0,1)
-  }
 
-
-
+/*
 .header__wrapper{
     background-color: rgb(182, 182, 182);
 }
 .main__wrapper{
-    background-color: lightslategray;
+    background-color: pink
 }
 .sticker{    
     background-color: rgb(0, 137, 190);
@@ -188,10 +185,8 @@ body{
 .photography{
     background-color: rgb(0, 128, 90);
 }
+*/
 
-span{
-    background-color: white;
-}
 
 
 
