@@ -16,7 +16,11 @@ let modalBox =
                         [0]:{
                         ['html']:{'tag':'button'} , 
                         ['attr']:{'class':'dialogBox__close', 'data-js':'closeModal'} , 
-                        ['textContent']:{'text': 'X'} , 
+                      
+
+
+                        //<i class="fal fa-times"></i>
+                         
                         },                        
                         [1]:{
                             
@@ -24,7 +28,7 @@ let modalBox =
                             ['child']:{
                                 [0]:{
                                     ['html']:{"tag": "legend"},
-                                    ['textContent'] : {"text": "Contacter-moi"}
+                                    ['textContent'] : {"text": "Contactez-moi"}
 
                                 },//fin legend 
 
@@ -35,7 +39,7 @@ let modalBox =
 
                                 [2]:{
                                     ['html']:{'tag':'div'} , 
-                                    ['attr']:{'class':'form_content',} ,
+                                    ['attr']:{'class':'form__content',} ,
                                     ['child']:{
                                         [0]:{
                                             ['html']:{'tag':'div'} , 
@@ -47,7 +51,7 @@ let modalBox =
                                                 },
                                                 [1]:{
                                                     ['html']:{'tag':'input'} , 
-                                                    ['attr']:{'class':'brickInput', "type":'text', "placeholder" : "Mon prénom"} ,
+                                                    ['attr']:{'class':'brickInput', "type":'text'} ,
                                                 }
                                             }
                                         },
@@ -61,7 +65,7 @@ let modalBox =
                                                 },
                                                 [1]:{
                                                     ['html']:{'tag':'input'} , 
-                                                    ['attr']:{'class':'brick__input', "type":'text', "placeholder" : "Mon Nom"} ,
+                                                    ['attr']:{'class':'brickInput', "type":'text'} ,
                                                 }
                                             }
                                         },
@@ -75,7 +79,7 @@ let modalBox =
                                                 },
                                                 [1]:{
                                                     ['html']:{'tag':'input'} , 
-                                                    ['attr']:{'class':'brick__input', "type":'emial', "placeholder" : "Email"} ,
+                                                    ['attr']:{'class':'brickInput', "type":'email'} ,
                                                 }
                                             }
                                         },
@@ -89,12 +93,13 @@ let modalBox =
                                                 },
                                                 [1]:{
                                                     ['html']:{'tag':'textarea'} , 
-                                                    ['attr']:{'class':'brick__input', "placeholder" : "Message", "rows" : "5", "cols" : "28"}
+                                                    ['attr']:{'class':'brickInput brickInput--textarea'}
                                                 }
                                             }
                                         },
                                         [4]:{
                                             ['html']:{'tag':'button'},
+                                            ['attr']:{'type': 'submit', 'class' : 'btn btn--modal'},
                                             ['textContent'] : {'text' : "Envoyer"}
                                             
                                         }

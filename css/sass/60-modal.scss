@@ -1,19 +1,171 @@
 .dialogBox{
-    position: fixed;
-    top : 0;
-    bottom :0;
+    position: fixed;    
     width : 100%;
     height : 100vh;
     z-index : 100;
-    background-color: white;  
     padding : 0;
+    border : none;
 
+    
+    
+
+       
     form{
         width : 375px;
         margin : auto;
-        height : 100vh;
         background-color: #db8876;
+        padding : rem(27) rem(20) rem(75) rem(16);
+        position : relative;
+        border-radius: rem(5);
+        height : 812px;
+       
+        @media screen and (min-width : 1441px){         
+            width : 668px;
+            height : 900px;    
+            padding : rem(32) rem(35) rem(38) rem(35);
+            margin-top : rem(32);
+        }
+        
+
+
+        .dialogBox__close{
+            background-color: transparent;
+            border :none;
+            outline: none;
+            position: absolute;
+            right : rem(25);
+            top : rem(27);
+            height: rem(27);
+            width: rem(27);
+            display: flex;
+            padding : 0;
+            @media screen and (min-width : 1441px){
+         
+                height: rem(42);
+                width : rem(42); 
+                right : rem(35);
+                top : rem(35);
+            }
+
+            &:before{
+                content : '';
+                width : 2px;
+                background-color: white;
+                height: rem(28);
+                display: block;
+                transform: rotate(45deg);
+                position: absolute;
+                top:0;
+                left: rem(14);
+
+                @media screen and (min-width : 1441px){         
+                    top :-4px;        
+                    height: rem(50);
+                    width : 5px;
+                    left :18px;
+                }
+            }
+
+            &:after{
+                content : '';
+                width : 2px;
+                background-color: rgb(255, 255, 255);
+                height: rem(28);
+                display: block;
+                transform: rotate(135deg);
+                position: absolute;
+                top:0;
+                left: rem(14);
+                @media screen and (min-width : 1441px){ 
+                    top :-4px;        
+                    height: rem(50);
+                    width : 5px;
+                    left :18px;
+                }
+            }
+
+
+        }
+
+        .form__content{
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        legend{
+            margin-bottom: rem(20);
+         
+            
+        }
+
+        h1{
+            margin-bottom : rem(43)
+        }
+
+        legend,h1{
+            font-size: rem(36);   
+            @media screen and (min-width : 1441px){         
+                font-size: rem(64);
+            }          
+        }
+
+        label{
+            color: #312E2E;
+            font-size: rem(24);
+            padding-bottom: rem(9);
+        }
+
+        .brick{
+            display: flex;
+            flex-direction: column;
+            padding-bottom: rem(18);
+            width : 100%;
+            @media screen and (min-width : 1441px){         
+                padding-bottom: rem(10);
+            } 
+
+            &Input{
+                height: rem(52);
+                border-radius : rem(5);
+                border : none;
+                padding : 6px;
+
+                @media screen and (min-width : 1441px){
+         
+                    height: rem(68);    
+                }
+
+                
+
+                &--textarea{
+                    height: 184px;
+                    border : none;
+                    padding : 6px;
+                    margin-bottom: rem(26);
+                    @media screen and (min-width : 1441px){ 
+                        height: 170px;  
+                    }
+                }
+            }
+
+          
+        }
+
+        .btn--modal{
+            width : 170px;
+            @media screen and (min-width : 1441px){
+         
+                align-self: flex-start; 
+                height: 69px;  
+            }
+
+        }
     }
 }
+
+
 
 

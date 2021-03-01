@@ -32,7 +32,7 @@ document.addEventListener('click',function(e){
                     // On envoie à l'atelier qui nous retourne un objet contenant la boite modal
                     // telle que construite dans le fichier designHTML/modalBox.js
 
-                    let thisHtmlObject = factoryHtml.createHtmlEl(modalBox,'elHtmlObject')
+                    let thisHtmlObject = factoryHtml.createHtmlEl(modalBox,'elHtmlObject')                   
 
                     //On récupère l'identités liés à l'id passé en url        
                     let identity = getData.getIdentity(data,idURL)            

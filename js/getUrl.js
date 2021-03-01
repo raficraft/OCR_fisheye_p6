@@ -49,3 +49,7 @@ for (const property in test2) {
   }
 
 
+let test  = document.createElement('div')
+
+test.setAttribute('class','test test2')
+console.log(test);
