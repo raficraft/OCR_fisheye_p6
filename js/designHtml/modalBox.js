@@ -47,11 +47,12 @@ let modalBox =
                                             ['child']:{
                                                 [0]:{
                                                     ['html']:{'tag':'label'} , 
+                                                    ['attr']:{ 'for' : 'firstname','name':'firstname'},
                                                     ['textContent'] : {'text' : 'Prénom'}
                                                 },
                                                 [1]:{
                                                     ['html']:{'tag':'input'} , 
-                                                    ['attr']:{'class':'brickInput', "type":'text'} ,
+                                                    ['attr']:{'id':'firstname','class':'brickInput', "type":'text'} ,
                                                 }
                                             }
                                         },
@@ -61,11 +62,12 @@ let modalBox =
                                             ['child']:{
                                                 [0]:{
                                                     ['html']:{'tag':'label'}, 
+                                                    ['attr']:{ 'for' : 'lastname'},
                                                     ['textContent'] : {'text' : 'Nom'}
                                                 },
                                                 [1]:{
                                                     ['html']:{'tag':'input'} , 
-                                                    ['attr']:{'class':'brickInput', "type":'text'} ,
+                                                    ['attr']:{'id':'lastname','class':'brickInput', "type":'text'} ,
                                                 }
                                             }
                                         },
@@ -75,11 +77,12 @@ let modalBox =
                                             ['child']:{
                                                 [0]:{
                                                     ['html']:{'tag':'label'},
+                                                    ['attr']:{ 'for' : 'email'},
                                                     ['textContent'] : {'text' : 'Email'}
                                                 },
                                                 [1]:{
                                                     ['html']:{'tag':'input'} , 
-                                                    ['attr']:{'class':'brickInput', "type":'email'} ,
+                                                    ['attr']:{'id':'email','class':'brickInput', "type":'email'} ,
                                                 }
                                             }
                                         },
@@ -89,11 +92,12 @@ let modalBox =
                                             ['child']:{
                                                 [0]:{
                                                     ['html']:{'tag':'label'} ,
+                                                    ['attr']:{ 'for' : 'message'},
                                                     ['textContent'] : {'text' : 'Votre message'}
                                                 },
                                                 [1]:{
                                                     ['html']:{'tag':'textarea'} , 
-                                                    ['attr']:{'class':'brickInput brickInput--textarea'}
+                                                    ['attr']:{'id':'message','class':'brickInput brickInput--textarea'}
                                                 }
                                             }
                                         },

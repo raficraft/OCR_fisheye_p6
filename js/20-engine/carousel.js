@@ -16,11 +16,8 @@ class Carousel{
             slidesVisible :1,
             currentItem : 0,
             loop : false          
-        },options),
-        
-
-
-        this.root = document.querySelector('#carousel')        
+        },options), 
+       
         this.container = document.querySelector('.carousel__container');
         this.children = [].slice.call(this.el.children)
         this.item = [].slice.call(document.querySelectorAll('.carousel__item'))
@@ -36,8 +33,6 @@ class Carousel{
 
         this.setStyle()  
 
-  
-
        
         // si l'item courant est passé via l'exterieur.
         // On positionne le slide sur celui-ci.
@@ -46,8 +41,6 @@ class Carousel{
         }
        
     }
-
-  
 
     /**
      * Applique les bonnes dimensions aux éléments

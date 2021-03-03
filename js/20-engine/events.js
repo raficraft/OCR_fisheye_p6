@@ -95,25 +95,26 @@ document.addEventListener('click',function(e){
                                 dataMedia[i][entries2] = entries2Val+i
 
                                 
+                                console.log(dataMedia);
 
                                     if(dataMedia[i].image){
 
                                         insertIn +=     `<div class="carousel__item">
-                                                            <figure>
-                                                                <img  src="${dataMedia[i].dirMedia}${dataMedia[i].image}" />
-                                                                <figcaption>${dataMedia[i].alt}</figcaption>
+                                                            <figure class"figure__img">
+                                                                <img  src="${dataMedia[i].dirMedia}${dataMedia[i].image}" class="carousel${dataMedia[i].class}"/>                                                               
                                                             </figure>
+                                                            <p>${dataMedia[i].alt}</p>
                                                         </div>`
 
                                     }else if(dataMedia[i].video){
 
                                         insertIn +=     `<div class="carousel__item">
-                                                            <figure>
+                                                            <figure class="figure__video">
                                                                 <video controls width="100%">
                                                                     <source src="${dataMedia[i].dirMedia}${dataMedia[i].video}" type="video/mp4">
-                                                                </video>
-                                                                <figcaption>${dataMedia[i].alt}</figcaption>
+                                                                </video>                                                               
                                                             </figure>
+                                                            <p>${dataMedia[i].alt}</p>
                                                         </div>`
 
 

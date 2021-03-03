@@ -88,7 +88,7 @@ let createVideo = function (thisData,inc) {
             </a>
           </header>
           <article class="sticker__media--info">   
-            <p class="sticker__media--title">${ucfirst(thisData.alt)}</p>
+            <p class="sticker__media--title">${thisData.alt}</p>
             <p class="sticker__media--price">${thisData.price} €</p>
             <p class="sticker__media--like">${thisData.likes}<i class="fas fa-heart fontIcon"></i></p>
           </article>
