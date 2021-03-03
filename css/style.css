@@ -232,27 +232,26 @@ body {
   box-shadow: 0px 10px 11px 0px #bbbbbb;
 }
 
-/*
-.header__wrapper{
-    background-color: rgb(182, 182, 182);
-}
-.main__wrapper{
-    background-color: pink
-}
-.sticker{    
-    background-color: rgb(0, 137, 190);
+.header__wrapper {
+  background-color: #b6b6b6;
 }
 
-.selectFilter--inner{
-    background-color: rgb(100, 102, 255);
+.main__wrapper {
+  background-color: pink;
 }
 
-.photography{
-    background-color: rgb(0, 128, 90);
+.sticker {
+  background-color: #0089be;
 }
 
+.selectFilter--inner {
+  background-color: #6466ff;
+}
 
-*/
+.photography {
+  background-color: #00805a;
+}
+
 .header__wrapper .header__logo {
   order: 1;
 }
