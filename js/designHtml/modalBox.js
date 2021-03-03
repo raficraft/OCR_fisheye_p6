@@ -7,7 +7,7 @@ let modalBox =
    {
        [0]:{
         ['html']:{'tag':'dialog'} , 
-        ['attr']:{'id' : 'formContact','class':'dialogBox', "open":"open"} ,         
+        ['attr']:{'id' : 'formContact','class':'dialogBox', "open":"open", "data-js":"closeContact"} ,         
             ['child']:{                             
                 [0]:{
                     ['html']:{'tag':'form'} , 
@@ -15,7 +15,7 @@ let modalBox =
                     ['child'] : {   
                         [0]:{
                         ['html']:{'tag':'button'} , 
-                        ['attr']:{'class':'dialogBox__close', 'data-js':'closeModal'} , 
+                        ['attr']:{'class':'dialogBox__close', 'data-js':'closeContact'} , 
                       
 
 
@@ -103,7 +103,7 @@ let modalBox =
                                         },
                                         [4]:{
                                             ['html']:{'tag':'button'},
-                                            ['attr']:{'type': 'submit', 'class' : 'btn btn--modal'},
+                                            ['attr']:{'type': 'submit', 'class' : 'btn btn--modal','data-js':'submitContact'},
                                             ['textContent'] : {'text' : "Envoyer"}
                                             
                                         }

@@ -60,7 +60,7 @@ let createImage = function (thisData,inc,) {
       `<article class="sticker__media sticker__media--img ${thisData.class} "> 
             <header >     
                 <a href="#">
-                  <p class="flexImg"><img class="imgFlex" src="${thisData.dirMedia}${thisData.image}" data-js="openCaroussel" data-item="${inc}"/></p>
+                  <p class="flexImg"><img class="imgFlex" src="${thisData.dirMedia}${thisData.image}" data-js="openCarousel" data-item="${inc}"/></p>
                 </a>
             </header>
             <article class="sticker__media--info">   
@@ -83,7 +83,7 @@ let createVideo = function (thisData,inc) {
       `<article class="sticker__media sticker__media--video ${thisData.class}">
           <header>
             <a href="#" class="flexImg">
-                <video class="imgFlex" width="100%" data-js="openCaroussel" data-item="${inc}">
+                <video class="imgFlex" width="100%" data-js="openCarousel" data-item="${inc}">
                 <source src="${thisData.dirMedia}${thisData.video}" type="video/mp4"></video>
             </a>
           </header>
@@ -104,6 +104,7 @@ let createVideo = function (thisData,inc) {
 //On instancie l'usine
 let factory = new mediaFactory()
 //On récupère les media liés à l'ID du photographe passé en URL
+const idURL = checkURL.request.idURL
 let medias = getData.getMedia(data,idURL)
 //On passe les média dans l'usine
 let newMedia =  factory.createMedia(medias)

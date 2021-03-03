@@ -6,7 +6,7 @@ let slider =
    {
        [0]:{
         ['html']:{'tag':'div'} , 
-        ['attr']:{'class':'slider', } ,         
+        ['attr']:{'class':'slider','data-js':'closeCarousel' } ,         
             ['child']:{
                 [0]:{
                     ['html']:{'tag':'div'},
@@ -14,7 +14,7 @@ let slider =
                     ['child']:{
                         [0]:{
                             ['html']:{'tag':'button'} , 
-                            ['attr']:{'class':'sliderBox__close',} 
+                            ['attr']:{'class':'sliderBox__close','data-js':'closeCarousel'} 
                         },// fin de Button
                         
                         [1]:{
@@ -33,7 +33,7 @@ let slider =
                             
                   [2]:{
                     ['html']:{'tag':'button'} , 
-                    ['attr']:{'class':'carousel__nav carousel__prev',} , 
+                    ['attr']:{'class':'carousel__nav carousel__prev','data-js':'prevCarousel'} , 
                     ['child']:{
                         [0]:{
                             ['html']:{'tag':'i'} , 
@@ -44,7 +44,7 @@ let slider =
                 },// button next
                 [3]:{
                     ['html']:{'tag':'button'} , 
-                    ['attr']:{'class':'carousel__nav carousel__next',} ,                     
+                    ['attr']:{'class':'carousel__nav carousel__next','data-js':'nextCarousel'} ,                     
                     ['child']:{
                         [0]:{
                             ['html']:{'tag':'i'} , 

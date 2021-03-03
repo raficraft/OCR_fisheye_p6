@@ -24,3 +24,8 @@ window.addEventListener('click', function(e) {
     }
 });
 
+
+/* Code migrant, 
+redéfinir dans une classe qui permet de selectionnée,
+l'élément que l'on souhaite transformer en select personalisé
+*/

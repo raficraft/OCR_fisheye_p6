@@ -1,19 +1,28 @@
 class getData {
-
-  //Déclaration d'une valeur par défaut pour la page index
-  idURL= false;
+/**
+ * 
+ * @param {JSON} data  Tableau json contenant les photographes et les photos
+ */
 
   constructor(data) {
     this.data = data;
     this.idURL = idURL;
   }
   
-  //Recupère tous les profils des photographe pour la page index.
+ 
+  /**
+   *  Recupère tous les profils des photographes .
+   */
   static getAllIdentity(){
     return data.photographers
   }
 
-  //Recupère tous les profils des photographe pour la page index.
+
+
+  /**
+   * Recupère tous les profils des photographe pour la page index.
+   * @param {string} sortValue valeur de trie (travel,sports,events...)
+   */
   static getAllIdentityByTag(sortValue){
 
     let x = 0;
@@ -27,25 +36,39 @@ class getData {
 
       let thisIdentity = allIdentity[i]
     
-    // Si la longueur du résultat la requête est supérieur à zero
-    // On stock l'identité concerné
-    if(thisIdentity.tags.filter(el => el=== sortValue).length > 0){
+    /* Si la longueur du résultat de la requête est supérieur à zero
+       On stock l'identité concerné */
+  
+    if(thisIdentity.tags.filter(el => el === sortValue).length > 0){      
         sortIdentity[x] = thisIdentity;
         x++
       }
+    }
 
+    console.log(sortIdentity.length);
+    //redirection si le tableau de trie ne contient aucune valeur
+    if(sortIdentity.length === 0){
+      console.error('on redirige');
+      document.location.href="404.html";
     }
    
     return sortIdentity;
     
   }
 
-  //Recupère le profil du photographe selon l'ID passer dans l'URL
+
+  /**
+   * Recupère le profil du photographe selon l'ID passer dans l'URL
+   */
   static getIdentity() {
       let thisData = data.photographers.find(el => el.id === idURL)
       return thisData
   }
-  //Récupère les photo du photographe selon l'ID passer dans l'url
+
+  /**
+   * Récupère les photos du photographe selon l'ID passer dans l'url
+   */
+ 
   static getMedia(){
       let thisMedia =  data.media.filter(el => el.photographerId === idURL)
       return thisMedia
@@ -53,7 +76,5 @@ class getData {
 
 }
 
-console.log(getData.getAllIdentity());
-console.log(getData.getAllIdentityByTag());
 
 

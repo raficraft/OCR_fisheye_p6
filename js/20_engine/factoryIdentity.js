@@ -121,7 +121,7 @@ function showIdentity(showThis){
     let stickerEl = document.querySelectorAll('.sticker')
     console.log(stickerEl.length)
 
-    if(idURL === false){
+    if(checkURL.request.idURL === false){
         if(stickerEl.length <= 2 || stickerEl.length === 5 || stickerEl.length === 4){
             console.log('on change les styles')
             
@@ -156,7 +156,10 @@ let factory2 = new identityFactory
 
 
 
-if(idURL !== false){
+if(checkURL.request.idURL !== false){
+
+    const idURL = checkURL.request.idURL
+
     //On récupère l'identités liés à l'id passé en url        
     let identity = getData.getIdentity(data,idURL)
     console.log(identity);
@@ -166,8 +169,9 @@ if(idURL !== false){
     showIdentity(newIdentity)
 }else{
 
-    if(tagURL !== false){
+    if(checkURL.request.tagURL !== false){
 
+        const tagURL = checkURL.request.tagURL
 
         console.log(getData.getAllIdentityByTag(tagURL));
 

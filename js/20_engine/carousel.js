@@ -27,9 +27,13 @@ class Carousel{
         let prevBtn = document.querySelector('.carousel__prev')
         let nextBtn = document.querySelector('.carousel__next')
 
+        let closeBtn = document.querySelector('[data-js="closeCarousel"]')
+        console.error(closeBtn);
+
 
         nextBtn.addEventListener('click',this.next.bind(this))
         prevBtn.addEventListener('click',this.prev.bind(this))
+        closeBtn.addEventListener('click',this.deleteCarousel.bind(this))
 
         this.setStyle()  
 
@@ -61,6 +65,10 @@ class Carousel{
     }
     prev(){  
         this.goToItem(this.options.currentItem - this.options.slidesToScroll)
+    }
+
+    deleteCarousel(){
+        document.querySelector('.slider').remove()
     }
 
     /**
