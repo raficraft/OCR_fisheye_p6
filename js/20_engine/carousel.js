@@ -26,20 +26,17 @@ class Carousel{
 
         let prevBtn = document.querySelector('.carousel__prev')
         let nextBtn = document.querySelector('.carousel__next')
-
         let closeBtn = document.querySelector('[data-js="closeCarousel"]')
-        console.error(closeBtn);
 
 
         nextBtn.addEventListener('click',this.next.bind(this))
         prevBtn.addEventListener('click',this.prev.bind(this))
         closeBtn.addEventListener('click',this.deleteCarousel.bind(this))
 
-        this.setStyle()  
 
-       
-        // si l'item courant est passé via l'exterieur.
-        // On positionne le slide sur celui-ci.
+        this.setStyle()         
+        // Si l'item courant est passé via l'exterieur.
+        // On positionne le slider sur celui-ci.
         if(options.currentItem !== 0 ){
             this.goToItem(this.options.currentItem-1)
         }
