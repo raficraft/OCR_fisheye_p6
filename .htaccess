@@ -11,6 +11,3 @@ RewriteCond %{REQUEST_FILENAME} !-l   # if link doesn't
 # QSA = Query String Append
 # R = Redirect (default is 302, temporary)
 RewriteRule ^ err404.html?url=%{REQUEST_URI}&refr=%{HTTP_REFERER} [L,QSA,R]
-  
-  
-ErrorDocument 404 404.html
