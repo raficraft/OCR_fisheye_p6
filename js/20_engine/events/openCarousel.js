@@ -7,10 +7,12 @@ function openCarousel (target){
     // telle que construite dans le fichier designHTML/modalBox.js
     const thisHtmlObject = factoryHtml.createHtmlEl(slider,'elHtmlObject')
 
-    let dataMedia = getData.getMedia(data,idURL)
+    let dataMedia = getData.getMediaByIdentity(data)
 
     //Donne la valeur de la photo sur laquelle l'on as cliqué
     let item = parseInt(target.dataset.item);  
+
+    console.error(item);
   
     
     

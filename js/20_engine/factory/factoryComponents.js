@@ -76,7 +76,7 @@ function renderComponent(showThis,target,method){
 
             showThis.map(function(media){  
     
-                target.insertAdjacentHTML("afterbegin",media.elHTML)
+                target.insertAdjacentHTML("beforeend",media.elHTML)
                 
             })
 

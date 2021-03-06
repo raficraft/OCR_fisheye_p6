@@ -38,7 +38,7 @@ class Carousel{
         // Si l'item courant est passé via l'exterieur.
         // On positionne le slider sur celui-ci.
         if(options.currentItem !== 0 ){
-            this.goToItem(this.options.currentItem-1)
+            this.goToItem(this.options.currentItem)
         }
        
     }
