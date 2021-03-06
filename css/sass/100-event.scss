@@ -33,5 +33,8 @@
     }
 }
 
-
+//Sur la page d'acceuil le bouton n'apparait pas
+.main__wrapper--index .btn{
+    display: none;
+}
 

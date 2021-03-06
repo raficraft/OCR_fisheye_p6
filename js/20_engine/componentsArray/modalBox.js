@@ -1,6 +1,3 @@
-  
-// Tableau associatif de la structure HTML à injecter
-// NB : Essayer à terme de faire sauter les clefs numériques 
 
 
 let modalBox = 

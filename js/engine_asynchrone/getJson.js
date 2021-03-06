@@ -57,7 +57,7 @@ function identityFactory(){
      
      
 
-        if(method === 'all')
+        if(method === 'allIdentities')
 
 
            //On ajoute des entrées au tableau passés en argument
@@ -75,7 +75,7 @@ function identityFactory(){
             })
         
 
-        if(method === 'justOne'){
+        if(method === 'oneIdentity'){
 
             //On recupe une seul Identité
             dataIdentity[dirImg] = srcImg

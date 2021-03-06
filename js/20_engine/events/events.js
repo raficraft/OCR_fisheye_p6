@@ -1,5 +1,6 @@
 
 const itsEvent = document.querySelectorAll('[data-js]');
+console.log(itsEvent);
 const eventLimit = itsEvent.length
 for (let i = 0 ; i < eventLimit; i++) {
 
@@ -12,7 +13,7 @@ for (let i = 0 ; i < eventLimit; i++) {
         // La valeur de l'attribut indique qu'elle action effectué
         e.preventDefault();
 
-    console.log('clcik');
+        console.log('click');
 
         if(e.target.dataset){
 

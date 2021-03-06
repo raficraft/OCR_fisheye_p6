@@ -1,32 +1,29 @@
 class CheckURL{
 
-    constructor(request){
-
+    constructor(request={}){
 
         this.pathArray   = window.location.pathname.substring(1).split('.')
         this.path        = this.pathArray[0]
-        this.params      = false
-        this.params      = window.location.search //Si aucune requête
-        this.request     =  Object.assign({},{
+        this.params      = window.location.search ? window.location.search  : false        
+        this.request     = Object.assign({},{
             idURL : false,
             tagURL : false         
-        },request) 
+        },request)
 
+
+       
 
         if(this.params !== false){
 
-            //On récupere les paramètres passer dans l'url (?id=number) || (?tag='filter')
+            //On récupere les paramètres passer dans l'url (?id='number') || (?tags='string')
             const get = this.params.substring(1).split('=');
 
             const paramRequest = get[0];
             const valueRequest = get[1];
 
-            //On transforme la valeur string en number  
-
-
             if(paramRequest === 'id'){
                 //On transforme la valeur string en number
-                 this.request.idURL =parseInt(valueRequest)
+                 this.request.idURL = parseInt(valueRequest)
             }else if(paramRequest === 'tags'){               
                 this.request.tagURL = valueRequest
             }            
@@ -35,6 +32,10 @@ class CheckURL{
 }
 
 const checkURL = new CheckURL;
+
+
+  
+
 
 
 

@@ -69,6 +69,78 @@ h1 {
   box-sizing: border-box;
 }
 
+/*Repères vertical*/
+.repere--X {
+  position: fixed;
+  content: "";
+  width: 1px;
+  height: 100%;
+  background-color: red;
+  z-index: 1000;
+}
+
+/*Repères horizontal*/
+.repere--Y {
+  position: fixed;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: red;
+  z-index: 1000;
+}
+
+/*Repères page index*/
+/*Repère vertical*/
+.repere__1--X {
+  left: 6rem;
+}
+
+.repere__2--X {
+  left: 82.5rem;
+}
+
+/*Repère horizontal*/
+.repere__1--Y {
+  top: 24.375rem;
+  /*Utilisez bottom pour ce repérer par les bas*/
+}
+
+.repere__2--Y {
+  top: 11.8125rem;
+  /*Utilisez bottom pour ce repérer par les bas*/
+}
+
+.repere__3--Y {
+  top: 4.625rem;
+  /*Utilisez bottom pour ce repérer par les bas*/
+}
+
+/*Repères page gallery*/
+/*Repère vertical*/
+.repere__gal1--X {
+  left: 6rem;
+}
+
+.repere__gal2--X {
+  right: 4.875rem;
+}
+
+/*Repère horizontal*/
+.repere__gal1--Y {
+  top: 25.375rem;
+  /*Utilisez bottom pour ce repérer par les bas*/
+}
+
+.repere__gal2--Y {
+  top: 12.8125rem;
+  /*Utilisez bottom pour ce repérer par les bas*/
+}
+
+.repere__gal3--Y {
+  top: 4.625rem;
+  /*Utilisez bottom pour ce repérer par les bas*/
+}
+
 body {
   font-size: 16px;
   display: flex;
@@ -1168,6 +1240,10 @@ figure .carouselmedia__Rhode--7 {
   .btn--highRes {
     padding: 1.375rem 0.725rem;
   }
+}
+
+.main__wrapper--index .btn {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

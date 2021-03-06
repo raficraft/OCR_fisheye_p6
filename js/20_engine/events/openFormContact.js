@@ -16,7 +16,7 @@ const openFormContact = ()=>{
         let thisHtmlObject = factoryHtml.createHtmlEl(modalBox,'elHtmlObject')                   
 
         //On récupère l'identités liés à l'id passé en url        
-        let identity = getData.getIdentity(data,idURL)            
+        let identity = getData.getIdentity(data)            
 
         // On ajoute le nom du photographe de manière dynamique avant insertion ^^
         thisHtmlObject.querySelector('#titleContact').textContent = identity.name;
