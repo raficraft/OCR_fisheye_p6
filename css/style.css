@@ -1175,6 +1175,9 @@ figure .carouselmedia__Rhode--7 {
   width: 150px;
   text-align: left;
 }
+.selectFilter--inner .custom-option span {
+  pointer-events: none;
+}
 .selectFilter--inner .custom-option:nth-child(1) {
   padding-top: 0.9375rem;
   padding-bottom: 0.9375rem;

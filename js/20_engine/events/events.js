@@ -1,4 +1,4 @@
-
+console.log('Gestionnaire des événements Chargés');
 const itsEvent = document.querySelectorAll('[data-js]');
 console.log(itsEvent);
 const eventLimit = itsEvent.length
@@ -44,7 +44,16 @@ for (let i = 0 ; i < eventLimit; i++) {
                 /**/
                 case 'sortMedia':
 
-                // on récupère la valeur de trie à passé à la fonction
+                    // on récupère la valeur de trie à passé à la fonction
+                    console.log('On réorganise le tableau');                    
+                    const sortBy_customSelect = target.dataset.value
+
+                    sortDataMedia(sortBy_customSelect)
+                    const elementToEmpty = document.querySelector('.photography')
+
+                    elementToEmpty.querySelectorAll('*').forEach(n => n.remove());
+
+                    showMedia()
                 
                 break;
 

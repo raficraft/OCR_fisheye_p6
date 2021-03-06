@@ -125,18 +125,54 @@ const redifineStyle_StickerIdentity = (target) =>{
 			if(checkURL.request.idURL === false){
 				if(stickerEl.length <= 2 || stickerEl.length === 5 || stickerEl.length === 4){            
 					
-					document.querySelector('.main__wrapper--index').style.justifyContent  = 'center';
+					document.querySelector('.main__wrapper--index').style.justifyContent  = 'center'
 					for(let i = 0; i < stickerEl.length; i++){
-						stickerEl[i].style.marginLeft  = '2rem';
-						stickerEl[i].style.marginRight  = '2rem';
+						stickerEl[i].style.marginLeft  = '2rem'
+						stickerEl[i].style.marginRight  = '2rem'
 					}
 				}
 			}
 		}
 
+}
+
+const sortDataMedia = (sortBy) => {
+
+
+	switch (sortBy){
+
+		case 'popularity':
+			
+			data.media.sort(function(a,b){
+				return b.likes - a.likes
+			})
+			console.log(data.media);
+
+		break;
+
+		case 'date':
+
+			data.media.sort(function(a,b){
+				return new Date(b.date) - new Date(a.date);
+			})
+			console.log(data.media);
+
+		break;
+
+
+		case 'title':
+
+			data.media.sort(function(a,b){
+				return a.alt - b.alt
+			}).reverse()
+			console.log(data.media);
+
+		break;
 
 
 
+
+	}
 }
 
 

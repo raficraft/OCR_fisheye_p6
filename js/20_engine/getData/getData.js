@@ -74,7 +74,10 @@ class getData {
          * Récupère les photos du photographe selon l'ID passer dans l'url
          */
       
-        static getMediaByIdentity(){
+        static getMediaByIdentity(sortValue){
+
+           
+
             let thisMedia =  data.media.filter(el => el.photographerId === checkURL.request.idURL)
             return thisMedia
         }
