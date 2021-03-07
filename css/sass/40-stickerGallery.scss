@@ -1,7 +1,7 @@
 // page gallery
 .main__wrapper--gallery{
 
-  
+   
 
     .sticker{
         flex-direction: row-reverse;
@@ -10,9 +10,9 @@
         margin-bottom : 0;
         width : 100%;
         text-align: left;
-        background-color: $third_background ;
-
+        
         @media screen and (min-width : 768px){
+            background-color: $third_background ;
             justify-content: flex-end;
             padding-top : 4.5rem;
             padding-bottom : 2.625rem;

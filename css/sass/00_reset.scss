@@ -59,4 +59,7 @@ h1{
 	font-family: 'DM sans', sans-serif;
 }
 
-*{box-sizing: border-box;}
+*{ //fait à l'arrache , s'occuper de tous les focus.
+	box-sizing: border-box;
+	outline-offset: 24px ; 
+}

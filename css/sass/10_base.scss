@@ -110,28 +110,32 @@ body{
 
 /*Système de filtre*/
 
-@media screen and (max-width : 767px) {
-    .selectFilter{
-        display : none;
-    }
-}
-.selectFilter--inner{
-   
-    height : 68px;
-    @media screen and (min-width : 767px) {  
-        padding : 0 rem(96);
-        margin : auto;    
-        inline-size: 100%;  
-        padding-bottom : rem(14)    
-    }
-    @media screen and(min-width : 1023px) {
-        inline-size: 1024px; 
-    }
-    @media screen and(min-width : 1439px) {
-        inline-size: 1440px;
-    }
-}
 
+
+.selectFilter{
+    display: flex;
+    justify-content: center;
+
+        @media screen and (max-width : 767px) {
+            display : none;
+        }
+
+    .selectFilter--inner{        
+    
+        @media screen and (min-width : 767px) { 
+            padding : 0 rem(96);
+            inline-size: 100%;  
+            padding-bottom : rem(14)    
+        }
+        @media screen and(min-width : 1023px) {
+            inline-size: 1024px; 
+        }
+        @media screen and(min-width : 1439px) {
+            inline-size: 1440px;
+            
+        }
+    }
+}
 
 /*Gallerie photo*/
 .photography{  
@@ -144,7 +148,7 @@ body{
         inline-size : 100%;
         margin : auto;
         justify-content: space-between;
-        padding : rem(16) rem(96);
+        padding : rem(16) rem(96) rem(96) rem(96);
     }
 
     @media screen and (min-width : 1023px){
@@ -159,15 +163,41 @@ body{
 }
 
 
+/*Gallerie counter*/
+.counterLike{
+    display: none;
+    @media screen and (min-width : 1439px){
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    background-color: $second_background;
+    bottom :0;
+    border-top-left-radius: rem(5);
+    border-top-right-radius: rem(5);
+    right : rem(36);
+    width : 376px;
+    padding : rem(21) rem(34) rem(10) rem(31);
+    z-index : 80;
+    p{
+        font-size: rem(24);
+        font-weight: 500;
+    }
+    .sumLike i{
+        padding-left : rem(4);
+    }
+
+}
 
 
-  .identity,form{
-    box-shadow: 0px 10px 11px 0px rgb(187, 187, 187);
-    
+}
 
-  }
+/*Icone coeur de fontAwesome font */
 
+.fas{
+    transform : scaleX(0.85);
+}
 
+/*
 
 .header__wrapper{
     background-color: rgb(182, 182, 182);
@@ -187,5 +217,5 @@ body{
     background-color: rgb(0, 128, 90);
 }
 
-
+*/
 

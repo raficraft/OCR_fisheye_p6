@@ -2,14 +2,15 @@
     position: fixed;        
     background-color: white;  
     padding : 0;
-    z-index : 100;
+    z-index : 60;
     top : 0;
     bottom :0;
     left : 0;
     right :0;
     display: flex;
-    z-index: 70;
+    z-index: 90;
     border : none;
+    cursor : pointer;
     
 
     .marquise{
@@ -35,9 +36,10 @@
         width : 12px;
         border : none;
         background-color: transparent;
-        z-index: 75;
+        z-index: 30;
         transition : all 0.3s;
         top: 4px;
+        cursor : pointer;
 
         &:hover{
             transform : scale(1.1);
@@ -81,7 +83,7 @@
             top : -1px;
             background-color : $first_color--other;
             display: block;
-            z-index : 35000;
+            z-index : 100;
             transform: rotate(135deg);
             @media screen and (min-width : 1400px){
                 height: 56px;
@@ -97,14 +99,12 @@
     .carousel{
         
         position : relative;
-        z-index: 1;
         overflow: hidden;      
         margin : auto;
         border-radius: 5px;
         width : 289px;
         height : 280px; //273??? 
-        
-        z-index: 80;
+        z-index: 40;
         box-sizing: content-box;
         
         @media screen and (min-width : 1400px){
@@ -117,7 +117,7 @@
         &__container{
            
             position: relative;
-            z-index: 90;
+            z-index: 50;
             transition : transform 0.3s;
             transform : translate3d(0,0,0);  
            
@@ -146,7 +146,7 @@
             background-color: transparent;  
             font-size : rem(13);     
             outline: none;
-            z-index :100;
+            z-index :70;
             cursor : pointer;
             transition :  3s;
             top : 50%;
@@ -237,5 +237,4 @@ figure{
     justify-content: center;
    
 }
-
 

@@ -1,4 +1,4 @@
-class CheckURL{
+class BrowserInfo{
 
     constructor(request={}){
 
@@ -11,8 +11,6 @@ class CheckURL{
         },request)
 
 
-       
-
         if(this.params !== false){
 
             //On récupere les paramètres passer dans l'url (?id='number') || (?tags='string')
@@ -24,16 +22,22 @@ class CheckURL{
             if(paramRequest === 'id'){
                 //On transforme la valeur string en number
                  this.request.idURL = parseInt(valueRequest)
-            }else if(paramRequest === 'tags'){               
+            }else if(paramRequest === 'tags' ){               
                 this.request.tagURL = valueRequest
             }            
+        }else if(this.params === false && this.path === 'gallery'){
+            redirectTo('404.html')
         }
+
     }
+
+ 
+    
 }
 
-const checkURL = new CheckURL;
+const browserInfo = new BrowserInfo;
 
-
+console.log(browserInfo);
 
   
 

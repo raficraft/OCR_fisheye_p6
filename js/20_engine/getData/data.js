@@ -69,7 +69,8 @@ let data = {
         "tags": ["fashion"],
         "likes": 62,
         "date": "2011-12-08",
-        "price": 55
+        "price": 55,
+        "alt" : 'Sous le soleil'
       },
       {
         "id": 8520927,
@@ -78,7 +79,8 @@ let data = {
         "tags": ["fashion"],
         "likes": 11,
         "date": "2011-11-06",
-        "price": 55
+        "price": 55,
+        "alt" : 'Franchir la ligne'
       },
       {
         "id": 9025895,
@@ -87,7 +89,8 @@ let data = {
         "tags": ["fashion"],
         "likes": 72,
         "date": "2013-08-12",
-        "price": 55
+        "price": 55,
+        "alt" : 'Dos au mur'
       },
       {
         "id": 9275938,
@@ -96,7 +99,8 @@ let data = {
         "tags": ["events"],
         "likes": 69,
         "date": "2018-02-22",
-        "price": 55
+        "price": 55,
+        "alt" : 'En attendant l\'instant'
       },
       {
         "id": 2053494,
@@ -105,7 +109,8 @@ let data = {
         "tags": ["events"],
         "likes": 2,
         "date": "2020-05-25",
-        "price": 55
+        "price": 55,
+        "alt" : 'Joie commune'
       },
       {
         "id": 7324238,
@@ -114,7 +119,8 @@ let data = {
         "tags": ["events"],
         "likes": 33,
         "date": "2019-06-12",
-        "price": 55
+        "price": 55,
+        "alt" : 'Happy brithday'
       },
       {
         "id": 8328953,
@@ -123,7 +129,8 @@ let data = {
         "tags": ["art"],
         "likes": 24,
         "date": "2011-12-08",
-        "price": 100
+        "price": 100,
+        "alt" : 'Animaux en bois'
       },
       {
         "id": 7502053,
@@ -132,7 +139,8 @@ let data = {
         "tags": ["art"],
         "likes": 88,
         "date": "2007-05-07",
-        "price": 55
+        "price": 55,
+        "alt" : 'Sortir du cadre'
       },
       {
         "id": 8523492,
@@ -141,7 +149,8 @@ let data = {
         "tags": ["art"],
         "likes": 24,
         "date": "2018-05-05",
-        "price": 55
+        "price": 55,
+        "alt" : 'Perspective urbaine'
       },
       {
         "id": 75902334,
@@ -150,7 +159,8 @@ let data = {
         "tags": ["art"],
         "likes": 75,
         "date": "2019-11-25",
-        "price": 55
+        "price": 55,
+        "alt" : 'Tous des pigeons'
       },
   
       {
@@ -160,7 +170,8 @@ let data = {
         "tags": ["sport"],
         "likes": 52,
         "date": "2013-02-30",
-        "price": 70
+        "price": 70,
+        "alt" : 'En cadence'
       },
       {
         "id": 92758372,
@@ -169,7 +180,8 @@ let data = {
         "tags": ["fashion"],
         "likes": 58,
         "date": "2018-07-17",
-        "price": 70
+        "price": 70,
+        "alt" : 'Ressentir ensemble'
       },
       {
         "id": 32958383,
@@ -178,7 +190,8 @@ let data = {
         "tags": ["fashion"],
         "likes": 11,
         "date": "2019-08-12",
-        "price": 70
+        "price": 70,
+        "alt" : 'Coquelicot'
       },
       {
         "id": 928587383,
@@ -187,7 +200,8 @@ let data = {
         "tags": ["events"],
         "likes": 2,
         "date": "2019-01-02",
-        "price": 70
+        "price": 70,
+        "alt" : 'Kanban système'
       },
       {
         "id": 725639493,
@@ -196,7 +210,8 @@ let data = {
         "tags": ["events"],
         "likes": 3,
         "date": "2019-05-20",
-        "price": 70
+        "price": 70,
+        "alt" : 'Prise de paroles'
       },
       {
         "id": 23394384,
@@ -205,7 +220,8 @@ let data = {
         "tags": ["events"],
         "likes": 52,
         "date": "2019-07-18",
-        "price": 70
+        "price": 70,
+        "alt" : 'Réglages Musical'
       },
       {
         "id": 87367293,
@@ -214,7 +230,8 @@ let data = {
         "tags": ["events"],
         "likes": 23,
         "date": "2018-02-22",
-        "price": 70
+        "price": 70,
+        "alt" : 'Sur scène'
       },
       {
         "id": 593834784,
@@ -223,7 +240,8 @@ let data = {
         "tags": ["animals"],
         "likes": 52,
         "date": "2017-03-13",
-        "price": 70
+        "price": 70,
+        "alt" : 'Face à la nature'
       },
       {
         "id": 83958935,
@@ -232,7 +250,8 @@ let data = {
         "tags": ["animals"],
         "likes": 52,
         "date": "2016-06-12",
-        "price": 70
+        "price": 70,
+        "alt" : 'Innocence dans le sable'
       },
   
       {
@@ -242,7 +261,8 @@ let data = {
         "tags": ["travel"],
         "likes": 23,
         "date": "2017-03-18",
-        "price": 45
+        "price": 45,
+        "alt" : 'A fleur de crète'
       },
       {
         "id": 343423425,
@@ -251,7 +271,8 @@ let data = {
         "tags": ["travel"],
         "likes": 101,
         "date": "2017-04-03",
-        "price": 45
+        "price": 45,
+        "alt" : 'Relaxation'
       },
       {
         "id": 73434243,
@@ -260,7 +281,8 @@ let data = {
         "tags": ["travel"],
         "likes": 99,
         "date": "2018-04-30",
-        "price": 45
+        "price": 45,
+        "alt" : 'Sur la route'
       },
       {
         "id": 23425523,
@@ -269,7 +291,8 @@ let data = {
         "tags": ["travel"],
         "likes": 34,
         "date": "2016-04-05",
-        "price": 45
+        "price": 45,
+        "alt" : 'De l\'autre coté'
       },
       {
         "id": 23134513,
@@ -278,7 +301,8 @@ let data = {
         "tags": ["travel"],
         "likes": 23,
         "date": "2017-03-18",
-        "price": 45
+        "price": 45,
+        "alt" : 'Embarcation vagabonde'
       },
       {
         "id": 92352352,
@@ -287,7 +311,8 @@ let data = {
         "tags": ["portrait"],
         "likes": 66,
         "date": "2018-05-24",
-        "price": 45
+        "price": 45,
+        "alt" : 'Sourire à la vie'
       },
       {
         "id": 34513453,
@@ -296,7 +321,8 @@ let data = {
         "tags": ["portait"],
         "likes": 52,
         "date": "2017-04-21",
-        "price": 45
+        "price": 45,
+        "alt" : 'Clair obscur'
       },
       {
         "id": 23523533,
@@ -305,7 +331,9 @@ let data = {
         "tags": ["portait"],
         "likes": 95,
         "date": "2018-11-02",
-        "price": 45
+        "price": 45,
+        "alt" : 'Inmpassible'
+
       },
       {
         "id": 525834234,
@@ -314,7 +342,8 @@ let data = {
         "tags": ["portait"],
         "likes": 25,
         "date": "2019-01-02",
-        "price": 45
+        "price": 45,
+        "alt" : "Animaux en bois"
       },
   
       {
@@ -416,7 +445,7 @@ let data = {
         "likes": 59,
         "date": "2019-07-02",
         "price": 60,
-        "alt" : "colibri arc en ciel"
+        "alt" : "Arc en ciel"
       },
   
       {
@@ -426,7 +455,8 @@ let data = {
         "tags": ["travel"],
         "likes": 25,
         "date": "2019-04-03",
-        "price": 60
+        "price": 60,
+        "alt" : "Japon traditionelle"
       },
       {
         "id": 2523434,
@@ -435,7 +465,9 @@ let data = {
         "tags": ["travel"],
         "likes": 53,
         "date": "2019-05-06",
-        "price": 60
+        "price": 60,
+        "alt" : "Espoir à Venise"
+        
       },
       {
         "id": 95293534,
@@ -444,7 +476,9 @@ let data = {
         "tags": ["travel"],
         "likes": 33,
         "date": "2019-05-12",
-        "price": 60
+        "price": 60,
+        "alt" : "Au fil de l'eau"
+        
       },
       {
         "id": 356234343,
@@ -453,7 +487,9 @@ let data = {
         "tags": ["travel"],
         "likes": 53,
         "date": "2019-06-20",
-        "price": 60
+        "price": 60,
+        "alt" : "Love in paris"
+        
       },
       {
         "id": 235234343,
@@ -462,7 +498,9 @@ let data = {
         "tags": ["travel"],
         "likes": 63,
         "date": "2019-06-26",
-        "price": 60
+        "price": 60,
+        "alt" : "La porte de l'orient"
+        
       },
       {
         "id": 6234234343,
@@ -471,7 +509,9 @@ let data = {
         "tags": ["architecture"],
         "likes": 52,
         "date": "2019-06-30",
-        "price": 60
+        "price": 60,
+        "alt" : "clocher à bulbe"
+        
       },
       {
         "id": 6525666253,
@@ -480,7 +520,8 @@ let data = {
         "tags": ["architecture"],
         "likes": 63,
         "date": "2019-07-20",
-        "price": 60
+        "price": 60,
+        "alt" : "Village tibétain"
       },
       {
         "id": 98252523433,
@@ -489,7 +530,8 @@ let data = {
         "tags": ["architecture"],
         "likes": 88,
         "date": "2020-01-05",
-        "price": 60
+        "price": 60,
+        "alt" : "Vertige à pise"
       },
       {
         "id": 9259398453,
@@ -498,7 +540,8 @@ let data = {
         "tags": ["architecture"],
         "likes": 57,
         "date": "2020-01-20",
-        "price": 65
+        "price": 65,
+        "alt" : "Canyon de bitume"
       },
       {
         "id": 3523523534,
@@ -507,7 +550,8 @@ let data = {
         "tags": ["architecture"],
         "likes": 54,
         "date": "2020-05-05",
-        "price": 60
+        "price": 60,
+        "alt" : "Haussmann"
       },
   
       {
@@ -608,7 +652,7 @@ let data = {
         "likes": 66,
         "date": "2018-05-20",
         "price": 58,
-        "alt" : "architecture en croix"
+        "alt" : "Architecture en croix"
       },
       {
         "id": 777723343,

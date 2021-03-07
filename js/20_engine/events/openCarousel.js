@@ -1,4 +1,4 @@
-function openCarousel (target){
+const openCarousel = (target) => {
 
     console.log('carroussel');
 

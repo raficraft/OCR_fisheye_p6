@@ -17,21 +17,54 @@ class Carousel{
             currentItem : 0,
             loop : false          
         },options), 
-       
+
+        this.root = document.querySelector('.carousel')
+        this.root.setAttribute('tabindex', '0')
+        this.root.focus()
+        //Ajouter  aria-hidden au contenu du site
         this.container = document.querySelector('.carousel__container');
         this.children = [].slice.call(this.el.children)
         this.item = [].slice.call(document.querySelectorAll('.carousel__item'))
-        this.moveCallbacks = []
 
-
+        let contentImage = document.querySelectorAll('.carousel img')
         let prevBtn = document.querySelector('.carousel__prev')
         let nextBtn = document.querySelector('.carousel__next')
-        let closeBtn = document.querySelector('[data-js="closeCarousel"]')
+        let closeBtn = document.querySelectorAll('[data-js="closeCarousel"]')
 
 
-        nextBtn.addEventListener('click',this.next.bind(this))
-        prevBtn.addEventListener('click',this.prev.bind(this))
-        closeBtn.addEventListener('click',this.deleteCarousel.bind(this))
+        //On empêche la fermeture du carousel si l'on clique dans une image
+        let lenghtContentImage = contentImage.length
+        for(let i = 0; i < lenghtContentImage; i++){
+            contentImage[i].addEventListener('click', (e) => {e.stopPropagation()})
+        }
+
+        nextBtn.addEventListener('click', (e) => {e.stopPropagation(); this.next();})
+        prevBtn.addEventListener('click', (e) => {e.stopPropagation(); this.prev()})
+
+        let limitCloseBtn = closeBtn.length
+        for(let i = 0; i < limitCloseBtn; i++){
+            closeBtn[i].addEventListener('click',(e) => {e.stopPropagation(); this.deleteCarousel()})
+        }
+
+        //Navigation au clavier
+
+        this.root.addEventListener('keyup',e =>{
+
+            if(e.key === 'ArrowRight' || e.key === 'Right'){
+                this.next()
+            }else  if(e.key === 'ArrowLeft' || e.key === 'Left'){
+                this.prev()
+            }
+
+        })
+
+
+
+
+
+
+
+
 
 
         this.setStyle()         
@@ -65,6 +98,7 @@ class Carousel{
     }
 
     deleteCarousel(){
+        console.log('delete')
         document.querySelector('.slider').remove()
     }
 

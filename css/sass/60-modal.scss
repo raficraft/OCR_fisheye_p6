@@ -2,12 +2,9 @@
     position: fixed;    
     width : 100%;
     height : 100vh;
-    z-index : 100;
+    z-index : 70;
     padding : 0;
-    border : none;
-
-    
-    
+    border : none;    
 
        
     form{
@@ -18,12 +15,14 @@
         position : relative;
         border-radius: rem(5);
         height : 812px;
+
        
-        @media screen and (min-width : 1441px){         
+        @media screen and (min-width : 1439px){         
             width : 668px;
             height : 900px;    
             padding : rem(32) rem(35) rem(38) rem(35);
             margin-top : rem(32);
+            box-shadow: 0px 10px 11px 0px rgb(187, 187, 187);
         }
         
 
@@ -39,7 +38,7 @@
             width: rem(27);
             display: flex;
             padding : 0;
-            @media screen and (min-width : 1441px){
+            @media screen and (min-width : 1439px){
          
                 height: rem(42);
                 width : rem(42); 
@@ -59,7 +58,7 @@
                 left: rem(14);
                 cursor : pointer;
 
-                @media screen and (min-width : 1441px){         
+                @media screen and (min-width : 1439px){         
                     top :-4px;        
                     height: rem(50);
                     width : 5px;
@@ -78,7 +77,7 @@
                 top:0;
                 left: rem(14);
                 cursor : pointer;
-                @media screen and (min-width : 1441px){ 
+                @media screen and (min-width : 1439px){ 
                     top :-4px;        
                     height: rem(50);
                     width : 5px;
@@ -109,7 +108,7 @@
 
         legend,h1{
             font-size: rem(36);   
-            @media screen and (min-width : 1441px){         
+            @media screen and (min-width : 1439px){         
                 font-size: rem(64);
             }          
         }
@@ -125,7 +124,7 @@
             flex-direction: column;
             padding-bottom: rem(18);
             width : 100%;
-            @media screen and (min-width : 1441px){         
+            @media screen and (min-width : 1439px){         
                 padding-bottom: rem(10);
             } 
 
@@ -135,7 +134,7 @@
                 border : none;
                 padding : 6px;
 
-                @media screen and (min-width : 1441px){
+                @media screen and (min-width : 1439px){
          
                     height: rem(68);    
                 }
@@ -147,7 +146,7 @@
                     border : none;
                     padding : 6px;
                     margin-bottom: rem(26);
-                    @media screen and (min-width : 1441px){ 
+                    @media screen and (min-width : 1439px){ 
                         height: 170px;  
                     }
                 }
@@ -158,7 +157,7 @@
 
         .btn--modal{
             width : 170px;
-            @media screen and (min-width : 1441px){
+            @media screen and (min-width : 1439px){
          
                 align-self: flex-start; 
                 height: 69px;  

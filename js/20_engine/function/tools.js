@@ -49,9 +49,22 @@ const multipleOfThree = value => {
  * @param {string} goTo  
  */
 
-const redirectionTo = (goTo)=>{
+const redirectTo = (goTo)=>{
 	document.location.href=goTo;
 }
+
+/**
+ * Permute un élément avec le premier enfant du parent
+ * Utile pour le Custom Select
+ * NB : Possibilité de l'amérioler:
+ *  -Permutté deux éléments qu'elle que soit leur position
+ *  -Permuté les éléments adjacents {previousSibling || nextSibling}
+ * @param {HTMLElement} elem 
+ */
+
+function swapDiv(elem) {
+    elem.parentNode.insertBefore(elem, elem.parentNode.firstChild);
+  }
 
 /**
  * Permet de modofier plusieurs attribut en une seul requête
@@ -110,29 +123,29 @@ console.log(dataMedia);
 }
 
 
-const redifineStyle_StickerIdentity = (target) =>{
-
+const redifineDistribution_StickerIdentity = () =>{
 	
 		// Considérant que l'on affiche seulement 6 fiches de photographe
 		// maximum sur la page d'index et qu'au delà un systèmre de pagination
 		// serait pertinent. On gère l'affichage en fonction du nombre de fiche
 		// que l'on affiche, pour garder un rendu visuelle cohérent.
 
-		if(target.classList.contains('main__wrapper')){
-
 			let stickerEl = document.querySelectorAll('.sticker')
-			//NB : Réecrire la condition centre les éléments seulement si ne sont pas des multiple de 3
-			if(checkURL.request.idURL === false){
-				if(stickerEl.length <= 2 || stickerEl.length === 5 || stickerEl.length === 4){            
-					
-					document.querySelector('.main__wrapper--index').style.justifyContent  = 'center'
-					for(let i = 0; i < stickerEl.length; i++){
-						stickerEl[i].style.marginLeft  = '2rem'
-						stickerEl[i].style.marginRight  = '2rem'
-					}
+
+			let size = stickerEl.length
+			
+
+			if(multipleOfThree(size) === false || stickerEl.length === 1){
+
+				document.querySelector('.main__wrapper--index').classList.toggle('orderSticker__mainCenter')
+
+				for(let i = 0; i < size; i++){
+					stickerEl[i].style.marginLeft  = '2rem'
+					stickerEl[i].style.marginRight  = '2rem'
 				}
 			}
-		}
+
+
 
 }
 
@@ -161,11 +174,8 @@ const sortDataMedia = (sortBy) => {
 
 
 		case 'title':
-
-			data.media.sort(function(a,b){
-				return a.alt - b.alt
-			}).reverse()
-			console.log(data.media);
+		
+			data.media.sort((a, b) => a.alt.localeCompare(b.alt, 'fr', {ignorePunctuation: true}));
 
 		break;
 

@@ -1,5 +1,13 @@
 function componentsFactory(){
 
+    /**
+     * 
+     * @param {JSON} dataJSON 
+     * @param {string} method 
+     * @returns {Array}
+     */
+
+    sortDataMedia('popularity') 
     this.createComponents = function(dataJSON,method){
 
         let makeComponent = []; 
@@ -7,7 +15,7 @@ function componentsFactory(){
         
         switch(method){
 
-            case 'allIdentities':
+            case 'identities':
                 //On boucle sur les identités
                 dataJSON.map(function(identitys){  
                     makeComponent[i] = new createSticker(identitys)
@@ -28,18 +36,25 @@ function componentsFactory(){
 
                 if(media.image){
                 //On construit l'élément HTML pour les images
-                    makeComponent[i] = new createImage(media,i); //NB verifier l'intérêt de passer l'increment à l'atelier 
+                    makeComponent[i] = new createImage(media,i) //NB verifier l'intérêt de passer l'increment à l'atelier 
                     i++
                 }
 
                 if(media.video){
                 //On construit l'élément HTML pour les video
-                    makeComponent[i] = new createVideo(media,i);
+                    makeComponent[i] = new createVideo(media,i)
                     i++
                 }
           
               })      
                 
+            break;
+
+
+            case 'makeCounter' : 
+
+                makeComponent = new createCounter(dataJSON)
+
             break;
         }
 
@@ -67,8 +82,7 @@ function renderComponent(showThis,target,method){
                 })
             }
 
-            redifineStyle_StickerIdentity(target) //voir function/tools.js NB : écrire la doc dans tools.js
-
+          
 
         break;
 
@@ -80,6 +94,11 @@ function renderComponent(showThis,target,method){
                 
             })
 
+        break;
+
+        case 'counter' :
+             target.insertAdjacentHTML("beforeend",showThis.elHTML)              
+      
         break;
 
     } 
