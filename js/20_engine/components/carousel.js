@@ -61,12 +61,6 @@ class Carousel{
 
 
 
-
-
-
-
-
-
         this.setStyle()         
         // Si l'item courant est passé via l'exterieur.
         // On positionne le slider sur celui-ci.
@@ -100,6 +94,8 @@ class Carousel{
     deleteCarousel(){
         console.log('delete')
         document.querySelector('.slider').remove()
+        let bodyElt = document.body
+        bodyElt.style.overflow = "scroll";
     }
 
     /**
