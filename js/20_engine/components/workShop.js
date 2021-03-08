@@ -1,5 +1,3 @@
-
-
 //Constructeur d'etiquette  
 let createSticker = function(thisData){
 
@@ -37,6 +35,7 @@ let createSticker = function(thisData){
             </article>
         </article>` 
 }
+
 
 
 
@@ -161,7 +160,7 @@ let createImage = function (thisData,inc,) {
   let createModalForm = function(){
 
 
-    thisData = getData.getIdentity()
+    thisData = GetData.getIdentity()
 
 
     this.elHTML = 

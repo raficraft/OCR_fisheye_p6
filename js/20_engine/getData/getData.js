@@ -1,4 +1,4 @@
-class getData {
+class GetData {
         
       /** 
        * @param {JSON} data  Tableau json contenant les photographes et les photos
@@ -30,7 +30,7 @@ class getData {
             // Données de sorties
             let sortIdentity =[]
 
-            let identities = getData.getIdentities() //toutes les identité
+            let identities = GetData.getIdentities() //toutes les identité
             let identitysLength = identities.length;
             
             for(let i=0;i<identitysLength;i++){
@@ -85,8 +85,8 @@ class getData {
 
         static getCountLike(){
 
-          let mediasByIdentity_JSON = getData.getMediaByIdentity(data)
-          let identity_JSON = getData.getIdentity(data)
+          let mediasByIdentity_JSON = GetData.getMediaByIdentity(data)
+          let identity_JSON = GetData.getIdentity(data)
   
           let countLike = 0;
           let thisPrice = identity_JSON.price

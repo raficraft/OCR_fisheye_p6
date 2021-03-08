@@ -1,68 +1,63 @@
 
 
+    //Exectuion de l'usine et de ses ateliers    
+    let getComponent = new componentsFactory()  
 
-
-    const methodRenderIdentity = 'identity' 
-    const methodRenderMedia_Gallery = 'media'
-    const methodRenderCounter_Gallery = 'counter'
-    const methodRenderModalForm_Gallery = 'modalForm'
-    const methodRenderCarousel_Gallery = 'carousel'
     //Container recevant les données créer par la factory et envoyé au rendu
     const targetIdentity = document.getElementById("main__wrapper");
     const targetMedia = document.querySelector('.photography');  
     const targetRoot = document.getElementById('body')
-
-
-    //Exectuion de l'usine et de ses ateliers    
-    let getComponent = new componentsFactory()    
+    
 
     //gallery.html
 
     const showIdentity = () => {
-
         //On récupère l'identités liés à l'id passé en url   {?id=id}     
-        let identity_JSON = getData.getIdentity()
+        let identity_JSON = GetData.getIdentity()
         //On passe le JSON dans la factory
         const identityComponent = getComponent.createComponents('oneIdentity',identity_JSON) 
-        renderComponent(identityComponent,targetIdentity,methodRenderIdentity)
+        renderComponent(identityComponent,targetIdentity)
     }
 
     const showMedia = () => {   
            
         //On récupère les media liés à l'ID du photographe passé en URL,trié selon leur popularité {?id=id} 
-        let mediasByIdentity_JSON = getData.getMediaByIdentity()
+        let mediasByIdentity_JSON = GetData.getMediaByIdentity()
         //On passe le JSON dans la factory
         let mediaComponent =  getComponent.createComponents('makeMedia',mediasByIdentity_JSON)
-        renderComponent(mediaComponent,targetMedia,methodRenderMedia_Gallery)
+        renderComponent(mediaComponent,targetMedia)
     }
 
 
     const showCounter = () => {
         console.error('showCounter');      
-        let counter_JSON = getData.getCountLike()
+        let counter_JSON = GetData.getCountLike()
         let counterComponent = getComponent.createComponents('makeCounter',counter_JSON)
-        renderComponent(counterComponent,targetRoot,methodRenderCounter_Gallery)
+        renderComponent(counterComponent,targetRoot)
     }
 
     const showModalForm = () => {
         console.error('modalForm');      
         let modalFormComponent = getComponent.createComponents('modalForm')
         console.log(modalFormComponent);
-        renderComponent(modalFormComponent,targetRoot,methodRenderModalForm_Gallery)
+        renderComponent(modalFormComponent,targetRoot)
     }
 
 
     const showCarousel = () => {
         console.error('Carousel');  
-        let mediasByIdentity_JSON = getData.getMediaByIdentity()    
+        let mediasByIdentity_JSON = GetData.getMediaByIdentity()    
         let carouselComponent = getComponent.createComponents('carousel',mediasByIdentity_JSON)
         console.log(carouselComponent);
-        renderComponent(carouselComponent,targetRoot,methodRenderCarousel_Gallery)
+        renderComponent(carouselComponent,targetRoot)
     }
     
   
+    //render
 
         //Affichage pour la page Gallery
+        //showIdentity()
+
         showIdentity()
         showMedia()
         showCounter()
@@ -76,3 +71,4 @@
             currentItem : 0,
             loog : true
         })
+ 

@@ -93,7 +93,7 @@ const setAttributes = (el, options) => {
 const alterateMediaObject = (dataMedia) =>{
 
 		//On ajoute des entrées au tableau passés en argument
-		let thisData = getData.getIdentity()
+		let thisData = GetData.getIdentity()
 		console.log(thisData);
 		let tabName = thisData.name.split(' ');
 		let name = tabName[0]

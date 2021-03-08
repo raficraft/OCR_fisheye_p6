@@ -29,15 +29,31 @@ class BrowserInfo{
             redirectTo('404.html')
         }
 
-    }
-
- 
-    
+    }    
 }
 
 const browserInfo = new BrowserInfo;
 
-console.log(browserInfo);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 

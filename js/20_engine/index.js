@@ -1,29 +1,25 @@
 
-    const methodRenderIdentity = 'identity' 
-    const targetIdentity = document.getElementById("main__wrapper");
-    
+   
+    const targetIdentity = document.getElementById("main__wrapper");    
     let getComponent = new componentsFactory() 
-
 
     const showIdentities = () =>{
         
         //On récupère l'identités liés au TAG passé en url   {?tags=tag}   
         
-        let identities_JSON = getData.getIdentities() 
-        console.log(identities_JSON)
+        let identities_JSON = GetData.getIdentities() 
         //on passe l'identité dans l'usine
         let identityComponent = getComponent.createComponents('identities',identities_JSON)
-        renderComponent(identityComponent,targetIdentity,methodRenderIdentity)
+        renderComponent(identityComponent,targetIdentity)
     }
     
 
      const showIdentityByTag = () =>{
-        console.log('ok')
-        let identityByTag_JSON = getData.getIdentitiesByTag(browserInfo.request.tagURL)
-        console.log(identityByTag_JSON) 
+
+        let identityByTag_JSON = GetData.getIdentitiesByTag(browserInfo.request.tagURL)
         //on passe l'identité dans la factory
         let identityComponent = getComponent.createComponents('identities',identityByTag_JSON) 
-        renderComponent(identityComponent,targetIdentity,methodRenderIdentity)
+        renderComponent(identityComponent,targetIdentity)
     }
 
 
