@@ -67,6 +67,7 @@ function componentsFactory(){
 
 }
 
+
 /**
  * 
  * @param {Object} showThis Element HTML commandé par la factory au usine factory/workshop.js
