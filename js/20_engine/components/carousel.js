@@ -43,7 +43,7 @@ class Carousel{
 
         let limitCloseBtn = closeBtn.length
         for(let i = 0; i < limitCloseBtn; i++){
-            closeBtn[i].addEventListener('click',(e) => {e.stopPropagation(); this.deleteCarousel()})
+            closeBtn[i].addEventListener('click',(e) => {e.stopPropagation(); console.log(e.target); this.deleteCarousel()})
         }
 
         //Navigation au clavier
@@ -94,8 +94,7 @@ class Carousel{
     deleteCarousel(){
         console.log('delete')
         document.querySelector('.slider').remove()
-        let bodyElt = document.body
-        bodyElt.style.overflow = "scroll";
+        restoreScrollBar()
     }
 
     /**

@@ -185,5 +185,34 @@ const sortDataMedia = (sortBy) => {
 	}
 }
 
+/**
+ * Permet de masquer la scroll lors de
+ * l'affichage d'une boite de dialog 
+ * prenant toute la surface de l'écran
+ */
+const hiddenScrollBar= () => {
+	let htmlElt = document.documentElement
+    let bodyElt = document.body
+    //Enlève la scrollbar lors de l'ouverture du carousel.
+    htmlElt.scrollTop = 0;
+    bodyElt.scrollTop = 0;
+    bodyElt.style.overflow = "hidden"
+}
+
+
+
+const restoreScrollBar = () => {
+	let bodyElt = document.body
+        bodyElt.style.overflow = "scroll";
+}
+
+
+let deleteDialogForm = ()=>{
+    console.log('delete')
+    document.querySelector('.dialogBox').remove()
+    restoreScrollBar()
+}
+
+
 
 

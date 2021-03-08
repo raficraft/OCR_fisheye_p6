@@ -473,11 +473,12 @@ body {
     align-self: flex-start;
     margin: 0 4.5rem 0 2rem;
   }
-  .main__wrapper--gallery .sticker__info h2 {
+  .main__wrapper--gallery .sticker__info h1 {
     display: flex;
     margin-bottom: 1.5rem;
     margin-left: 0.0625rem;
     font-size: 4rem;
+    color: #d3573c;
   }
 }
 .main__wrapper--gallery .sticker header {
@@ -593,7 +594,7 @@ body {
     font-size: 24px;
   }
 }
-.sticker__media--info p {
+.sticker__media--info h2 {
   flex-wrap: nowrap;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -647,9 +648,15 @@ body {
   position: fixed;
   width: 100%;
   height: 100vh;
-  z-index: 70;
+  z-index: 200;
   padding: 0;
   border: none;
+  background-color: white;
+  -webkit-overflow-scrolling: touch;
+}
+.dialogBox[aria-hidden=true] {
+  visibility: hidden;
+  opacity: 0;
 }
 .dialogBox form {
   width: 375px;
@@ -672,7 +679,6 @@ body {
 .dialogBox form .dialogBox__close {
   background-color: transparent;
   border: none;
-  outline: none;
   position: absolute;
   right: 1.5625rem;
   top: 1.6875rem;
@@ -811,6 +817,10 @@ body {
   z-index: 90;
   border: none;
   cursor: pointer;
+}
+.slider[aria-hidden=true] {
+  visibility: hidden;
+  opacity: 0;
 }
 .slider .marquise {
   width: 289px;

@@ -1,25 +1,26 @@
 function componentsFactory(){
 
-    /**
-     * 
+    /** 
      * @param {JSON} dataJSON 
      * @param {string} method 
      * @returns {Array}
      */
 
-    sortDataMedia('popularity') 
-    this.createComponents = function(dataJSON,method){
+    sortDataMedia('popularity')  // Réordonnancement du tableau avant usage
+    
+    this.createComponents = function(method,dataJSON){
 
         let makeComponent = []; 
-        let i=0;
+        let inc=0;
         
         switch(method){
 
             case 'identities':
+                
                 //On boucle sur les identités
                 dataJSON.map(function(identitys){  
-                    makeComponent[i] = new createSticker(identitys)
-                    i++                 
+                    makeComponent[inc] = new createSticker(identitys)
+                    inc++                 
                 })
             break;
 
@@ -36,25 +37,28 @@ function componentsFactory(){
 
                 if(media.image){
                 //On construit l'élément HTML pour les images
-                    makeComponent[i] = new createImage(media,i) //NB verifier l'intérêt de passer l'increment à l'atelier 
-                    i++
+                    makeComponent[inc] = new createImage(media,inc) 
+                    inc++
                 }
 
                 if(media.video){
                 //On construit l'élément HTML pour les video
-                    makeComponent[i] = new createVideo(media,i)
-                    i++
-                }
-          
+                    makeComponent[inc] = new createVideo(media,inc)
+                    inc++
+                }          
               })      
                 
             break;
 
-
             case 'makeCounter' : 
-
                 makeComponent = new createCounter(dataJSON)
+            break;
 
+            case 'modalForm' : 
+                makeComponent = new createModalForm(dataJSON)
+            break;
+            case 'carousel' : 
+                makeComponent = new createCarousel(dataJSON)
             break;
         }
 
@@ -63,12 +67,26 @@ function componentsFactory(){
 
 }
 
-//Affiche le contenue produit par de l'usine
+/**
+ * 
+ * @param {Object} showThis Element HTML commandé par la factory au usine factory/workshop.js
+ * @param {HTMLElement} target 
+ * @param {string} method 
+ */
 function renderComponent(showThis,target,method){
+
+    console.error('affichage via render Component '+method); 
+    console.error(typeof showThis); 
+    console.error('Longueur de l\'élément à afficher : '+showThis.length); 
+    console.error('Size de l\'élément à afficher : '+Object.isFrozen(showThis)); 
+
+
 
     switch(method){
 
         case 'identity':
+
+
 
             //Dans le cas ou le tableau ne contient qu'une seul entrée NB : 1 entrée mais longueur inexistante !?
             if(!showThis.length){
@@ -77,8 +95,8 @@ function renderComponent(showThis,target,method){
 
             }else{
 
-                showThis.map(function(thisIdentity){
-                    target.insertAdjacentHTML("beforeend",thisIdentity.elHTML) 
+                showThis.map(function(showThis){
+                    target.insertAdjacentHTML("beforeend",showThis.elHTML) 
                 })
             }
 
@@ -88,9 +106,9 @@ function renderComponent(showThis,target,method){
 
         case 'media' :
 
-            showThis.map(function(media){  
+            showThis.map(function(showThis){  
     
-                target.insertAdjacentHTML("beforeend",media.elHTML)
+                target.insertAdjacentHTML("beforeend",showThis.elHTML)
                 
             })
 
@@ -99,6 +117,18 @@ function renderComponent(showThis,target,method){
         case 'counter' :
              target.insertAdjacentHTML("beforeend",showThis.elHTML)              
       
+        break;
+
+
+        case 'modalForm' :
+            target.insertAdjacentHTML("beforeend",showThis.elHTML)  
+        
+        break;
+
+
+        case 'carousel' :
+            target.insertAdjacentHTML("beforeend",showThis.elHTML)  
+        
         break;
 
     } 

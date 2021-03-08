@@ -332,7 +332,7 @@ let data = {
         "likes": 95,
         "date": "2018-11-02",
         "price": 45,
-        "alt" : 'Inmpassible'
+        "alt" : 'Impassible'
 
       },
       {

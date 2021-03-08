@@ -1,0 +1,40 @@
+
+    const methodRenderIdentity = 'identity' 
+    const targetIdentity = document.getElementById("main__wrapper");
+    
+    let getComponent = new componentsFactory() 
+
+
+    const showIdentities = () =>{
+        
+        //On récupère l'identités liés au TAG passé en url   {?tags=tag}   
+        
+        let identities_JSON = getData.getIdentities() 
+        console.log(identities_JSON)
+        //on passe l'identité dans l'usine
+        let identityComponent = getComponent.createComponents('identities',identities_JSON)
+        renderComponent(identityComponent,targetIdentity,methodRenderIdentity)
+    }
+    
+
+     const showIdentityByTag = () =>{
+        console.log('ok')
+        let identityByTag_JSON = getData.getIdentitiesByTag(browserInfo.request.tagURL)
+        console.log(identityByTag_JSON) 
+        //on passe l'identité dans la factory
+        let identityComponent = getComponent.createComponents('identities',identityByTag_JSON) 
+        renderComponent(identityComponent,targetIdentity,methodRenderIdentity)
+    }
+
+
+
+    if(browserInfo.request.tagURL === false){
+
+        showIdentities()
+        
+       }else{    
+           
+           showIdentityByTag()
+           redifineDistribution_StickerIdentity() //voir function/tools.js NB : écrire la doc dans tools.js
+
+    }

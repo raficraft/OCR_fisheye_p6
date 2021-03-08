@@ -6,17 +6,16 @@ for (let i = 0 ; i < eventLimit; i++) {
 
     itsEvent[i].addEventListener('click',function(e){   
 
+        e.preventDefault();        
+        e.stopPropagation()
         console.log(e);
         console.log(e.target);
+        console.log('click');
 
         // Gestion des événement filtrer avec l'attribut data-js présent sur l'élément clické
         // La valeur de l'attribut indique qu'elle action effectué
-        e.preventDefault();
-
-        console.log('click');
-
+      
         if(e.target.dataset){
-
             
         
             let el = e.target;
@@ -30,22 +29,54 @@ for (let i = 0 ; i < eventLimit; i++) {
 
                 case 'openFormContact' :
 
-                    openFormContact()
+                    //On passe le main avec un attribut Aria-hidden
+                    let webSiteHidden = document.querySelector('#main')
+                    let showDialogBox = document.querySelector('#dialog')
+                    webSiteHidden.setAttribute('aria-hidden', 'true');
+                    //On affiche la boite de dialog
+                    showDialogBox.setAttribute('aria-hidden', false);
+                    //on focus sur le premier champ de saisie
+                    let inputFirst = document.querySelector('#firstname')
+                    inputFirst.focus()
 
-                break;          
+
+
+                break;   
+                
+                case 'closeModal':
+
+
+                    let webSiteShow = document.querySelector('#main')
+                    let dialogBoxClose = document.querySelector('#dialog')
+                    webSiteShow.setAttribute('aria-hidden', 'false');
+                    //On affiche la boite de dialog
+                    dialogBoxClose.setAttribute('aria-hidden', true);
+
+                break;
+
+                case 'submitModal':
+
+                    console.log('Soumettre le formulaire');
+
+                break;
 
                 case 'openCarousel':
-                    console.log('openCarousel');
-                   
-                    openCarousel(target);
-                
+                   /*
+                    let item = parseInt(target.dataset.item); 
+
+                    new Carousel(document.querySelector('.carousel__container'),{
+                        slidesToScroll : 1,
+                        slidesVisible : 1,
+                        currentItem : 0,
+                        loog : true
+                    })
+                    */
                 break;
 
                 /**/
                 case 'sortMedia':
 
-                    // on récupère la valeur de trie à passé à la fonction
-                    console.log('On réorganise le tableau');                    
+                    // on récupère la valeur de trie à passé à la fonction                 
                     const sortBy_customSelect = target.dataset.value
 
                     sortDataMedia(sortBy_customSelect)
@@ -78,13 +109,16 @@ for (let i = 0 ; i < eventLimit; i++) {
 
                     let sumLikeElement = document.querySelector('.sumLike')
                     sumLikeElement.innerHTML = `${sumLike}<i class="fas fa-heart fontIcon"></i>`
+                
+                
+                break;    
+                
+                
+                case 'closeContact ': 
 
-           
-                
+                    console.log('la putain de sa mère')
 
-                
-                
-                break;          
+                break
             
             
 

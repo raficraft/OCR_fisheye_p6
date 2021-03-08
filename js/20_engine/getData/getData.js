@@ -9,11 +9,7 @@ class getData {
           this.data = data;
           this.idURL = idURL;
 
-          console.log(this.idURL);
-
         }
-      
-
 
         /**
          *  Recupère tous les profils des photographes .
@@ -81,8 +77,6 @@ class getData {
          * Récupère les photos du photographe selon l'ID passer dans l'url
          */      
         static getMediaByIdentity(){
-
-          console.log('getMedia');
          
             let thisMedia =  data.media.filter(el => el.photographerId === browserInfo.request.idURL)          
             return thisMedia
@@ -112,4 +106,3 @@ class getData {
 
 
 
-console.log(window.innerHeight)
