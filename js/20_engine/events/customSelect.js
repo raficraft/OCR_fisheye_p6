@@ -1,9 +1,22 @@
 document.querySelector('.custom-select-wrapper').addEventListener('click', function() {
-    this.querySelector('.custom-select').classList.toggle('open');
+
+    const selectBody = this.querySelector('.custom-select');
+
+    selectBody.classList.toggle('open');
+
+    if(selectBody.getAttribute('aria-expanded') === 'false'){
+        selectBody.setAttribute('aria-expanded', 'true');
+    }else{
+        selectBody.setAttribute('aria-expanded', 'true');
+    }
+    
+    
 })
 
 for (const option of document.querySelectorAll(".custom-option")) {
     option.addEventListener('click', function() {
+
+       
 
         document.querySelector('.custom-hidden').classList.remove('custom-hidden');
         
@@ -21,6 +34,7 @@ window.addEventListener('click', function(e) {
     const select = document.querySelector('.custom-select')
     if (!select.contains(e.target)) {
         select.classList.remove('open');
+        select.setAttribute('aria-expanded', 'false');
     }
 });
 

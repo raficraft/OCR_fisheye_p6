@@ -9,18 +9,21 @@
     <!-- rule css font-family: 'DM Sans', sans-serif;-->
       
     <script src="js/20_engine/function/tools.js" defer></script>
-    <script src="js/20_engine/function/customSelect.js" defer></script>       
-    <script src="js/20_engine/function/carousel.js" defer></script>   
-
+    <script src="js/20_engine/function/carousel.js" defer></script>  
+    
+    
     <script src="js/20_engine/getData/data.js" defer></script>
     <script src="js/20_engine/getData/getData.js" defer></script>
     <script src="js/20_engine/getData/browserInfo.js" defer></script>      
     
     <script src="js/20_engine/components/workShop.js" defer></script>       
     <script src="js/20_engine/factory/factoryComponents.js" ></script> 
-
     
-    <script src="js/20_engine/gallery.js" defer></script>  
+    
+    <script src="js/20_engine/gallery.js" defer></script> 
+    
+    <script src="js/20_engine/events/customSelect.js" defer></script>       
+    <script src="js/20_engine/events/events.js" defer></script>  
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">  
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -54,20 +57,46 @@
         
       </section>
       
-      <div class="selectFilter">
-        <div class="selectFilter--inner">
+      <div  class="selectFilter" aria-hidden="true">
+        <div class="selectFilter--inner" aria-hidden="true">
           
-          <label for="customSelect">Trier Par</label>
+          <label id="listox-label" for="custom-select">Trier Par</label>
           
-          <div class="custom-select-wrapper">
-            <div class="custom-select">
-              <button class="custom-select__trigger" id="customSelect"><span>Popularité</span>
+          <div class="custom-select-wrapper" role="listbox" tabindex="0"
+          aria-labelledby="listox-label">
+            <div class="custom-select"
+                  aria-labelledby="listox-label" 
+                  aria-activedescendant="listbox1-1"
+                  aria-haspopup="listbox"
+                  aria-selected="true"
+                  aria-expanded="false">
+
+              <button id="custom-select__trigger" class="custom-select__trigger"
+                       role="option"
+                       aria-labelledby="listox-label">
+                       <span>Popularité</span>
                 <div class="arrow"></div>
               </button>
-              <div class="custom-options">
-                <button class="custom-option selected custom-hidden" data-value="popularity" data-js='sortMedia'><span>Popularité</span></button>
-                <button class="custom-option" data-value="date" data-js='sortMedia'><span>Date</span></button>
-                <button class="custom-option" data-value="title" data-js='sortMedia'><span>Titre</span></button>
+
+              <div class="custom-options" aria-hidden="true">
+                <button id="custom-option1-1" class="custom-option selected custom-hidden"
+                        data-value="popularity" data-js='sortMedia' role="option"
+                        aria-labelledby="listox-label">
+                        <span>Popularité</span>
+                </button>
+
+                <button id="custom-option1-2" class="custom-option" 
+                        data-value="date" data-js='sortMedia' role="option"
+                        aria-labelledby="listox-label">
+                        <span>Date</span>
+                </button>
+
+                <button id="custom-option1-3" class="custom-option" 
+                        data-value="title" data-js='sortMedia' role="option"
+                        aria-labelledby="listox-label">
+                        <span>Titre</span>
+                </button>
+
               </div>
             </div>
           </div>   
@@ -94,7 +123,7 @@
    
   </body>
   
-  <script src="js/20_engine/events/events.js" defer></script> 
+ 
   
   
   </html>
