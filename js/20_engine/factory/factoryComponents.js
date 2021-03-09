@@ -32,19 +32,19 @@ function componentsFactory(){
             case 'makeMedia' : 
 
                 alterateMediaObject(dataJSON) //NB ecrire la doc dans tools
-
+            
                 dataJSON.map(function(media){  
 
                     if(media.image){
                     //On construit l'élément HTML pour les images
                         makeComponent[inc] = new createImage(media,inc) 
-                        inc++
+                        inc++                      
                     }
 
                     if(media.video){
                     //On construit l'élément HTML pour les video
                         makeComponent[inc] = new createVideo(media,inc)
-                        inc++
+                        inc++                        
                     }          
                 })      
                 

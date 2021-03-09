@@ -74,9 +74,6 @@ function swapDiv(elem) {
 
 
 const setAttributes = (el, options) => {
-
-	console.log(typeof options);
-
 	Object.keys(options).forEach(function(attr) {
 	  el.setAttribute(attr, options[attr]);
 	})
@@ -94,7 +91,6 @@ const alterateMediaObject = (dataMedia) =>{
 
 		//On ajoute des entrées au tableau passés en argument
 		let thisData = GetData.getIdentity()
-		console.log(thisData);
 		let tabName = thisData.name.split(' ');
 		let name = tabName[0]
 		
@@ -117,9 +113,6 @@ const alterateMediaObject = (dataMedia) =>{
 			dataMedia[i][k1] = v1+i
 	
 		}
-
-console.log(dataMedia);
-
 }
 
 
@@ -159,7 +152,6 @@ const sortDataMedia = (sortBy) => {
 			data.media.sort(function(a,b){
 				return b.likes - a.likes
 			})
-			console.log(data.media);
 
 		break;
 
@@ -168,7 +160,6 @@ const sortDataMedia = (sortBy) => {
 			data.media.sort(function(a,b){
 				return new Date(b.date) - new Date(a.date);
 			})
-			console.log(data.media);
 
 		break;
 
@@ -208,7 +199,6 @@ const restoreScrollBar = () => {
 
 
 let deleteDialogForm = ()=>{
-    console.log('delete')
     document.querySelector('.dialogBox').remove()
     restoreScrollBar()
 }

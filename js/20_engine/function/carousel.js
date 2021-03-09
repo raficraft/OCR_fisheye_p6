@@ -43,7 +43,7 @@ class Carousel{
 
         let limitCloseBtn = closeBtn.length
         for(let i = 0; i < limitCloseBtn; i++){
-            closeBtn[i].addEventListener('click',(e) => {e.stopPropagation(); console.log(e.target); this.deleteCarousel()})
+            closeBtn[i].addEventListener('click',(e) => {e.stopPropagation(); this.closeCarousel()})
         }
 
         //Navigation au clavier
@@ -91,10 +91,10 @@ class Carousel{
         this.goToItem(this.options.currentItem - this.options.slidesToScroll)
     }
 
-    deleteCarousel(){
-        console.log('delete')
-        document.querySelector('.slider').remove()
+    closeCarousel(){                
         restoreScrollBar()
+        document.querySelector('.slider').setAttribute('aria-hidden', true);
+        document.querySelector('#main').setAttribute('aria-hidden', false)
     }
 
     /**

@@ -37,18 +37,12 @@ let medias = getData.getMediaByIdentity(data)
 let newMedia =  factory.createMedia(medias)
 
 function renderComponent(showThis,target){
-
-  console.log(showThis);
-  console.log(typeof showThis);
-  
   
   showThis.map(function(media){  
     
     target.insertAdjacentHTML("afterbegin",media.elHTML)
     
   })
-  
-  
   
 }
 let targetMedia = document.querySelector('.photography');  

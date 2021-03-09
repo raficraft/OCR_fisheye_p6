@@ -29,26 +29,21 @@
     }
 
 
-    const showCounter = () => {
-        console.error('showCounter');      
+    const showCounter = () => {     
         let counter_JSON = GetData.getCountLike()
         let counterComponent = getComponent.createComponents('makeCounter',counter_JSON)
         renderComponent(counterComponent,targetRoot)
     }
 
-    const showModalForm = () => {
-        console.error('modalForm');      
+    const showModalForm = () => {    
         let modalFormComponent = getComponent.createComponents('modalForm')
-        console.log(modalFormComponent);
         renderComponent(modalFormComponent,targetRoot)
     }
 
 
     const showCarousel = () => {
-        console.error('Carousel');  
         let mediasByIdentity_JSON = GetData.getMediaByIdentity()    
         let carouselComponent = getComponent.createComponents('carousel',mediasByIdentity_JSON)
-        console.log(carouselComponent);
         renderComponent(carouselComponent,targetRoot)
     }
     

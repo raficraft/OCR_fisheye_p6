@@ -3,13 +3,12 @@ class BrowserInfo{
     constructor(request={}){
 
         this.pathArray   = window.location.pathname.substring(1).split('.')
-        this.path        = this.pathArray[0]
+        this.path        = this.path  ? this.path = this.pathArray[0] : this.path = 'index'
         this.params      = window.location.search ? window.location.search  : false        
         this.request     = Object.assign({},{
             idURL : false,
             tagURL : false         
         },request)
-
 
         if(this.params !== false){
 
