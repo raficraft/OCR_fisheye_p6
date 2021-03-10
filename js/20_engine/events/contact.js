@@ -9,13 +9,13 @@ let openFormContact = () =>{
 }
 
 
-let closeModal = () => {
+let closeModal = (target) => {
 
     restoreScrollBar()
     document.querySelector('#main').setAttribute('aria-hidden', false);
     document.querySelector('#dialog').setAttribute('aria-hidden', true);
 
     //On repositionne le focus sur le bouton de contact
-    document.querySelector('.btn--highRes').focus()
+    target.focus()
 
 }

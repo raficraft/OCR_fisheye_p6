@@ -1,6 +1,6 @@
 .slider{
     position: fixed;        
-    background-color: white;  
+    background-color: white;
     padding : 0;
     z-index : 60;
     top : 0;
@@ -15,35 +15,41 @@
         visibility: hidden;
         opacity: 0;
       }
+      @media screen and (min-width:1439px){
+        
+        background-color: rgba(0,0,0,0.5); 
+      }
     
 
     .marquise{
-        width : 289px;
-        height : 280px;
+        width : 400px;
+        height : 320px;
         position : relative;
         margin : auto;
+        background-color: rgb(172, 242, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         @media screen and (min-width:1439px){
-            width: 1050px;
-            height: 980px;
+            width: 980px;
+            height:800px;
         }
 
     }
 
-  
-
     .sliderBox__close{
         position: absolute;
-        top : 0px;
-        right : -20px;
+        top : 24px;
+        right : 24px;
         height: 12px;
         width : 12px;
         border : none;
         background-color: transparent;
         z-index: 30;
         transition : all 0.3s;
-        top: 4px;
         cursor : pointer;
+        background-color: yellow;
 
         &:hover{
             transform : scale(1.1);
@@ -51,11 +57,9 @@
         @media screen and (min-width : 1400px){
             height: 42px;
             width: 42px;
-            right :-69px;
-            top : 15px;
+            right :40px;
+            top : 60px;
         }
-        
-
 
         &:before{
             position : absolute;
@@ -102,18 +106,24 @@
 
     .carousel{
         
-        position : relative;
-        overflow: hidden;      
+        position : relative;     
         margin : auto;
         border-radius: 5px;
         width : 289px;
         height : 280px; //273??? 
         z-index: 40;
         box-sizing: content-box;
+        overflow : hidden;
         
-        @media screen and (min-width : 1400px){
-            width : 1050px;
-            height : 960px;
+        @media screen and (min-width : 1439px){
+
+            //Un problème survient sur la hauteur du carousel
+            // et fait disparaite le titre de l'image 
+            //si le dimensionnment est trop grand
+            
+            width : 800px;
+            height : 720px;
+            margin-top : 40px
         }
 
      
@@ -124,11 +134,35 @@
             z-index: 50;
             transition : transform 0.3s;
             transform : translate3d(0,0,0);  
+            display: flex;
            
         }
 
         &__item{
-            p{
+            height : 685px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            video{
+                width : 800px;
+                height: 450px;
+                transform: translateY(25%);
+                
+            }
+
+            .flexImg{
+                justify-content: center;
+                height: 685px;
+                background-color: black;
+               
+            }
+
+            .imgFlex{
+                height: 685px;
+            }
+
+            figcaption{
                 margin-top : rem(7);
                 font-size: rem(14);
                 line-height: 18px;
@@ -138,6 +172,8 @@
                     margin-top: rem(12);
                 }
             }
+
+                
         }
      
 
@@ -169,10 +205,13 @@
 
         &__prev{
            
-            transform: translateY(-100%);
-            left : -30px;       
+            left : 10px; 
+            top : 25%;
+            background-color: yellow;
+            height: 50%;      
             @media screen and (min-width : 1400px){
-                left: -65px;
+             
+                left: 30px;
             }
             
           
@@ -181,11 +220,15 @@
 
         &__next{
             
-            transform: translateY(-100%);
-            right : -30px;
+           
+            right : 10px;
+            top : 25%;
+            background-color: yellow;
+            height: 50%;
            
             @media screen and (min-width : 1400px){
-                right : -65px;
+                right : 30px;
+         
             }
             
                      
@@ -200,44 +243,11 @@
             clear : both;
             display: table;
         }
-
-        &__item{
-            float : left;
-        }
        
     }
 
   
 }
 
-figure{
-    width : 289px;
-    height : 248px;
-    display: flex;
-    flex-direction: column;  
-    background-color: black;
 
-
-    @media screen and (min-width : 1400px){
-        width : 1050px;
-        height : 900px;
-    }
-
-    img{
-        height: 100%;
-        object-fit:cover;
-        border-radius: 5px;       
-    }
-        
-     
-    video{
-        background-color: black;
-    }
-    
-}
-
-.figure__video{
-    justify-content: center;
-   
-}
 

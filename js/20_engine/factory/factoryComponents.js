@@ -72,19 +72,13 @@ function componentsFactory(){
  * @param {Object} showThis Element HTML commandé par la factory au usine factory/workshop.js
  * @param {HTMLElement} target 
  */
-
-
 function renderComponent(showThis,target){
 
-    if(!showThis.length){
-
-        target.insertAdjacentHTML("beforeend",showThis.elHTML) 
-
-    }else{
-
-        showThis.map(function(showThis){
-            target.insertAdjacentHTML("beforeend",showThis.elHTML) 
-
-        })
-    }
+    !showThis.length ?  target.insertAdjacentHTML("beforeend",showThis.elHTML) :
+    
+    
+                    showThis.map(function(showThis){
+                        target.insertAdjacentHTML("beforeend",showThis.elHTML) 
+                    })
+   
 }

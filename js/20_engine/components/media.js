@@ -6,7 +6,7 @@ let createImage = function (thisData,inc) {
         `<article class="sticker__media sticker__media--img" > 
             
                   <a href="#" class="flexImg"  data-js="openCarousel" data-item="${inc}">
-                    <img class="imgFlex ${thisData.class}" src="${thisData.dirMedia}${thisData.image}" 
+                    <img class="imgFlex ${thisData.class}" src="${thisData.dirMedia}/300/${thisData.image}" 
                     data-js="openCarousel" data-item="${inc}"                        
                           alt="Cette photo ce nomme ${ucfirst(thisData.alt)}                        
                           à un prix de ${thisData.price} euro et à actuellement eu ${thisData.likes} like. "/>
@@ -34,7 +34,7 @@ let createImage = function (thisData,inc) {
         `<article class="sticker__media sticker__media--video">
             <a href="#" class="flexImg" data-js="openCarousel" data-item="${inc}" >              
                   <video class="imgFlex ${thisData.class}" width="100%"   data-js="openCarousel" data-item="${inc}">
-                  <source src="${thisData.dirMedia}${thisData.video}" type="video/mp4"></video>              
+                  <source src="${thisData.dirMedia}/video/${thisData.video}" type="video/mp4"></video>              
               <span class="sr__only">Cette vidéo ce nomme ${ucfirst(thisData.alt)},
               à un prix de ${thisData.price} euro et à actuellement eu ${thisData.likes} mention j'aime. </span> 
             </a>

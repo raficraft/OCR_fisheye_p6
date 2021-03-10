@@ -15,10 +15,11 @@ for(var i = 0; i < limit; i++){
 if(thisData[i].image){
 
     this.elHTML +=  `<div class="carousel__item">
-                        <figure class"figure__img">
-                            <img  src="${thisData[i].dirMedia}${thisData[i].image}" class="carousel${thisData[i].class}" alt="${thisData[i].alt}" aria-labelledby="carousel"/>                                                               
+                        <figure class"figure__img flexImg">
+                            <img  src="${thisData[i].dirMedia}/1050/${thisData[i].image}" 
+                                  class="carousel${thisData[i].class} imgFlex" alt="${thisData[i].alt}" aria-labelledby="carousel"/>                                                               
+                                  <figcaption>${thisData[i].alt}</figcaption>
                         </figure>
-                        <p>${thisData[i].alt}</p>
                     </div>`
 
                 
@@ -26,12 +27,12 @@ if(thisData[i].image){
 }else if(thisData[i].video){
 
     this.elHTML += `<div class="carousel__item">
-                        <figure class="figure__video">
-                            <video controls autoplay="false">
-                                <source src="${thisData[i].dirMedia}${thisData[i].video}" type="video/mp4" aria-label="${thisData[i].alt}" aria-labelledby="carousel">
+                        <figure class="figure__video flexImg">
+                            <video controls>
+                                <source src="${thisData[i].dirMedia}/video/${thisData[i].video}" type="video/mp4" aria-label="${thisData[i].alt}" aria-labelledby="carousel">
                             </video>                                                               
-                        </figure>
-                        <p>${thisData[i].alt}</p>
+                            </figure>
+                            <figcaption>${thisData[i].alt}</figcaption>
                     </div>`
 }        
 }

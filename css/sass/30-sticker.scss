@@ -1,4 +1,11 @@
-
+.main__wrapper--index{
+    .sticker{
+        transition: 0.3s;
+        &:hover{
+            transform : scale(1.05)
+        }
+    }
+}
 
 .sticker{
 
@@ -7,16 +14,21 @@
     align-items: center;
     text-align: center;
     margin-bottom : 1.75rem;
+    width:  90%;
+ 
     @media screen and (min-width : 768px){
      //flex: 0 1 48%;
      margin-bottom : 3rem;
 
     }
     @media screen and (min-width : 1023px){
-        flex: 0 1 26%;
-        margin-bottom : 3rem;
-   
+        flex: 0 1 28%;
+        margin-bottom : 3rem;   
     } 
+
+    header{
+        width : 100%;
+    }
 
     .identity{
         display: flex;
@@ -24,6 +36,14 @@
         justify-content: center;
         align-content: center;
         align-items: center;   
+        padding : 0.5rem 1.5rem 0.25rem;
+        margin-bottom: 0.375rem;
+        width : 100%;
+        
+        &:focus{
+            outline: 1px solid;
+            background-color: rgb(214, 214, 214);
+        }   
     }
     
 
@@ -67,28 +87,9 @@
     }
 
     .nav{
-
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
-
-        span{
-            margin : 0 5px 0 0;
-            padding : 1px 6px;
-            border: 0.5px solid #c4c4c4;
-            border-radius: 11px;
-         
-        }
-
-        a{
-            font-family: 'DM Sans', sans-serif;
-            font-size: 12px;
-            color: $first_color--other;
-            font-weight: 500;
-            line-height: 1rem;
-            font-weight: bold;
-        }
-   
+        flex-wrap: wrap; 
     }
 
 }

@@ -1,22 +1,17 @@
 const itsEvent = document.querySelectorAll('[data-js]');
 const eventLimit = itsEvent.length
+ // Gestion des événement filtrer avec l'attribut data-js présent sur l'élément clické
+ // La valeur de l'attribut indique qu'elle action effectué
 
-for (let i = 0 ; i < eventLimit; i++) {
+ itsEvent.forEach((btn) => btn.addEventListener('click',function(e){   
 
-    itsEvent[i].addEventListener('click',function(e){   
-
-        e.preventDefault();        
-        e.stopPropagation() 
-
-        // Gestion des événement filtrer avec l'attribut data-js présent sur l'élément clické
-        // La valeur de l'attribut indique qu'elle action effectué
+        e.preventDefault();  e.stopPropagation();
       
         if(e.target.dataset){
 
             let el = e.target;
             const target = e.target;
             const action = el.dataset.js;
-            const params = el.dataset.params;
 
             console.log(action);
 
@@ -24,7 +19,7 @@ for (let i = 0 ; i < eventLimit; i++) {
 
                 case 'openFormContact' : openFormContact(); break;   
                 
-                case 'closeModal': closeModal(); break;
+                case 'closeModal': closeModal(target); break;
 
                 case 'submitModal': console.log('Soumettre le formulaire'); break;
 
@@ -35,12 +30,9 @@ for (let i = 0 ; i < eventLimit; i++) {
                 case 'addLike':  addlike(target); break;  
 
             }
-
-        }
-    
-    });
-
-}
+        }    
+    })
+ )
 
 
 

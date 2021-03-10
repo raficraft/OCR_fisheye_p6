@@ -20,7 +20,6 @@ class Carousel{
 
         this.root = document.querySelector('.carousel')
         this.root.setAttribute('tabindex', '0')
-        this.root.focus()
         //Ajouter  aria-hidden au contenu du site
         this.container = document.querySelector('.carousel__container');
         this.children = [].slice.call(this.el.children)
@@ -32,23 +31,19 @@ class Carousel{
         let closeBtn = document.querySelectorAll('[data-js="closeCarousel"]')
 
 
-        //On empêche la fermeture du carousel si l'on clique dans une image
-        let lenghtContentImage = contentImage.length
-        for(let i = 0; i < lenghtContentImage; i++){
-            contentImage[i].addEventListener('click', (e) => {e.stopPropagation()})
-        }
+        //On empêche la fermeture du carousel si l'on clique dans une image       
+       
+        contentImage.forEach((btn) => btn.addEventListener('click', (e) => {e.stopPropagation()}))       
 
         nextBtn.addEventListener('click', (e) => {e.stopPropagation(); this.next();})
-        prevBtn.addEventListener('click', (e) => {e.stopPropagation(); this.prev()})
-
-        let limitCloseBtn = closeBtn.length
-        for(let i = 0; i < limitCloseBtn; i++){
-            closeBtn[i].addEventListener('click',(e) => {e.stopPropagation(); this.closeCarousel()})
-        }
+        prevBtn.addEventListener('click', (e) => {e.stopPropagation(); this.prev()})  
+      
+        closeBtn.forEach((btn) => btn.addEventListener('click',(e) => {e.stopPropagation(); this.closeCarousel()}))
+        
 
         //Navigation au clavier
 
-        this.root.addEventListener('keyup',e =>{
+        document.querySelector('.slider').addEventListener('keyup',e =>{
 
             if(e.key === 'ArrowRight' || e.key === 'Right'){
                 this.next()
@@ -78,10 +73,8 @@ class Carousel{
         let ratio = this.children.length / this.options.slidesVisible;
         this.container.style.width =(ratio*100) +"%"
        
-        let itemLength = this.item.length
-        for(let i = 0; i < itemLength; i++){
-            this.item[i].style.width = ((100/ this.options.slidesVisible) / ratio) +"%"
-        }
+        this.item.forEach((item) => item.style.width = ((100/ this.options.slidesVisible) / ratio) +"%")
+      
     }
 
     next(){      

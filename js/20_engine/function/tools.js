@@ -119,7 +119,7 @@ const alterateMediaObject = (dataMedia) =>{
 const redifineDistribution_StickerIdentity = () =>{
 	
 		// Considérant que l'on affiche seulement 6 fiches de photographe
-		// maximum sur la page d'index et qu'au delà un systèmre de pagination
+		// maximum sur la page d'index et qu'au delà un système de pagination
 		// serait pertinent. On gère l'affichage en fonction du nombre de fiche
 		// que l'on affiche, pour garder un rendu visuelle cohérent.
 

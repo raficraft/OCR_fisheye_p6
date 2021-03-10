@@ -39,7 +39,9 @@ class BrowserInfo{
         console.log(this.request);
         console.log(`this.idURL : ${this.request.idURL}`);
         console.log(`this.tagURL : ${this.request.tagURL}`);
-        console.log(`this.params : ${this.request.params}`);
+        console.log(`this.paramsURL : ${this.request.paramsURL}`);
+        console.log(`la largeur de la fenêtre est de  : ${window.innerWidth}`);
+        console.log(`la hauteur de la fenêtre est de  : ${window.innerHeight}`);
 
 
         // Si l'on filtre les photographes on positionnne le focus sur le lien correspondant

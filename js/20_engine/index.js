@@ -3,12 +3,10 @@
     const targetIdentity = document.getElementById("main__wrapper");    
     let getComponent = new componentsFactory() 
 
-    const showIdentities = () =>{
-        
-        //On récupère l'identités liés au TAG passé en url   {?tags=tag}   
-        
+    const showIdentities = () =>{        
+        //On récupère l'identités liés au TAG passé en url   {?tags=tag}        
         let identities_JSON = GetData.getIdentities() 
-        //on passe l'identité dans l'usine
+        //on passe l'identité dans la factory
         let identityComponent = getComponent.createComponents('identities',identities_JSON)
         renderComponent(identityComponent,targetIdentity)
     }

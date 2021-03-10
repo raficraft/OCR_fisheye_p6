@@ -213,6 +213,31 @@ body{
     
 }
 
+
+.nav__filter a{
+    display :flex;
+    margin : 0 0.3125rem 0.375rem 0;
+    padding : 1px 4px;
+    transition: 0.3s;
+    border: 0.5px solid #c4c4c4;
+    border-radius: 11px;    
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    color: $first_color--other;
+    font-weight: 500;
+    line-height: 1rem;
+    font-weight: bold;
+
+    &:focus,&:hover{
+    background-color: $first_background;
+    color : white !important;
+    }
+}
+
+
+
+
+
 /*
 
 .header__wrapper{

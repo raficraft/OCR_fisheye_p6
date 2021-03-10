@@ -61,5 +61,10 @@ h1{
 
 *{ 
 	box-sizing: border-box;
+	outline : 0;
 
+}
+
+:focus{
+	transition: 0.3s;
 }
