@@ -1434,11 +1434,11 @@ figure .carouselmedia__Rhode--7 {
   justify-content: center;
 }
 
-.custom-select__trigger:focus {
+.customSelect--trigger:focus {
   background-color: black;
 }
 
-.custom-option:focus {
+.customOption:focus {
   background-color: #DB8876;
 }
 

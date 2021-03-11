@@ -13,10 +13,7 @@ let sortMedia = (target)=>{
         on réaffecte les ecouteurs d'événement au attibuts [data-js] contenue
         dans le parent {.sticker__media}
         */
-
        new EventsDispatcher('.sticker__media [data-js]')
-
-      
 
     
 }
