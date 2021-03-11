@@ -40,8 +40,8 @@
 
     .sliderBox__close{
         position: absolute;
-        top : 24px;
-        right : 24px;
+        top : 44px;
+        right : 34px;
         height: 12px;
         width : 12px;
         border : none;
@@ -54,7 +54,7 @@
         &:hover{
             transform : scale(1.1);
         }
-        @media screen and (min-width : 1400px){
+        @media screen and (min-width : 1439px){
             height: 42px;
             width: 42px;
             right :40px;
@@ -73,7 +73,7 @@
             z-index : 20;
             transform: rotate(45deg);
 
-            @media screen and (min-width : 1400px){
+            @media screen and (min-width : 1439px){
                 height: 56px;
                 width: 6px;
                 top : -6px;
@@ -93,7 +93,7 @@
             display: block;
             z-index : 100;
             transform: rotate(135deg);
-            @media screen and (min-width : 1400px){
+            @media screen and (min-width : 1439px){
                 height: 56px;
                 width: 6px;
                 top : -6px;
@@ -104,29 +104,30 @@
 
     }
 
+      //Un problème survient sur la hauteur du carousel
+      // et fait disparaite le titre de l'image 
+      //si le dimensionnment est trop petit
+      //excentre l'élément de la marquise
+            
+
     .carousel{
         
         position : relative;     
         margin : auto;
         border-radius: 5px;
         width : 289px;
-        height : 280px; //273??? 
+        height : 260px;
         z-index: 40;
         box-sizing: content-box;
         overflow : hidden;
+        margin-top : 40px; // 10px de perdu
         
         @media screen and (min-width : 1439px){
-
-            //Un problème survient sur la hauteur du carousel
-            // et fait disparaite le titre de l'image 
-            //si le dimensionnment est trop grand
-            
+          
             width : 800px;
             height : 720px;
             margin-top : 40px
         }
-
-     
 
         &__container{
            
@@ -135,31 +136,43 @@
             transition : transform 0.3s;
             transform : translate3d(0,0,0);  
             display: flex;
-           
+
         }
 
         &__item{
-            height : 685px;
+            height : 248px;
             display: flex;
             flex-direction: column;
             justify-content: center;
 
+            @media screen and (min-width : 1439px){                
+                height : 685px;
+            }
+
             video{
-                width : 800px;
-                height: 450px;
+                height:162px;
                 transform: translateY(25%);
                 
+                @media screen and (min-width : 1439px){                
+                   // width : 800px;
+                    height: 450px;                    
+                }
             }
 
             .flexImg{
                 justify-content: center;
-                height: 685px;
+                height: 248px;
                 background-color: black;
-               
+                @media screen and (min-width : 1439px){                
+                    height : 685px;
+                }
             }
 
             .imgFlex{
-                height: 685px;
+                height: 248px;
+                @media screen and (min-width : 1439px){                
+                    height : 685px;
+                }
             }
 
             figcaption{
@@ -167,20 +180,18 @@
                 font-size: rem(14);
                 line-height: 18px;
                 color : $first_background !important;
-                @media screen and (min-width : 1400px){
+                @media screen and (min-width : 1439px){
                     font-size: rem(24);
                     margin-top: rem(12);
                 }
-            }
-
-                
+            } 
         }
      
 
         &__nav{
             position : absolute;
             color : $first_background;
-            width : 40px;
+            width : 20px;
             height : 40px;  
             border : none;
             background-color: transparent;  
@@ -195,7 +206,7 @@
             }
      
             
-            @media screen and (min-width : 1400px){
+            @media screen and (min-width : 1439px){
                 height: 50px;
                 width : 50px;
                 font-size :rem(48);
@@ -205,48 +216,30 @@
 
         &__prev{
            
-            left : 10px; 
+            left : 30px; 
             top : 25%;
             background-color: yellow;
             height: 50%;      
-            @media screen and (min-width : 1400px){
+            @media screen and (min-width : 1439px){
              
                 left: 30px;
-            }
-            
-          
-            
+            }            
         }
 
-        &__next{
-            
+        &__next{           
            
-            right : 10px;
+            right : 30px;
             top : 25%;
             background-color: yellow;
             height: 50%;
            
-            @media screen and (min-width : 1400px){
+            @media screen and (min-width : 1439px){
                 right : 30px;
          
-            }
-            
+            }           
                      
-        }
-
-
-      
-        // supprimer
-        
-        &__container::after{
-            content :'';
-            clear : both;
-            display: table;
-        }
-       
+        }  
     }
-
-  
 }
 
 

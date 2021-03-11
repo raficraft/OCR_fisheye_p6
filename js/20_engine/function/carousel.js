@@ -5,7 +5,7 @@ class Carousel{
    * @param {object} options
    * @param {object}  [options.slidesToScroll = 1] Nombre d'éléments à faire défiler
    * @param {object}  [options.slidesVisible = 1] Nombre d'éléments visible dans le carousel
-   * @param {boolean} [options.loop = false] Doit-on boculer en fin de carousel
+   * @param {boolean} [options.loop = false] Doit-on basculer en fin de carousel
    */
 
     constructor(element,options ={}){
@@ -30,7 +30,6 @@ class Carousel{
         let nextBtn = document.querySelector('.carousel__next')
         let closeBtn = document.querySelectorAll('[data-js="closeCarousel"]')
 
-
         //On empêche la fermeture du carousel si l'on clique dans une image       
        
         contentImage.forEach((btn) => btn.addEventListener('click', (e) => {e.stopPropagation()}))       
@@ -39,22 +38,16 @@ class Carousel{
         prevBtn.addEventListener('click', (e) => {e.stopPropagation(); this.prev()})  
       
         closeBtn.forEach((btn) => btn.addEventListener('click',(e) => {e.stopPropagation(); this.closeCarousel()}))
-        
 
         //Navigation au clavier
 
         document.querySelector('.slider').addEventListener('keyup',e =>{
-
             if(e.key === 'ArrowRight' || e.key === 'Right'){
                 this.next()
             }else  if(e.key === 'ArrowLeft' || e.key === 'Left'){
                 this.prev()
             }
-
         })
-
-
-
 
         this.setStyle()         
         // Si l'item courant est passé via l'exterieur.
@@ -71,10 +64,8 @@ class Carousel{
 
     setStyle(){        
         let ratio = this.children.length / this.options.slidesVisible;
-        this.container.style.width =(ratio*100) +"%"
-       
-        this.item.forEach((item) => item.style.width = ((100/ this.options.slidesVisible) / ratio) +"%")
-      
+        this.container.style.width =(ratio*100) +"%"       
+        this.item.forEach((item) => item.style.width = ((100/ this.options.slidesVisible) / ratio) +"%")      
     }
 
     next(){      

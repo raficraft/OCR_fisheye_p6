@@ -886,8 +886,8 @@ body {
 }
 .slider .sliderBox__close {
   position: absolute;
-  top: 24px;
-  right: 24px;
+  top: 44px;
+  right: 34px;
   height: 12px;
   width: 12px;
   border: none;
@@ -900,7 +900,7 @@ body {
 .slider .sliderBox__close:hover {
   transform: scale(1.1);
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1439px) {
   .slider .sliderBox__close {
     height: 42px;
     width: 42px;
@@ -920,7 +920,7 @@ body {
   z-index: 20;
   transform: rotate(45deg);
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1439px) {
   .slider .sliderBox__close:before {
     height: 56px;
     width: 6px;
@@ -940,7 +940,7 @@ body {
   z-index: 100;
   transform: rotate(135deg);
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1439px) {
   .slider .sliderBox__close:after {
     height: 56px;
     width: 6px;
@@ -953,10 +953,11 @@ body {
   margin: auto;
   border-radius: 5px;
   width: 289px;
-  height: 280px;
+  height: 260px;
   z-index: 40;
   box-sizing: content-box;
   overflow: hidden;
+  margin-top: 40px;
 }
 @media screen and (min-width: 1439px) {
   .slider .carousel {
@@ -973,23 +974,42 @@ body {
   display: flex;
 }
 .slider .carousel__item {
-  height: 685px;
+  height: 248px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+@media screen and (min-width: 1439px) {
+  .slider .carousel__item {
+    height: 685px;
+  }
+}
 .slider .carousel__item video {
-  width: 800px;
-  height: 450px;
+  height: 162px;
   transform: translateY(25%);
+}
+@media screen and (min-width: 1439px) {
+  .slider .carousel__item video {
+    height: 450px;
+  }
 }
 .slider .carousel__item .flexImg {
   justify-content: center;
-  height: 685px;
+  height: 248px;
   background-color: black;
 }
+@media screen and (min-width: 1439px) {
+  .slider .carousel__item .flexImg {
+    height: 685px;
+  }
+}
 .slider .carousel__item .imgFlex {
-  height: 685px;
+  height: 248px;
+}
+@media screen and (min-width: 1439px) {
+  .slider .carousel__item .imgFlex {
+    height: 685px;
+  }
 }
 .slider .carousel__item figcaption {
   margin-top: 0.4375rem;
@@ -997,7 +1017,7 @@ body {
   line-height: 18px;
   color: #901C1C !important;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1439px) {
   .slider .carousel__item figcaption {
     font-size: 1.5rem;
     margin-top: 0.75rem;
@@ -1006,7 +1026,7 @@ body {
 .slider .carousel__nav {
   position: absolute;
   color: #901C1C;
-  width: 40px;
+  width: 20px;
   height: 40px;
   border: none;
   background-color: transparent;
@@ -1019,7 +1039,7 @@ body {
 .slider .carousel__nav :hover {
   transform: scale(1.2);
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1439px) {
   .slider .carousel__nav {
     height: 50px;
     width: 50px;
@@ -1027,31 +1047,26 @@ body {
   }
 }
 .slider .carousel__prev {
-  left: 10px;
+  left: 30px;
   top: 25%;
   background-color: yellow;
   height: 50%;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1439px) {
   .slider .carousel__prev {
     left: 30px;
   }
 }
 .slider .carousel__next {
-  right: 10px;
+  right: 30px;
   top: 25%;
   background-color: yellow;
   height: 50%;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1439px) {
   .slider .carousel__next {
     right: 30px;
   }
-}
-.slider .carousel__container::after {
-  content: "";
-  clear: both;
-  display: table;
 }
 
 figure .carouselmedia__Mimi--0 {
