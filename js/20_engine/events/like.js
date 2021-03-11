@@ -7,7 +7,7 @@ let addlike = (target) => {
     target.innerHTML = `${newCount}<i class="fas fa-heart fontIcon"></i>`
     target.removeAttribute('data-js')
 
-    let allLikeElement = document.querySelectorAll('.sticker__media--like')  
+    const allLikeElement = document.querySelectorAll('.sticker__media--like')  
     let limit = allLikeElement.length
 
 
@@ -17,7 +17,7 @@ let addlike = (target) => {
     }
 
 
-    let sumLikeElement = document.querySelector('.sumLike')
+    const sumLikeElement = document.querySelector('.sumLike')
     sumLikeElement.innerHTML = `${sumLike}<i class="fas fa-heart fontIcon"></i>`
 
 }

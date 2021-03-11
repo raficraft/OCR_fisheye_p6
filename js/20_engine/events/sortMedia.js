@@ -9,33 +9,14 @@ let sortMedia = (target)=>{
        elementToEmpty.querySelectorAll('*').forEach(n => n.remove());
        showMedia()
 
-
-       /* Suite à des effets transversaut qui reinject la gallery d'image {showMedia}
+        /* Suite à des effets transversaut qui reinject la gallery d'image {showMedia}
         on réaffecte les ecouteurs d'événement au attibuts [data-js] contenue
         dans le parent {.sticker__media}
         */
 
-       const itsEvent = document.querySelectorAll('.sticker__media [data-js]');
-       itsEvent.forEach((btn) => btn.addEventListener('click',function(e){   
+       new EventsDispatcher('.sticker__media [data-js]')
 
-              e.preventDefault();  e.stopPropagation();
-            
-              if(e.target.dataset){
       
-                  let el = e.target;
-                  const target = e.target;
-                  const action = el.dataset.js;
-      
-                  console.log(action);
-      
-                  switch(action){      
-      
-                      case 'openCarousel': openCarousel(target); break;
-      
-                      case 'addLike':  addlike(target); break;  
-      
-                  }
-              }    
-          })
-       )
+
+    
 }

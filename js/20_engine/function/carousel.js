@@ -33,10 +33,10 @@ class Carousel{
         this.children = [].slice.call(this.el.children)
         this.item = [].slice.call(document.querySelectorAll('.carousel__item'))
 
-        let contentImage = document.querySelectorAll('.carousel img')
-        let prevBtn = document.querySelector('.carousel__prev')
-        let nextBtn = document.querySelector('.carousel__next')
-        let closeBtn = document.querySelectorAll('[data-js="closeCarousel"]')
+        const contentImage = document.querySelectorAll('.carousel img')
+        const prevBtn = document.querySelector('.carousel__prev')
+        const nextBtn = document.querySelector('.carousel__next')
+        const closeBtn = document.querySelectorAll('[data-js="closeCarousel"]')
 
         //On empêche la fermeture du carousel si l'on clique dans une image       
        
