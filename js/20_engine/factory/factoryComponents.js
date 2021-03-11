@@ -6,7 +6,7 @@ function componentsFactory(){
      * @returns {Array}
      */
 
-   // sortDataMedia('popularity')  // Réordonnancement du tableau avant usage
+    sortDataMedia(localStorage.getItem('sortDataMedia'))  // Réordonnancement du tableau avant usage
     
     this.createComponents = function(method,dataJSON){
 
@@ -59,6 +59,9 @@ function componentsFactory(){
             break;
             
             case 'carousel' : 
+
+                console.log(localStorage.getItem('sortDataMedia'));
+                sortDataMedia(localStorage.getItem('sortDataMedia'))
                 makeComponent = new createCarousel(dataJSON)
             break;
         }

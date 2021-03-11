@@ -53,6 +53,7 @@ class BrowserInfo{
         }else{
             localStorage.setItem('eventSource' , 'index')
             localStorage.setItem('eventValue' , false)
+            localStorage.setItem('sortDataMedia' , 'popularity')
         }
 
 

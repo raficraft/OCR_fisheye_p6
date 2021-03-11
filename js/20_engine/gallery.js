@@ -42,6 +42,9 @@
 
 
     const showCarousel = () => {
+        if(document.querySelector('.slider')){
+            document.querySelector('.slider').remove()
+        }
         let mediasByIdentity_JSON = GetData.getMediaByIdentity()    
         let carouselComponent = getComponent.createComponents('carousel',mediasByIdentity_JSON)
         renderComponent(carouselComponent,targetRoot)

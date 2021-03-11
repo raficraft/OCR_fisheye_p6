@@ -28,6 +28,11 @@ class CustomSelect{
             option.parentNode.querySelector('.customOption.selected').classList.remove('selected');
             option.classList.add('selected','customHidden');
             option.closest('.custom-select').querySelector('.customSelect--trigger span').textContent = option.textContent;
+            sortDataMedia(localStorage.setItem('sortDataMedia', option.textContent))
+
+            //Spécifique à ce projet
+           
+            showCarousel()
         }
     }
 
