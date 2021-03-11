@@ -30,8 +30,7 @@ class CustomSelect{
             option.closest('.custom-select').querySelector('.customSelect--trigger span').textContent = option.textContent;
             sortDataMedia(localStorage.setItem('sortDataMedia', option.textContent))
 
-            //Spécifique à ce projet
-           
+            //Spécifique à ce projet lors du filtre l'on réaffiche le carousel           
             showCarousel()
         }
     }

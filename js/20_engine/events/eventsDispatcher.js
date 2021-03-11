@@ -25,9 +25,10 @@ const eventLimit = itsEvent.length
 
                 case 'openCarousel': openCarousel(target); break;
 
+                case 'addLike':  addlike(target); break; 
+                 
                 case 'sortMedia': sortMedia(target);  break;
 
-                case 'addLike':  addlike(target); break;  
 
             }
         }    

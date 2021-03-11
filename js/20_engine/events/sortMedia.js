@@ -9,6 +9,12 @@ let sortMedia = (target)=>{
        elementToEmpty.querySelectorAll('*').forEach(n => n.remove());
        showMedia()
 
+
+       /* Suite à des effets transversaut qui reinject la gallery d'image {showMedia}
+        on réaffecte les ecouteurs d'événement au attibuts [data-js] contenue
+        dans le parent {.sticker__media}
+        */
+
        const itsEvent = document.querySelectorAll('.sticker__media [data-js]');
        itsEvent.forEach((btn) => btn.addEventListener('click',function(e){   
 
