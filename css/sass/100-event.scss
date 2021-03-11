@@ -54,3 +54,13 @@
     justify-content: center;
 }
 
+
+
+.custom-select__trigger:focus{
+    background-color:black;    
+}
+
+.custom-option:focus{
+    background-color:$second_background;
+}
+

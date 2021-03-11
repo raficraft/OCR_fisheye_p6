@@ -20,7 +20,7 @@
      
     }
 
-    .custom-select-wrapper {
+    .customSelect__wrapper {
       position: relative;
       width: 170px;
       display: block;      
@@ -49,7 +49,7 @@
 
     }
     
-    .custom-select__trigger {
+    .customSelect--trigger {
       position: relative;
       display: flex;
       align-items: center;
@@ -59,7 +59,7 @@
       border : none;     
     }
 
-    .custom-options {
+    .customOptions{
       position: absolute;
       display: block;
       top: 100%;
@@ -77,12 +77,12 @@
      
     }   
 
-    .custom-select.open .custom-options {
+    .custom-select.open .customOptions{
       opacity: 1;
       visibility: visible;
       pointer-events: all;
     }
-    .custom-option {
+    .customOption {
       position: relative;
       display: block;
       cursor: pointer;
@@ -96,15 +96,11 @@
         pointer-events: none;
       }
 
-      &:nth-child(1){       
+      &:nth-child(1),&:nth-child(2){       
         padding-top : rem(15) ;
         padding-bottom : rem(15) ;
       }
-
-      &:nth-child(2){       
-        padding-top : rem(15) ;
-        padding-bottom : rem(15) ;
-      }
+     
       &:nth-child(3){
         padding-top: rem(15);
         padding-bottom: rem(19);   
@@ -127,7 +123,7 @@
       color : white;
     }
 
-    .custom-hidden{
+    .customHidden{
       display : none;
     }
 

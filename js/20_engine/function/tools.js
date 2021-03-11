@@ -72,7 +72,6 @@ function swapDiv(elem) {
  * @param {objet} options  // Collections d'attributs à appliqué
  */
 
-
 const setAttributes = (el, options) => {
 	Object.keys(options).forEach(function(attr) {
 	  el.setAttribute(attr, options[attr]);
@@ -197,12 +196,27 @@ const restoreScrollBar = () => {
         bodyElt.style.overflow = "scroll";
 }
 
+const toggleAttribute = (element,attributes,oldAttr,newAttr) =>{
+
+	if(element.getAttribute(attributes) === oldAttr){
+		element.setAttribute(attributes, newAttr)
+	}else if(element.getAttribute(attributes) === newAttr){
+		element.setAttribute(attributes, oldAttr)
+	}
+}
+
+
+
+
+
+
+/*
 
 let deleteDialogForm = ()=>{
     document.querySelector('.dialogBox').remove()
     restoreScrollBar()
 }
-
+*/
 
 
 

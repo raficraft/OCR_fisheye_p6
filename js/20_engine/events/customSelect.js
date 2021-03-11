@@ -1,45 +1,53 @@
-document.querySelector('.custom-select-wrapper').addEventListener('click', function() {
+/**
+ *  Source Externe [https://andrejgajdos.com/custom-select-dropdown/]
+ *  Custom_select adapté au besoin du projet.
+ * 
+ */
 
-    const selectBody = this.querySelector('.custom-select');
+class CustomSelect{
 
-    selectBody.classList.toggle('open');
+    constructor(element){
 
-    if(selectBody.getAttribute('aria-expanded') === 'false'){
-        selectBody.setAttribute('aria-expanded', 'true');
-    }else{
-        selectBody.setAttribute('aria-expanded', 'true');
-    }
-    
-    
-})
+        this.el = document.querySelector(element)        
+        this.customOption =  document.querySelectorAll(".customOption")
+        this.selectBody = document.querySelector('.custom-select');
 
-for (const option of document.querySelectorAll(".custom-option")) {
-    option.addEventListener('click', function() {
-
-       
-
-        document.querySelector('.custom-hidden').classList.remove('custom-hidden');
-        
-        if (!this.classList.contains('selected')) {
-            this.parentNode.querySelector('.custom-option.selected').classList.remove('selected');
-            this.classList.add('selected','custom-hidden');
-            this.closest('.custom-select').querySelector('.custom-select__trigger span').textContent = this.textContent;
-            
-          
+        this.el.addEventListener('click', () => { this.openCustomSelect(this.selectBody) })
+        for (const option of this.customOption) {
+            option.addEventListener('click',  () => {   this.swapOption(option)})
         }
-    })
+        window.addEventListener('click', (e) => { this.closCustomSelect(e)});
+    }
+
+
+
+    swapOption(option){
+        console.log(option);
+        document.querySelector('.customHidden').classList.remove('customHidden');                
+        if (!option.classList.contains('selected')) {
+            option.parentNode.querySelector('.customOption.selected').classList.remove('selected');
+            option.classList.add('selected','customHidden');
+            option.closest('.custom-select').querySelector('.customSelect--trigger span').textContent = option.textContent;
+        }
+    }
+
+    openCustomSelect(el){       
+        el.classList.toggle('open');
+        toggleAttribute(el,'aria-expanded','false','true') 
+    }
+
+    closCustomSelect(e){
+        const select = document.querySelector('.custom-select')
+        if (!select.contains(e.target)) {
+            select.classList.remove('open');
+            toggleAttribute(select,'aria-expanded','false','true')
+        }
+    }
+
+    
+   
 }
 
-window.addEventListener('click', function(e) {
-    const select = document.querySelector('.custom-select')
-    if (!select.contains(e.target)) {
-        select.classList.remove('open');
-        select.setAttribute('aria-expanded', 'false');
-    }
-});
 
-
-/* Code migrant, 
-redéfinir dans une classe qui permet de selectionnée,
-l'élément que l'on souhaite transformer en select personalisé
-*/
+new CustomSelect('.customSelect__wrapper')
+      

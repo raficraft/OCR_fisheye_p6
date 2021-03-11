@@ -1,6 +1,8 @@
 let openCarousel = (target)=>{
 
-    let item = parseInt(target.dataset.item);                     
+    let item = parseInt(target.dataset.item);   
+    
+    console.log(item);
 
     document.querySelector('.slider').setAttribute('aria-hidden', false);                    
     document.querySelector('#main').setAttribute('aria-hidden', true);

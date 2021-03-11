@@ -1,3 +1,11 @@
+/**
+ *  Carousel conçu à partir du tuto suivant [https://grafikart.fr/tutoriels/carrousel-javascript-87]
+ * 
+ */
+
+
+
+
 class Carousel{
 
   /** 
@@ -16,7 +24,7 @@ class Carousel{
             slidesVisible :1,
             currentItem : 0,
             loop : false          
-        },options), 
+        },options) 
 
         this.root = document.querySelector('.carousel')
         this.root.setAttribute('tabindex', '0')
@@ -68,6 +76,10 @@ class Carousel{
         this.item.forEach((item) => item.style.width = ((100/ this.options.slidesVisible) / ratio) +"%")      
     }
 
+    /**
+     * Event liés au caraousel
+     */
+
     next(){      
         this.goToItem(this.options.currentItem + this.options.slidesToScroll)
     }
@@ -95,14 +107,8 @@ class Carousel{
 
         let translateX = index * (-100 / this.item.length)
         this.container.style.transform = 'translate3d('+translateX+'%,0,0)'
-        this.options.currentItem = index
-      
+        this.options.currentItem = index      
     }
-
-
-
-    
-    
 
 }
 

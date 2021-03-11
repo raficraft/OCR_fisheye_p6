@@ -30,6 +30,10 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
+html, body {
+  scroll-behavior: smooth;
+}
+
 body {
   line-height: 1;
   position: relative;
@@ -65,7 +69,7 @@ h1 {
   font-family: "DM sans", sans-serif;
 }
 
-* {
+*, *:after, *:before {
   box-sizing: border-box;
   outline: 0;
 }
@@ -1292,16 +1296,16 @@ figure .carouselmedia__Rhode--7 {
   font-size: 1.125rem;
   padding: 0.875rem 0.625rem;
 }
-.selectFilter--inner .custom-select-wrapper {
+.selectFilter--inner .customSelect__wrapper {
   position: relative;
   width: 170px;
   display: block;
 }
-.selectFilter--inner .custom-select-wrapper .open {
+.selectFilter--inner .customSelect__wrapper .open {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-.selectFilter--inner .custom-select-wrapper .open .arrow:after {
+.selectFilter--inner .customSelect__wrapper .open .arrow:after {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "";
@@ -1315,7 +1319,7 @@ figure .carouselmedia__Rhode--7 {
   padding: 0.3125rem 0.625rem 0;
   width: 170px;
 }
-.selectFilter--inner .custom-select__trigger {
+.selectFilter--inner .customSelect--trigger {
   position: relative;
   display: flex;
   align-items: center;
@@ -1324,7 +1328,7 @@ figure .carouselmedia__Rhode--7 {
   background-color: #901C1C;
   border: none;
 }
-.selectFilter--inner .custom-options {
+.selectFilter--inner .customOptions {
   position: absolute;
   display: block;
   top: 100%;
@@ -1340,12 +1344,12 @@ figure .carouselmedia__Rhode--7 {
   border-bottom-right-radius: 0.3125rem;
   cursor: pointer;
 }
-.selectFilter--inner .custom-select.open .custom-options {
+.selectFilter--inner .custom-select.open .customOptions {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
 }
-.selectFilter--inner .custom-option {
+.selectFilter--inner .customOption {
   position: relative;
   display: block;
   cursor: pointer;
@@ -1354,18 +1358,14 @@ figure .carouselmedia__Rhode--7 {
   width: 150px;
   text-align: left;
 }
-.selectFilter--inner .custom-option span {
+.selectFilter--inner .customOption span {
   pointer-events: none;
 }
-.selectFilter--inner .custom-option:nth-child(1) {
+.selectFilter--inner .customOption:nth-child(1), .selectFilter--inner .customOption:nth-child(2) {
   padding-top: 0.9375rem;
   padding-bottom: 0.9375rem;
 }
-.selectFilter--inner .custom-option:nth-child(2) {
-  padding-top: 0.9375rem;
-  padding-bottom: 0.9375rem;
-}
-.selectFilter--inner .custom-option:nth-child(3) {
+.selectFilter--inner .customOption:nth-child(3) {
   padding-top: 0.9375rem;
   padding-bottom: 1.1875rem;
 }
@@ -1383,7 +1383,7 @@ figure .carouselmedia__Rhode--7 {
   width: 16px;
   color: white;
 }
-.selectFilter--inner .custom-hidden {
+.selectFilter--inner .customHidden {
   display: none;
 }
 
@@ -1432,6 +1432,14 @@ figure .carouselmedia__Rhode--7 {
 
 .orderSticker__mainCenter {
   justify-content: center;
+}
+
+.custom-select__trigger:focus {
+  background-color: black;
+}
+
+.custom-option:focus {
+  background-color: #DB8876;
 }
 
 /*# sourceMappingURL=style.css.map */
