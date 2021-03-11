@@ -42,7 +42,7 @@ let createSticker = function(thisData){
 
                 thisData.tags.forEach(tag =>{    
                         this.elHTML +=  
-                                        `<span class="filter"><a href="index.html?tags=${tag}">#${tag}</a></span>`    
+                                        `<span class="filter"><a href="index.html?tags=${tag}">#${ucFirst(tag)}</a></span>`    
                 }) 
                 this.elHTML += 
                                 `</footer>

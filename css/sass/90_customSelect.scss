@@ -127,5 +127,11 @@
       display : none;
     }
 
-    
+  .customSelect--trigger:focus{
+      background-color:black;    
+  }
+  
+  .customOption:focus{
+      background-color:$second_background;
+  }
 }

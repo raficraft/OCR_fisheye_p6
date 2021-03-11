@@ -60,7 +60,6 @@ function componentsFactory(){
             
             case 'carousel' : 
 
-                console.log(localStorage.getItem('sortDataMedia'));
                 sortDataMedia(localStorage.getItem('sortDataMedia'))
                 makeComponent = new createCarousel(dataJSON)
             break;
@@ -77,11 +76,12 @@ function componentsFactory(){
  */
 function renderComponent(showThis,target){
 
-    !showThis.length ?  target.insertAdjacentHTML("beforeend",showThis.elHTML) :
-    
-    
-                    showThis.map(function(showThis){
-                        target.insertAdjacentHTML("beforeend",showThis.elHTML) 
-                    })
-   
+    if(!showThis.length){
+         target.insertAdjacentHTML("beforeend",showThis.elHTML)
+    }else{    
+        showThis.map(function(showThis){
+          target.insertAdjacentHTML("beforeend",showThis.elHTML) 
+      })
+    }
+     
 }

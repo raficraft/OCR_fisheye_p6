@@ -53,8 +53,7 @@
   
     //render
 
-        //Affichage pour la page Gallery
-        //showIdentity()
+        //Affichage pour la page Gallery 
 
         showIdentity()
         showMedia()

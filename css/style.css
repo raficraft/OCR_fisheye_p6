@@ -1386,6 +1386,12 @@ figure .carouselmedia__Rhode--7 {
 .selectFilter--inner .customHidden {
   display: none;
 }
+.selectFilter--inner .customSelect--trigger:focus {
+  background-color: black;
+}
+.selectFilter--inner .customOption:focus {
+  background-color: #DB8876;
+}
 
 .btn {
   padding: 0.25rem 0.6875rem;
@@ -1432,14 +1438,6 @@ figure .carouselmedia__Rhode--7 {
 
 .orderSticker__mainCenter {
   justify-content: center;
-}
-
-.customSelect--trigger:focus {
-  background-color: black;
-}
-
-.customOption:focus {
-  background-color: #DB8876;
 }
 
 /*# sourceMappingURL=style.css.map */
