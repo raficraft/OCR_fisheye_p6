@@ -1,5 +1,7 @@
 let openFormContact = () =>{
 
+    showModalForm()
+
       //On passe le main avec un attribut Aria-hidden
       document.querySelector('#main').setAttribute('aria-hidden', true);
       document.querySelector('#dialog').setAttribute('aria-hidden', false);

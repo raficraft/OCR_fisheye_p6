@@ -1,5 +1,7 @@
 let openCarousel = (target)=>{
 
+    showCarousel()
+
     let item = parseInt(target.dataset.item);   
     
     console.log(item);
@@ -7,7 +9,9 @@ let openCarousel = (target)=>{
     document.querySelector('.slider').setAttribute('aria-hidden', false);                    
     document.querySelector('#main').setAttribute('aria-hidden', true);
     document.querySelector('.carousel__next').focus()
-    hiddenScrollBar()
+   // hiddenScrollBar()
+
+  
 
     new Carousel(document.querySelector('.carousel__container'),{
         slidesToScroll : 1,
@@ -15,4 +19,7 @@ let openCarousel = (target)=>{
         currentItem : item,
         loog : true
     })
+
+   
+   
 }

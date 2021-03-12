@@ -40,10 +40,10 @@
           this.elHTML += 
               `</div>
                 </div>
-                  <button class="carousel__nav carousel__prev" data-js="prevCarousel" arial-label="image précédente" aria-labelledby="carousel">
+                  <button class="carousel__nav carousel__prev" arial-label="image précédente" aria-labelledby="carousel">
                     <i class="fas fa-chevron-left" aria-hidden="true"></i>
                   </button>
-                  <button class="carousel__nav carousel__next" data-js="nextCarousel" arial-label="image suivante" aria-labelledby="carousel">
+                  <button class="carousel__nav carousel__next" arial-label="image suivante" aria-labelledby="carousel">
                     <i class="fas fa-chevron-right" aria-hidden=true></i>
                   </button>
                 </div>

@@ -2,7 +2,7 @@
 
     constructor(dataAttibute){
         this.events = document.querySelectorAll(dataAttibute);
-        this.events.forEach((btn) => btn.addEventListener('click',(e)=>{ this.listen(e)}  ))       
+        this.events.forEach((btn) => btn.addEventListener('mousedown',(e)=>{ this.listen(e)}  ))       
     }
 
     listen(e){
@@ -13,9 +13,6 @@
             const el = e.target;
             const target = e.target;
             const action = el.dataset.js;
-
-            console.log(action);
-
             console.log(action)
 
             switch(action){
@@ -38,20 +35,3 @@
  }
 
 new EventsDispatcher('[data-js]')
-
-
- 
-
-/***
- * 
- *   
-        this.trigger.addEventListener('focus', (e)=>{
-            if(this.click === false){
-             this.openCustomSelect();
-            } 
-        })
-        
-
-
-        this.lastOption.addEventListener('focusout',(e)=>{; this.closCustomSelect(e); })
-*/

@@ -58,14 +58,10 @@
         showIdentity()
         showMedia()
         showCounter()
-        showModalForm()
-        showCarousel()
+     
+       
 
-        //remettre en place dans les event
-        new Carousel(document.querySelector('.carousel__container'),{
-            slidesToScroll : 1,
-            slidesVisible : 1,
-            currentItem : 0,
-            loog : true
-        })
- 
+
+     
+
+      

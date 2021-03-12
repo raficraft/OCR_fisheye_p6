@@ -16,17 +16,15 @@
 
 
 
-        this.el.addEventListener('mouseDown', (e) => { e.preventDefault(); this.openCustomSelect(this.selectBody) })
+        this.selectBody.addEventListener('mousedown', (e) => { e.preventDefault(); this.openCustomSelect(this.selectBody) })
 
         this.trigger.addEventListener('focus', (e)=>{ this.openCustomSelect(this.selectBody);  })
 
         this.lastOption.addEventListener('focusout',(e)=>{
             
-            const select = document.querySelector('.custom-select')
-         
-                select.classList.remove('open');
-                toggleAttribute(select,'aria-expanded','false','true')
-           
+            const select = document.querySelector('.custom-select')         
+            select.classList.remove('open');
+            toggleAttribute(select,'aria-expanded','false','true')           
         
         })
 
@@ -39,7 +37,6 @@
         window.addEventListener('click', (e) => { 
             this.closCustomSelect(e)
 
-            console.log(this.lastOption)
         
         });
     }
@@ -66,12 +63,35 @@
                     const select = document.querySelector('.custom-select')
                  
                         select.classList.remove('open');
-                        toggleAttribute(select,'aria-expanded','false','true')
-                   
-                
+                        toggleAttribute(select,'aria-expanded','false','true')  
                 })
 
             }
+
+            if(localStorage.getItem('sortDataMedia') === 'date'){
+                console.log('on change')
+                this.lastOption = document.getElementById('customOption3')
+
+                this.lastOption.addEventListener('focusout',(e)=>{
+            
+                    const select = document.querySelector('.custom-select')
+                 
+                        select.classList.remove('open');
+                        toggleAttribute(select,'aria-expanded','false','true')  
+                })
+
+            }
+
+
+
+
+
+
+
+
+
+
+
 
             //Spécifique à ce projet lors du filtre l'on réaffiche le carousel           
             showCarousel()

@@ -3,9 +3,6 @@
  * 
  */
 
-
-
-
 class Carousel{
 
   /** 
@@ -27,7 +24,6 @@ class Carousel{
         },options) 
 
         this.root = document.querySelector('.carousel')
-        this.root.setAttribute('tabindex', '0')
         //Ajouter  aria-hidden au contenu du site
         this.container = document.querySelector('.carousel__container');
         this.children = [].slice.call(this.el.children)
@@ -49,11 +45,16 @@ class Carousel{
 
         //Navigation au clavier
 
+        console.log(document.querySelector('.slider'));
+
         document.querySelector('.slider').addEventListener('keyup',e =>{
+
+            console.log('key');
+
             if(e.key === 'ArrowRight' || e.key === 'Right'){
-                this.next()
+                this.next(); console.log('next');
             }else  if(e.key === 'ArrowLeft' || e.key === 'Left'){
-                this.prev()
+                this.prev(); console.log('prev');
             }
         })
 
@@ -88,7 +89,7 @@ class Carousel{
     }
 
     closeCarousel(){                
-        restoreScrollBar()
+       // restoreScrollBar()
         document.querySelector('.slider').setAttribute('aria-hidden', true);
         document.querySelector('#main').setAttribute('aria-hidden', false)
     }
