@@ -58,6 +58,10 @@
         showIdentity()
         showMedia()
         showCounter()
+        showModalForm()
+     
+
+        new EventsDispatcher('[data-js]')
      
        
 

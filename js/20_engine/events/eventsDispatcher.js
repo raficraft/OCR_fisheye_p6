@@ -19,7 +19,7 @@
 
                 case 'openFormContact' : openFormContact(); break;   
                 
-                case 'closeModal': closeModal(target); break;
+                case 'closeModal': console.log('click'); closeModal(target); break;
 
                 case 'submitModal': console.log('Soumettre le formulaire'); break;
 
