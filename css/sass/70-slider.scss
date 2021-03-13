@@ -48,56 +48,49 @@
         border : none;
         background-color: transparent;
         z-index: 30;
-        transition : transform 0.3s;
+        transition : 0.3s;
         cursor : pointer;
+        transform-origin: center;        
+        border: 2px solid transparent;
+        border-radius: 50%;
 
-        &:hover{
+        &:hover,&:active{
             transform : scale(1.1);
         }
         @media screen and (min-width : 1439px){
-            height: 42px;
-            width: 42px;
-            right :40px;
-            top : 60px;
+            right :30px;
+            top : 44px;
+            height: 54px;
+            width: 54px;
+
+            &:focus{
+                border-radius: 50%;
+                border: 2px solid $second_color;
+                box-shadow: $box-shadow;
+            }
+        
+
+            &:before,&:after{
+                position : absolute;
+                content : '';              
+                background-color : $first_background;
+                display: block;
+                z-index : 20;
+                height: 44px;
+                width: 6px;
+                top : 3px;
+                left : 22px 
+            }
         }
 
-        &:before{
-            position : absolute;
-            content : '';
-            width : 1px;
-            height : 15px;
-            left : 5px;
-            top : -1px;
-            background-color : $first_background;
-            display: block;
-            z-index : 20;
-            transform: rotate(45deg);
+       
 
-            @media screen and (min-width : 1439px){
-                height: 56px;
-                width: 6px;
-                top : -6px;
-                left : 20px              
-            }           
+        &:before{           
+            transform: rotate(45deg);          
         }
 
-        &:after{
-            position : absolute;
-            content : '';
-            width : 1px;
-            height : 15px;
-            left : 5px;
-            top : -1px;
-            background-color : $first_color--other;
-            display: block;
-            z-index : 100;
-            transform: rotate(135deg);
-            @media screen and (min-width : 1439px){
-                height: 56px;
-                width: 6px;
-                top : -6px;
-                left : 20px              
-            }           
+        &:after{         
+            transform: rotate(135deg);                   
         }
     }
 
@@ -127,14 +120,13 @@
 
         }
 
-        &__container{
-           
+        &__container{           
             position: relative;
             z-index: 50;
             transition : transform 0.3s;
             transform : translate3d(0,0,0);  
             display: flex;
-
+            height:100%;
         }
 
         &__item{
@@ -143,10 +135,8 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-
-            @media screen and (min-width : 1439px){                
-                height : 685px;
-            }
+            height:100%;
+            
 
             video{
                 height:162px;
@@ -160,11 +150,9 @@
 
             .flexImg{
                 justify-content: center;
-                height: 248px;
                 background-color: $second_background;
-                @media screen and (min-width : 1439px){                
-                    height : 685px;
-                }
+                height : 100%;
+              
             }
 
             .imgFlex{
@@ -182,14 +170,16 @@
                 @media screen and (min-width : 1439px){
                     font-size: rem(24);
                     margin-top: rem(12);
+                    height : 35px;
                 }
             } 
         }     
 
-        &__nav{
-            position : absolute;
-            color : $first_background;
-            width : 20px;
+       
+
+        &__prev,&__next{
+            position : absolute;           
+            width : 40px;
             height : 40px;  
             border : none;
             background-color: transparent;  
@@ -197,49 +187,58 @@
             z-index :70;
             cursor : pointer;
             top : 50%;
-
-            :hover{
-                transform : scale(1.2);
-            }
-     
+            transform-origin: center;          
+            transition: 0.3s;
+            border : 2px solid transparent;
+                border-radius : 50%;
+            &:hover{
+            transform: scale(1.1);
+            } 
+            &:active{ 
+            transform: scale(1.4); 
+            }   
+            &:focus{
+                border : 2px solid $second_color;
+                border-radius : 50%;
+                box-shadow: $box-shadow;
+                
+            } 
             
             @media screen and (min-width : 1439px){
                 height: 50px;
                 width : 50px;
+                top : calc(50% - 60px);
                 font-size :rem(48);
-            }           
+            } 
+            .fas{
+                color : $first_background;
+                transform-origin: center;
+                @media screen and (min-width : 1439px){
+                    position: absolute; 
+                    top : 0px             
+                }
+            }
+
+            .fa-chevron-right{
+                right : 5px;
+            }
+            .fa-chevron-left{
+                left : 5px;
+            }
+        }
+       
+
+        &__prev{            
+            left: 30px;
         }
 
-        &__prev{
-           
-            left : 30px; 
-            top : 25%;
-            height: 50%;      
-            @media screen and (min-width : 1439px){
-             
-                left: 30px;
-            }            
-        }
-
-        &__next{           
-           
-            right : 30px;
-            top : 25%;
-            height: 50%;
-           
-            @media screen and (min-width : 1439px){
-                right : 30px;
-         
-            }   
-            
-          
+        &__next{
+             right : 30px;          
         }  
     }
 }
 
-.slider *:focus{    
-    outline: 4px solid black;  
-}
+
 
 
 
@@ -277,9 +276,7 @@
 
 }*/
 
-button{
-    //outline: 2px solid blac       k;
-}
+
 
 
 

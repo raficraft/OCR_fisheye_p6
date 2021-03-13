@@ -37,17 +37,17 @@
 
                           <div class="brick">
                             <label for="lastname">Prénom</label>
-                            <input id="lastname" type="text" name="lastname" class="brickInput"/>
+                            <input id="lastname" type="text" name="lastname" class="brickInput" required//>
                           </div>
 
                           <div class="brick">
                             <label for="email">Email</label>
-                            <input  id="email" type="email" name="email" class="brickInput"/>
+                            <input  id="email" type="email" name="email" class="brickInput" required//>
                           </div>
 
                           <div class="brick">
                             <label for="message">Message</label>
-                            <textarea  id="message" type="email" name="email" class="brickInput brickInput--textarea"></textarea>
+                            <textarea  id="message" type="email" name="email" class="brickInput brickInput--textarea" required/></textarea>
                           </div>
 
                           <button type="submit" class="btn btn--modal" data-js="submitModal" aria-label="soumettre">Envoyer</button>

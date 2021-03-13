@@ -21,9 +21,13 @@ class Carousel{
             currentItem : 0,
             loop : false,
             imgView : '',
-            nextMedia : 'img'
+        },options),
+        this.btn = {
+            cross : document.querySelector('.sliderBox__close'),
+            prev : document.querySelector('.carousel__prev'),
+            next : document.querySelector('.carousel__next'),
+        }  
 
-        },options) 
 
         this.root = document.querySelector('.carousel')
         //Ajouter  aria-hidden au contenu du site
@@ -32,81 +36,27 @@ class Carousel{
         this.item = [].slice.call(document.querySelectorAll('.carousel__item'))
 
         const content = document.querySelectorAll('.marquise')
-        const prevBtn = document.querySelector('.carousel__prev')
-        const nextBtn = document.querySelector('.carousel__next')
         const closeBtn = document.querySelectorAll('[data-js="closeCarousel"]')
-        const crossBtn = document.querySelector('.sliderBox__close')
-        
 
-       
-
-
-
+        this.setStyle()         
         
         //On empêche la fermeture du carousel si l'on clique dans une image 
         content.forEach((btn) => btn.addEventListener('click', (e) => {
             e.stopPropagation()
         })) 
         
-        nextBtn.addEventListener('click', (e) => {e.stopPropagation(); this.next();})
-        prevBtn.addEventListener('click', (e) => {
-            e.stopPropagation(); 
-            this.prev()
-        })  
-        
-
-        nextBtn.addEventListener('keydown', (e) => { 
-            if(e.key === 'Tab'){
-                e.preventDefault()
-                e.stopPropagation()               
-                console.log(this.options.imgView);
-
-                document.querySelector('.sliderBox__close').focus()
-            }          
-        })
-
-        prevBtn.addEventListener('keydown', (e) => { 
-            if(e.key === 'Tab'){
-                e.preventDefault()
-                e.stopPropagation() 
-                console.log(e)              
-                console.log(this.options.imgView);
-                console.log(this.options.imgView.tagName);
-
-                if(this.options.imgView.tagName === 'VIDEO'){
-                    document.querySelector(`.slider [data-inc="${this.options.currentItem}"]`).focus();
-                }else{
-
-                document.querySelector('.carousel__next').focus()
-                }
-            }          
-        })
-
-        crossBtn.addEventListener('keydown', (e) => { 
-            if(e.key === 'Tab'){
-                e.preventDefault()
-                e.stopPropagation()  
-                document.querySelector('.carousel__prev').focus()
-                console.log(this.options.imgView);
-                console.log(this.options.imgView.tagName);
-            }          
-        })
-
-        
-      
-
-
-    
-
-       
-        
-        console.log(crossBtn);
-      
+        this.btn.next.addEventListener('click', (e) => {e.stopPropagation(); this.next();})
+        this.btn.prev.addEventListener('click', (e) => {e.stopPropagation(); this.prev();}) 
         closeBtn.forEach((btn) => btn.addEventListener('click',(e) => {e.stopPropagation(); this.closeCarousel()}))
 
-        //Navigation au clavier
+        // Si l'item courant est passé via l'exterieur.
+        // On positionne le slider sur celui-ci.
+        if(options.currentItem !== 0 ){
+            this.goToItem(this.options.currentItem)
+        }
 
-        console.log(document.querySelector('.slider'));
+
+        //Navigation au clavier
 
         document.querySelector('.slider').addEventListener('keyup',e =>{
 
@@ -117,12 +67,8 @@ class Carousel{
             }
         })
 
-        this.setStyle()         
-        // Si l'item courant est passé via l'exterieur.
-        // On positionne le slider sur celui-ci.
-        if(options.currentItem !== 0 ){
-            this.goToItem(this.options.currentItem)
-        }
+       this.createTabNav(this.btn)
+
        
     }
 
@@ -171,6 +117,33 @@ class Carousel{
         console.log(this.options.currentItem)  
         this.options.imgView = document.querySelector(`.slider [data-inc="${this.options.currentItem}"]`)
         
+    }
+
+
+    createTabNav(tabBtn){      
+
+        // order is not guaranteed
+        for (const [key, value] of Object.entries(tabBtn)) {
+
+        value.addEventListener('keydown',(e)=>{
+         
+            if(e.key === 'Tab'){ 
+                e.preventDefault()
+                e.stopPropagation()
+                key === 'cross' ? this.btn.prev.focus() : false
+                key === 'next' ? this.btn.cross.focus() : false
+
+                if( key === 'prev') {
+                
+                    if(this.options.imgView.tagName === 'VIDEO'){
+                        document.querySelector(`.slider [data-inc="${this.options.currentItem}"]`).focus();
+                    }else{
+                        this.btn.next.focus()
+                    }
+                }              
+            }              
+        }) 
+        }  
     }
 
 }
