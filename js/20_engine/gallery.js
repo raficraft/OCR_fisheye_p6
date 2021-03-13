@@ -54,11 +54,9 @@
     //render
 
         //Affichage pour la page Gallery 
-
         showIdentity()
         showMedia()
         showCounter()
-        showModalForm()
      
 
         new EventsDispatcher('[data-js]')

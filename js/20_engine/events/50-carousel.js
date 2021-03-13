@@ -8,8 +8,8 @@ let openCarousel = (target)=>{
 
     document.querySelector('.slider').setAttribute('aria-hidden', false);                    
     document.querySelector('#main').setAttribute('aria-hidden', true);
-    document.querySelector('.carousel__next').focus()
-   // hiddenScrollBar()
+    document.querySelector('.sliderBox__close').focus()
+    hiddenScrollBar()
 
   
 

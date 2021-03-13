@@ -1,6 +1,5 @@
 /**
  *  Carousel conçu à partir du tuto suivant [https://grafikart.fr/tutoriels/carrousel-javascript-87]
- * 
  */
 
 class Carousel{
@@ -20,7 +19,10 @@ class Carousel{
             slidesToScroll : 1,
             slidesVisible :1,
             currentItem : 0,
-            loop : false          
+            loop : false,
+            imgView : '',
+            nextMedia : 'img'
+
         },options) 
 
         this.root = document.querySelector('.carousel')
@@ -29,17 +31,76 @@ class Carousel{
         this.children = [].slice.call(this.el.children)
         this.item = [].slice.call(document.querySelectorAll('.carousel__item'))
 
-        const contentImage = document.querySelectorAll('.carousel img')
+        const content = document.querySelectorAll('.marquise')
         const prevBtn = document.querySelector('.carousel__prev')
         const nextBtn = document.querySelector('.carousel__next')
         const closeBtn = document.querySelectorAll('[data-js="closeCarousel"]')
+        const crossBtn = document.querySelector('.sliderBox__close')
+        
 
-        //On empêche la fermeture du carousel si l'on clique dans une image       
        
-        contentImage.forEach((btn) => btn.addEventListener('click', (e) => {e.stopPropagation()}))       
 
+
+
+        
+        //On empêche la fermeture du carousel si l'on clique dans une image 
+        content.forEach((btn) => btn.addEventListener('click', (e) => {
+            e.stopPropagation()
+        })) 
+        
         nextBtn.addEventListener('click', (e) => {e.stopPropagation(); this.next();})
-        prevBtn.addEventListener('click', (e) => {e.stopPropagation(); this.prev()})  
+        prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); 
+            this.prev()
+        })  
+        
+
+        nextBtn.addEventListener('keydown', (e) => { 
+            if(e.key === 'Tab'){
+                e.preventDefault()
+                e.stopPropagation()               
+                console.log(this.options.imgView);
+
+                document.querySelector('.sliderBox__close').focus()
+            }          
+        })
+
+        prevBtn.addEventListener('keydown', (e) => { 
+            if(e.key === 'Tab'){
+                e.preventDefault()
+                e.stopPropagation() 
+                console.log(e)              
+                console.log(this.options.imgView);
+                console.log(this.options.imgView.tagName);
+
+                if(this.options.imgView.tagName === 'VIDEO'){
+                    document.querySelector(`.slider [data-inc="${this.options.currentItem}"]`).focus();
+                }else{
+
+                document.querySelector('.carousel__next').focus()
+                }
+            }          
+        })
+
+        crossBtn.addEventListener('keydown', (e) => { 
+            if(e.key === 'Tab'){
+                e.preventDefault()
+                e.stopPropagation()  
+                document.querySelector('.carousel__prev').focus()
+                console.log(this.options.imgView);
+                console.log(this.options.imgView.tagName);
+            }          
+        })
+
+        
+      
+
+
+    
+
+       
+        
+        console.log(crossBtn);
       
         closeBtn.forEach((btn) => btn.addEventListener('click',(e) => {e.stopPropagation(); this.closeCarousel()}))
 
@@ -48,8 +109,6 @@ class Carousel{
         console.log(document.querySelector('.slider'));
 
         document.querySelector('.slider').addEventListener('keyup',e =>{
-
-            console.log('key');
 
             if(e.key === 'ArrowRight' || e.key === 'Right'){
                 this.next(); console.log('next');
@@ -82,14 +141,14 @@ class Carousel{
      */
 
     next(){      
-        this.goToItem(this.options.currentItem + this.options.slidesToScroll)
+        this.goToItem(this.options.currentItem + this.options.slidesToScroll)    
     }
     prev(){  
         this.goToItem(this.options.currentItem - this.options.slidesToScroll)
     }
 
     closeCarousel(){                
-       // restoreScrollBar()
+        restoreScrollBar()
         document.querySelector('.slider').setAttribute('aria-hidden', true);
         document.querySelector('#main').setAttribute('aria-hidden', false)
     }
@@ -108,7 +167,10 @@ class Carousel{
 
         let translateX = index * (-100 / this.item.length)
         this.container.style.transform = 'translate3d('+translateX+'%,0,0)'
-        this.options.currentItem = index      
+        this.options.currentItem = index  
+        console.log(this.options.currentItem)  
+        this.options.imgView = document.querySelector(`.slider [data-inc="${this.options.currentItem}"]`)
+        
     }
 
 }

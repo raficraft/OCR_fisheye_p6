@@ -41,7 +41,8 @@ let createImage = function (thisData,inc) {
             <article class="sticker__media--info">   
               <h2 class="sticker__media--title" aria-hidden="true">${ucFirst(thisData.alt)}</h2>
               <p class="sticker__media--price"  aria-hidden="true">${thisData.price} €</p>
-              <p class="sticker__media--like" data-js="addLike">${thisData.likes}<i class="fas fa-heart fontIcon" aria-hidden="true"></i></p>
+              <p class="sticker__media--like" data-js="addLike">${thisData.likes}
+              <i class="fas fa-heart fontIcon" aria-hidden="true"></i></p>
               <span class="sr__only">Bouton vous permettant d'ajouter une mention j'aime</span>  
           </article>
         </article>` 

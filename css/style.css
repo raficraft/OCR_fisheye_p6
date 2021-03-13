@@ -877,10 +877,10 @@ body {
   height: 320px;
   position: relative;
   margin: auto;
-  background-color: #acf2ff;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: white;
 }
 @media screen and (min-width: 1439px) {
   .slider .marquise {
@@ -897,9 +897,8 @@ body {
   border: none;
   background-color: transparent;
   z-index: 30;
-  transition: all 0.3s;
+  transition: transform 0.3s;
   cursor: pointer;
-  background-color: yellow;
 }
 .slider .sliderBox__close:hover {
   transform: scale(1.1);
@@ -1000,7 +999,7 @@ body {
 .slider .carousel__item .flexImg {
   justify-content: center;
   height: 248px;
-  background-color: black;
+  background-color: #DB8876;
 }
 @media screen and (min-width: 1439px) {
   .slider .carousel__item .flexImg {
@@ -1037,7 +1036,6 @@ body {
   font-size: 0.8125rem;
   z-index: 70;
   cursor: pointer;
-  transition: 3s;
   top: 50%;
 }
 .slider .carousel__nav :hover {
@@ -1053,7 +1051,6 @@ body {
 .slider .carousel__prev {
   left: 30px;
   top: 25%;
-  background-color: yellow;
   height: 50%;
 }
 @media screen and (min-width: 1439px) {
@@ -1064,7 +1061,6 @@ body {
 .slider .carousel__next {
   right: 30px;
   top: 25%;
-  background-color: yellow;
   height: 50%;
 }
 @media screen and (min-width: 1439px) {
@@ -1073,61 +1069,95 @@ body {
   }
 }
 
-figure .carouselmedia__Mimi--0 {
+.slider *:focus {
+  outline: 4px solid black;
+}
+
+.figure__video {
+  position: relative;
+}
+
+.figure__video video:focus ~ .maskVideo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  bottom: 0;
+  display: block;
+  background-color: rgba(144, 28, 28, 0);
+  border: 6px solid #901c1c;
+  z-index: 500;
+  content: "";
+  width: 100%;
+  height: 100%;
+}
+
+/*
+
+
+.figure__video video:focus,.figure__video video:hover{
+
+    border : 1px solid red;
+    object-fit: cover;
+
+
+
+}*/
+figure .media__Mimi--0 {
   object-position: 70% 0%;
 }
-figure .carouselmedia__Mimi--2 {
+figure .media__Mimi--2 {
   object-position: 0% 44%;
 }
-figure .carouselmedia__Mimi--4 {
+figure .media__Mimi--4 {
   object-position: 0% 20%;
 }
-figure .carouselmedia__Mimi--6 {
+figure .media__Mimi--6 {
   object-position: 0% 20%;
 }
-figure .carouselmedia__Mimi--9 {
+figure .media__Mimi--9 {
   object-position: 0% 40%;
 }
-figure .carouselmedia__Ellie-Rose--5 {
+figure .media__Ellie-Rose--5 {
   object-position: 0% 20%;
 }
-figure .carouselmedia__Ellie-Rose--6 {
+figure .media__Ellie-Rose--6 {
   object-position: 100% 0%;
 }
-figure .carouselmedia__Tracy--0 {
+figure .media__Tracy--0 {
   object-position: 0% 8%;
 }
-figure .carouselmedia__Tracy--2 {
+figure .media__Tracy--2 {
   object-position: 0% 15%;
 }
-figure .carouselmedia__Tracy--3 {
+figure .media__Tracy--3 {
   object-position: 0% 60%;
 }
-figure .carouselmedia__Tracy--4 {
+figure .media__Tracy--4 {
   object-position: 60% 0%;
 }
-figure .carouselmedia__Tracy--7 {
+figure .media__Tracy--7 {
   object-position: 0% 0%;
 }
-figure .carouselmedia__Tracy--8 {
+figure .media__Tracy--8 {
   object-position: 40% 0%;
 }
-figure .carouselmedia__Nabeel--8 {
+figure .media__Nabeel--8 {
   object-position: 0% 70%;
 }
-figure .carouselmedia__Rhode--1 {
+figure .media__Rhode--1 {
   object-position: 0% 10%;
 }
-figure .carouselmedia__Rhode--2 {
+figure .media__Rhode--2 {
   object-position: 0% 30%;
 }
-figure .carouselmedia__Rhode--5 {
+figure .media__Rhode--5 {
   object-position: 0% 30%;
 }
-figure .carouselmedia__Rhode--6 {
+figure .media__Rhode--6 {
   object-position: 0% 0%;
 }
-figure .carouselmedia__Rhode--7 {
+figure .media__Rhode--7 {
   object-position: 0% 70%;
 }
 

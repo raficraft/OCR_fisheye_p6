@@ -9,10 +9,7 @@ let sortMedia = (target)=>{
        elementToEmpty.querySelectorAll('*').forEach(n => n.remove());
        showMedia()
 
-        /* Suite à des effets transversaut qui reinject la gallery d'image {showMedia}
-        on réaffecte les ecouteurs d'événement au attibuts [data-js] contenue
-        dans le parent {.sticker__media}
-        */
+        
        new EventsDispatcher('.sticker__media [data-js]')
 
     

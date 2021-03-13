@@ -27,10 +27,10 @@
         height : 320px;
         position : relative;
         margin : auto;
-        background-color: rgb(172, 242, 255);
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: white;
 
         @media screen and (min-width:1439px){
             width: 980px;
@@ -48,9 +48,8 @@
         border : none;
         background-color: transparent;
         z-index: 30;
-        transition : all 0.3s;
+        transition : transform 0.3s;
         cursor : pointer;
-        background-color: yellow;
 
         &:hover{
             transform : scale(1.1);
@@ -162,7 +161,7 @@
             .flexImg{
                 justify-content: center;
                 height: 248px;
-                background-color: black;
+                background-color: $second_background;
                 @media screen and (min-width : 1439px){                
                     height : 685px;
                 }
@@ -185,8 +184,7 @@
                     margin-top: rem(12);
                 }
             } 
-        }
-     
+        }     
 
         &__nav{
             position : absolute;
@@ -198,7 +196,6 @@
             font-size : rem(13); 
             z-index :70;
             cursor : pointer;
-            transition :  3s;
             top : 50%;
 
             :hover{
@@ -217,7 +214,6 @@
            
             left : 30px; 
             top : 25%;
-            background-color: yellow;
             height: 50%;      
             @media screen and (min-width : 1439px){
              
@@ -229,15 +225,60 @@
            
             right : 30px;
             top : 25%;
-            background-color: yellow;
             height: 50%;
            
             @media screen and (min-width : 1439px){
                 right : 30px;
          
-            }       
+            }   
+            
+          
         }  
     }
+}
+
+.slider *:focus{    
+    outline: 4px solid black;  
+}
+
+
+
+
+.figure__video{
+    position :relative;
+}
+
+.figure__video video:focus ~.maskVideo{
+
+    position : absolute;
+    top : 0;
+    bottom: 0;
+    left:0;
+    bottom: 0;
+    display: block;
+    background-color:rgba(144,28,28,0);
+    border: 6px solid rgba(144,28,28,1);
+    z-index: 500;
+    content: '';
+    width : 100%;
+    height: 100%;
+}
+
+
+/*
+
+
+.figure__video video:focus,.figure__video video:hover{
+
+    border : 1px solid red;
+    object-fit: cover;
+
+
+
+}*/
+
+button{
+    //outline: 2px solid blac       k;
 }
 
 

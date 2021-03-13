@@ -1,6 +1,6 @@
 let openFormContact = () =>{
 
-   
+   // showModalForm()
 
       //On passe le main avec un attribut Aria-hidden
       document.querySelector('#main').setAttribute('aria-hidden', true);
@@ -8,6 +8,8 @@ let openFormContact = () =>{
       hiddenScrollBar()
       //on focus sur le premier champ de saisie
       document.querySelector('#firstname').focus()
+
+   //   new EventsDispatcher('#dialog [data-js]')
 
      
 }
