@@ -592,7 +592,7 @@ let data = {
         "likes": 77,
         "date": "2018-04-16",
         "price": 50,
-        "alt" : "Saut en skies"
+        "alt" : "Saut en skis"
       },
       {
         "id": 9253445784,

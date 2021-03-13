@@ -53,10 +53,34 @@
         transform-origin: center;        
         border: 2px solid transparent;
         border-radius: 50%;
-
-        &:hover,&:active{
-            transform : scale(1.1);
+      
+        &:active{
+            transform : scale(1.3);
         }
+
+        &:hover,&:focus{
+            transform : scale(1.1);
+            border-radius: 50%;
+            border: 2px solid $second_color;
+            box-shadow: $box-shadow;
+        }
+    
+
+        &:before,&:after{
+            position : absolute;
+            content : '';              
+            background-color : $first_background;
+            display: block;
+            z-index : 20;
+            height: 13px;
+            width: 3px;
+            top : 3px;
+            left : 22px 
+        }
+
+
+
+
         @media screen and (min-width : 1439px){
             right :30px;
             top : 44px;
@@ -190,19 +214,20 @@
             transform-origin: center;          
             transition: 0.3s;
             border : 2px solid transparent;
-                border-radius : 50%;
-            &:hover{
-            transform: scale(1.1);
-            } 
-            &:active{ 
-            transform: scale(1.4); 
-            }   
-            &:focus{
+            border-radius : 50%;
+
+            &:hover,&:focus{
                 border : 2px solid $second_color;
                 border-radius : 50%;
                 box-shadow: $box-shadow;
+                transform: scale(1.1);
                 
             } 
+            
+            &:active{ 
+                transform: scale(1.4); 
+            }   
+           
             
             @media screen and (min-width : 1439px){
                 height: 50px;

@@ -29,7 +29,24 @@
         })
 
         for (const option of this.customOption) {
-            option.addEventListener('click',  () => {   this.swapOption(option)})
+            option.addEventListener('click',  (e) => {  
+                e.preventDefault();  e.stopPropagation(); 
+                this.swapOption(option)  
+                console.log('click dans le custom select')
+            
+            })
+
+            option.addEventListener('keydown',(e)=>{
+
+                if(e.key === 13 || e.key === 32 || e.key === 'Enter' || e.key === ' '){
+                    
+                    console.log('keyDown dans le custom select : '+ e.key)  
+                    e.preventDefault();  e.stopPropagation();                   
+                    const target = e.target; 
+                    sortMedia(target);
+                    
+                }
+            })
         }
 
 
@@ -81,19 +98,7 @@
                 })
 
             }
-
-
-
-
-
-
-
-
-
-
-
-
-            //Spécifique à ce projet lors du filtre l'on réaffiche le carousel           
+            //Spécifique à ce projet lors du filtre l'on réInject le carousel           
             showCarousel()
         }
     }

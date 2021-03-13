@@ -25,7 +25,7 @@
 
                 case 'openCarousel': openCarousel(target); break;
 
-                case 'sortMedia': console.log(localStorage.getItem('sortDataMedia')); sortMedia(target);  break;
+                case 'sortMedia': sortMedia(target);  break;
 
                 case 'addLike':  addlike(target); break;  
 
@@ -35,3 +35,4 @@
  }
 
 new EventsDispatcher('[data-js]')
+
