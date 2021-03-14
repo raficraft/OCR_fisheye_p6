@@ -12,94 +12,41 @@
         this.customOption =  document.querySelectorAll(".customOption")
         this.selectBody = document.querySelector('.custom-select');
         this.trigger = document.querySelector('.customSelect--trigger');
-        this.lastOption = document.getElementById('customOption3')
 
+        this.el.addEventListener('click', () => { this.openCustomSelect(this.selectBody) })
 
-
-        this.selectBody.addEventListener('mousedown', (e) => { e.preventDefault(); this.openCustomSelect(this.selectBody) })
-
-        this.trigger.addEventListener('focus', (e)=>{ this.openCustomSelect(this.selectBody);  })
-
-        this.lastOption.addEventListener('focusout',(e)=>{
-            
-            const select = document.querySelector('.custom-select')         
-            select.classList.remove('open');
-            toggleAttribute(select,'aria-expanded','false','true')           
         
-        })
-
         for (const option of this.customOption) {
-            option.addEventListener('click',  (e) => {  
-                e.preventDefault();  e.stopPropagation(); 
-                this.swapOption(option)  
-                console.log('click dans le custom select')
-            
-            })
-
-            option.addEventListener('keydown',(e)=>{
-
-                if(e.key === 13 || e.key === 32 || e.key === 'Enter' || e.key === ' '){
-                    
-                    console.log('keyDown dans le custom select : '+ e.key)  
-                    e.preventDefault();  e.stopPropagation();                   
-                    const target = e.target; 
-                    sortMedia(target);
-                    
-                }
-            })
+            option.addEventListener('click',  () => {   this.swapOption(option)})
         }
-
-
-
-        window.addEventListener('click', (e) => { 
-            this.closCustomSelect(e)
-
         
-        });
+        window.addEventListener('click', (e) => { this.clickDoMAndClose(e)});
+        
+        this.trigger.addEventListener('focus', (e)=>{ this.openCustomSelect(this.selectBody);  })
+     
+
     }
 
 
 
     swapOption(option){
-        console.log(option);
+        console.log('swap');
         document.querySelector('.customHidden').classList.remove('customHidden');                
         if (!option.classList.contains('selected')) {
             option.parentNode.querySelector('.customOption.selected').classList.remove('selected');
             option.classList.add('selected','customHidden');
-            option.closest('.custom-select').querySelector('.customSelect--trigger span').textContent = option.textContent;            
-            localStorage.setItem('sortDataMedia' , option.dataset.value)
+            option.closest('.custom-select').querySelector('.customSelect--trigger span').textContent = option.textContent;
+            sortDataMedia(localStorage.setItem('sortDataMedia', option.textContent))
 
-            console.log(this.trigger.textContent)
-
-            if(localStorage.getItem('sortDataMedia') === 'title'){
-                console.log('on change')
-                this.lastOption = document.getElementById('customOption2')
-
-                this.lastOption.addEventListener('focusout',(e)=>{
-            
-                    const select = document.querySelector('.custom-select')
-                 
-                        select.classList.remove('open');
-                        toggleAttribute(select,'aria-expanded','false','true')  
-                })
-
-            }
-
-            if(localStorage.getItem('sortDataMedia') === 'date'){
-                console.log('on change')
-                this.lastOption = document.getElementById('customOption3')
-
-                this.lastOption.addEventListener('focusout',(e)=>{
-            
-                    const select = document.querySelector('.custom-select')
-                 
-                        select.classList.remove('open');
-                        toggleAttribute(select,'aria-expanded','false','true')  
-                })
-
-            }
-            //Spécifique à ce projet lors du filtre l'on réInject le carousel           
+            //Spécifique à ce projet lors du filtre l'on réaffiche le carousel           
             showCarousel()
+            //On ferme le customSelect et on pointe sur la première image
+            this.closCustomSelect()
+            let firstMedia = document.querySelector('.flexImg[data-item="0"]')
+            firstMedia.focus()
+        
+
+            
         }
     }
 
@@ -108,12 +55,18 @@
         toggleAttribute(el,'aria-expanded','false','true') 
     }
 
-    closCustomSelect(e){
-        const select = document.querySelector('.custom-select')
-        if (!select.contains(e.target)) {
-            select.classList.remove('open');
-            toggleAttribute(select,'aria-expanded','false','true')
+    clickDoMAndClose(e){
+        if (!this.selectBody.contains(e.target)) {
+            this.selectBody.classList.remove('open');
+            toggleAttribute(this.selectBody,'aria-expanded','false','true')
         }
+    }
+
+    closCustomSelect(){
+        const select = document.querySelector('.custom-select')        
+        select.classList.remove('open');
+        toggleAttribute(select,'aria-expanded','false','true')
+        
     }
 
     
@@ -121,4 +74,5 @@
 }
 
 
-new CustomSelect('.customSelect__wrapper')
+
+

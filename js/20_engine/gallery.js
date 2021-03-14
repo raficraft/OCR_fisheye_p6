@@ -60,7 +60,7 @@
      
 
         new EventsDispatcher('[data-js]')
-     
+        new CustomSelect('.customSelect__wrapper')
        
 
 

@@ -24,13 +24,13 @@
 
     .marquise{
         width : 400px;
-        height : 320px;
+        height : 340px;
         position : relative;
         margin : auto;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: white;
+        background-color: rgb(255, 255, 255);
 
         @media screen and (min-width:1439px){
             width: 980px;
@@ -42,9 +42,9 @@
     .sliderBox__close{
         position: absolute;
         top : 44px;
-        right : 34px;
-        height: 12px;
-        width : 12px;
+        right : 26px;
+        height: 22px;
+        width : 22px;
         border : none;
         background-color: transparent;
         z-index: 30;
@@ -73,9 +73,10 @@
             display: block;
             z-index : 20;
             height: 13px;
-            width: 3px;
-            top : 3px;
-            left : 22px 
+            width: 2px;
+            top : 2.5px;
+            right : 8px ;
+           
         }
 
 
@@ -130,7 +131,7 @@
         margin : auto;
         border-radius: 5px;
         width : 289px;
-        height : 260px;
+        height : 268px;
         z-index: 40;
         box-sizing: content-box;
         overflow : hidden;
@@ -151,6 +152,7 @@
             transform : translate3d(0,0,0);  
             display: flex;
             height:100%;
+           // background-color: yellow;
         }
 
         &__item{
@@ -164,10 +166,10 @@
 
             video{
                 height:162px;
-                transform: translateY(25%);
+                transform: translateY(27%);
                 
                 @media screen and (min-width : 1439px){                
-                   // width : 800px;
+                    transform: translateY(25%);
                     height: 450px;                    
                 }
             }
@@ -187,7 +189,6 @@
             }
 
             figcaption{
-                margin-top : rem(7);
                 font-size: rem(14);
                 line-height: 18px;
                 color : $first_background !important;
@@ -203,18 +204,19 @@
 
         &__prev,&__next{
             position : absolute;           
-            width : 40px;
-            height : 40px;  
+            cursor : pointer;
             border : none;
             background-color: transparent;  
             font-size : rem(13); 
             z-index :70;
-            cursor : pointer;
-            top : 50%;
+            width : 30px;
+            height : 30px;  
+            top : calc(50% - 28px);
             transform-origin: center;          
             transition: 0.3s;
             border : 2px solid transparent;
             border-radius : 50%;
+            background-color: rgb(255, 255, 255);
 
             &:hover,&:focus{
                 border : 2px solid $second_color;
@@ -251,15 +253,24 @@
                 left : 5px;
             }
         }
-       
 
         &__prev{            
-            left: 30px;
+            left: 20px;
         }
 
         &__next{
-             right : 30px;          
+             right : 20px;          
         }  
+       
+        @media screen and (min-width : 1439px){
+            &__prev{            
+                left: 30px;
+            }
+
+            &__next{
+                right : 30px;          
+            }  
+        }
     }
 }
 

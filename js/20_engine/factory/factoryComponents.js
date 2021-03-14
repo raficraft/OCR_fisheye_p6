@@ -7,8 +7,21 @@ function componentsFactory(){
      */
 
     sortDataMedia(localStorage.getItem('sortDataMedia'))  // Réordonnancement du tableau avant usage
+    console.error(`on rentre dans la factory`);
     
-    this.createComponents = function(method,dataJSON){
+    this.createComponents = function(method,dataJSON = {}){
+
+        console.log(dataJSON)
+        if(!dataJSON.length){
+            console.log(`method : ${method}, je n'ai pas de longueur`)
+            console.log(`method : ${method}, mais j'ai une dimension de : ${Object.size(dataJSON)}`)
+            console.log(dataJSON)
+        }else{
+            console.log(`method : ${method}, j'ai une longueur de : ${dataJSON.length}`)
+            console.log(dataJSON)
+        }
+
+        console.error(' ')
 
         let makeComponent = []; 
         let inc=0;

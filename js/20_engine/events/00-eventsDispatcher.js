@@ -2,7 +2,7 @@
 
     constructor(dataAttibute){
         this.events = document.querySelectorAll(dataAttibute);
-        this.events.forEach((btn) => btn.addEventListener('mousedown',(e)=>{ this.listen(e)}  ))       
+        this.events.forEach((btn) => btn.addEventListener('click',(e)=>{ this.listen(e)}  ))       
     }
 
     listen(e){

@@ -2,11 +2,11 @@
   let createCarousel = function (thisData){
 
           this.elHTML = 
-          `<div class="slider" data-js="closeCarousel" aria-hidden="true" tabindex="-1">
-            <div class="marquise" tabindex="-1">
+          `<div class="slider" data-js="closeCarousel" aria-hidden="true" >
+            <div class="marquise" >
               <button class="sliderBox__close" data-index="1" data-js="closeCarousel" aria-label="bouton de fermeture du carousel"></button>
-              <div id="carousel" class="carousel" tabindex="-1">
-                <div class="carousel__container" style="width: 0%;" tabindex="-1">`
+              <div id="carousel" class="carousel" >
+                <div class="carousel__container" style="width: 0%;" >`
 
       let limit = thisData.length
       for(var i = 0; i < limit; i++){
@@ -14,8 +14,8 @@
 
         if(thisData[i].image){
 
-          this.elHTML +=  `<div class="carousel__item" tabindex="-1">
-                              <figure class"figure__img flexImg" tabindex="-1">
+          this.elHTML +=  `<div class="carousel__item" >
+                              <figure class"figure__img flexImg" >
                                   <img  src="${thisData[i].dirMedia}/1050/${thisData[i].image}" 
                                         class="${thisData[i].class} imgFlex"
                                         alt="${thisData[i].alt}"
@@ -23,7 +23,7 @@
                                         data-inc="${i}"
                                         />  
                                                                                                      
-                                        <figcaption tabindex="-1">${thisData[i].alt}</figcaption>
+                                        <figcaption >${ucFirst(thisData[i].alt)}</figcaption>
                               </figure>
                           </div>`
 
@@ -31,8 +31,8 @@
 
         }else if(thisData[i].video){
 
-          this.elHTML += `<div class="carousel__item" tabindex="-1">
-                              <figure class="figure__video flexImg" tabindex="-1">
+          this.elHTML += `<div class="carousel__item" >
+                              <figure class="figure__video flexImg" >
                                   <video controls data-inc="${i}" tabindex="3">
 
                                       <source 
@@ -46,7 +46,7 @@
                                   </video>  
                                   <span class="maskVideo"></span>                                                             
                                   </figure>
-                                  <figcaption tabindex="-1">${thisData[i].alt}</figcaption>
+                                  <figcaption >${ucFirst(thisData[i].alt)}</figcaption>
                           </div>`
         }        
       }
