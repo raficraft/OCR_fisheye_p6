@@ -2,11 +2,11 @@
 
     constructor(dataAttibute){
         this.events = document.querySelectorAll(dataAttibute);
-        this.events.forEach((btn) => btn.addEventListener('click',(e)=>{ this.listen(e)}  ))       
+        this.events.forEach((btn) => btn.addEventListener('click',(e)=>{ this.eventClick(e)}  ))       
     }
 
-    listen(e){
-        e.preventDefault();  e.stopPropagation();
+    eventClick(e){
+        
       
         if(e.target.dataset){
 
@@ -14,21 +14,25 @@
             const target = e.target;
             const action = el.dataset.js;
             console.log(action)
+            if(action !== 'submitModal'){
+                e.preventDefault();  e.stopPropagation();
+                switch(action){               
 
-            switch(action){
-
-                case 'openFormContact' : openFormContact(); break;   
+                    case 'openFormContact' : openFormContact(); break;   
+                    
+                    case 'closeModal':  closeModal(target); break;
                 
-                case 'closeModal': console.log('click'); closeModal(target); break;
 
-                case 'submitModal': console.log('Soumettre le formulaire'); break;
+                    case 'openCarousel': openCarousel(target); break;
 
-                case 'openCarousel': openCarousel(target); break;
+                    case 'sortMedia': sortMedia(target);  break;
 
-                case 'sortMedia': sortMedia(target);  break;
+                    case 'addLike':  addlike(target); break;  
 
-                case 'addLike':  addlike(target); break;  
+                }
+            }else{
 
+               submitModal()
             }
         } 
     }

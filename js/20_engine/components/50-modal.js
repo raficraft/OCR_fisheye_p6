@@ -16,7 +16,7 @@
                   data-js="closeModal">
                 
                 
-                    <form action="" method="post">
+                    <form id="sendMessage"  method="dialog">
                       <button 
                       class="dialogBox__close"
                       type="button" 
@@ -31,13 +31,13 @@
                         <div class="form__content">
 
                           <div class="brick">
-                            <label for="firstname">nom</label>
-                            <input id="firstname" type="text" name="firstname" class="brickInput" min-length="2" required/>
+                            <label for="lastname">Prénom</label>
+                            <input id="lastname" type="text" name="lastname" class="brickInput" required//>
                           </div>
 
                           <div class="brick">
-                            <label for="lastname">Prénom</label>
-                            <input id="lastname" type="text" name="lastname" class="brickInput" required//>
+                            <label for="firstname">nom</label>
+                            <input id="firstname" type="text" name="firstname" class="brickInput" min-length="2" required/>
                           </div>
 
                           <div class="brick">
@@ -47,10 +47,10 @@
 
                           <div class="brick">
                             <label for="message">Message</label>
-                            <textarea  id="message" type="email" name="email" class="brickInput brickInput--textarea" required/></textarea>
+                            <textarea  id="message"  name="message" class="brickInput brickInput--textarea" required/></textarea>
                           </div>
 
-                          <button type="submit" class="btn btn--modal" data-js="submitModal" aria-label="soumettre">Envoyer</button>
+                          <button type="submit" class="btn btn--modal" formnovalidate="formnovalidate" data-js="submitModal" aria-label="soumettre">Envoyer</button>
 
                       
                         

@@ -1,6 +1,8 @@
 
   let createCarousel = function (thisData){
 
+    sortDataMedia(localStorage.getItem('sortDataMedia'))
+    
           this.elHTML = 
           `<div class="slider" data-js="closeCarousel" aria-hidden="true" >
             <div class="marquise" >

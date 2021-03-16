@@ -39,7 +39,7 @@
             sortDataMedia(localStorage.setItem('sortDataMedia', option.textContent))
 
             //Spécifique à ce projet lors du filtre l'on réaffiche le carousel           
-            showCarousel()
+            factory.injectCarousel()
             //On ferme le customSelect et on pointe sur la première image
             this.closCustomSelect()
             let firstMedia = document.querySelector('.flexImg[data-item="0"]')

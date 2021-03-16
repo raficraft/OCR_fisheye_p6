@@ -5,7 +5,7 @@
     z-index : 200;
     padding : 0;
     border : none;    
-    background-color: white;
+    background-color: rgba(0,0,0,0.5);
     -webkit-overflow-scrolling: touch;
     &[aria-hidden="true"]{
     visibility: hidden;
@@ -25,7 +25,6 @@
             width : 668px;    
             padding : rem(32) rem(35) rem(38) rem(35);
             margin-top : rem(32);
-            box-shadow: $box-shadow;
         }  
 
 

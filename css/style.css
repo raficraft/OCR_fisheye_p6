@@ -696,7 +696,7 @@ body {
   z-index: 200;
   padding: 0;
   border: none;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.5);
   -webkit-overflow-scrolling: touch;
 }
 .dialogBox[aria-hidden=true] {
@@ -717,7 +717,6 @@ body {
     width: 668px;
     padding: 2rem 2.1875rem 2.375rem 2.1875rem;
     margin-top: 2rem;
-    box-shadow: 0px 5px 5px 0px #bbbbbb;
   }
 }
 .dialogBox form .dialogBox__close {

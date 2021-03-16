@@ -1,6 +1,8 @@
 let openFormContact = () =>{
 
-    showModalForm()
+
+
+    factory.injectModalForm()
     //On passe le main avec un attribut Aria-hidden
     document.querySelector('#main').setAttribute('aria-hidden', true);
     document.querySelector('#dialog').setAttribute('aria-hidden', false);
@@ -29,10 +31,18 @@ let closeModal = (target) => {
 
 let submitModal = () => {
 
-    let submitMessage = `<div class="submitMessage">
+  /* let submitMessage = `<div class="submitMessage">
                             <h1>votre message à bien été transmit</h1>
-                         </div>`
+                         </div>`*/
 
-    document.querySelector('#dialog fieldset').innerHTML = submitMessage
+    let dataForm = {}
+
+    let inputsForm = document.forms["sendMessage"].querySelectorAll('.brickInput');
+
+    inputsForm.forEach(el =>   dataForm[el.name] = el.value  )
+
+    console.log(dataForm)
+    //Les informations collectés dans dataForm seront au fichier de validation
+    closeModal()
 
 }

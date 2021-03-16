@@ -7,7 +7,7 @@ let sortMedia = (target)=>{
        sortDataMedia(sortBy_customSelect)
        const elementToEmpty = document.querySelector('.photography')
        elementToEmpty.querySelectorAll('*').forEach(n => n.remove());
-       showMedia()
+       factory.injectMedia()
 
         
        new EventsDispatcher('.sticker__media [data-js]')

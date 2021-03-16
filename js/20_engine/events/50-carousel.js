@@ -1,6 +1,6 @@
 let openCarousel = (target)=>{
 
-    showCarousel()
+    factory.injectCarousel()
 
     let item = parseInt(target.dataset.item);   
     

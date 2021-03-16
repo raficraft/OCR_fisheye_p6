@@ -62,8 +62,7 @@ class GetData {
          */
         static getIdentity() {
 
-
-            let thisData = data.photographers.find(el => el.id === browserInfo.request.idURL)
+            let   thisData = data.photographers.find(el => el.id === browserInfo.request.idURL)
             
             if(Object.size(thisData) === 0){
               redirectTo('404.html')

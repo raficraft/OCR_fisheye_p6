@@ -1,22 +1,31 @@
 let createSticker = function(thisData){
 
-  let path = browserInfo.path
+
+        if(!thisData.length){
+                let tmpData = []
+                tmpData.push(thisData)
+                console.log(tmpData)
+                thisData = tmpData
+            }
+
+        this.elHTML = ''
 
 
-        this.elHTML =
-        `<article class="sticker">
+        thisData.forEach((data,key) => {
+                console.log(data)
+        this.elHTML +=`<article class="sticker">
                 <header>`
 
                 if(browserInfo.request.idURL === false){
-                this.elHTML  +=`<a class="identity" href="gallery.html?id=${thisData.id}" >
+                this.elHTML  +=`<a class="identity" href="gallery.html?id=${data.id}" >
                                         <p class=" flexImg">
-                                        <img class="identity__img imgFlex" src="img/Photographers_photo/${thisData.portrait}"
-                                        alt="Photographe affilié au site Fisheye : ${thisData.name}"  /></p>
-                                         <span><h2>${thisData.name}</h2></span>
+                                        <img class="identity__img imgFlex" src="img/Photographers_photo/${data.portrait}"
+                                        alt="Photographe affilié au site Fisheye : ${data.name}"  /></p>
+                                         <span><h2>${data.name}</h2></span>
                                 </a>`
                 }else{
-                this.elHTML+= `<p class="identity flexImg"><img class="identity__img imgFlex" src="img/Photographers_photo/${thisData.portrait}"
-                                alt="Photographe affilié au site Fisheye : ${thisData.name}"  /></p>`
+                this.elHTML+= `<p class="identity flexImg"><img class="identity__img imgFlex" src="img/Photographers_photo/${data.portrait}"
+                                alt="Photographe affilié au site Fisheye : ${data.name}"  /></p>`
 
                 }
 
@@ -31,16 +40,16 @@ let createSticker = function(thisData){
             
             
                 if(browserInfo.request.idURL !== false){
-                this.elHTML += ` <h1>${thisData.name}</h1>`
+                this.elHTML += ` <h1>${data.name}</h1>`
                 }
 
 
-                this.elHTML += `<p class="info__city">${thisData.city}, ${thisData.country}</p>
-                                <p class="info__tagline">${thisData.tagline}</p>
-                                <p class="info__price">${thisData.price}€/jour</p>                       
+                this.elHTML += `<p class="info__city">${data.city}, ${data.country}</p>
+                                <p class="info__tagline">${data.tagline}</p>
+                                <p class="info__price">${data.price}€/jour</p>                       
                                 <footer class="nav nav__filter">`
 
-                thisData.tags.forEach(tag =>{    
+                data.tags.forEach(tag =>{    
                         this.elHTML +=  
                                         `<span class="filter"><a href="index.html?tags=${tag}">#${ucFirst(tag)}</a></span>`    
                 }) 
@@ -48,4 +57,7 @@ let createSticker = function(thisData){
                                 `</footer>
                         </article>
                 </article>` 
+                
+        });
+
 }
