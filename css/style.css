@@ -196,7 +196,7 @@ body {
 }
 @media screen and (min-width: 767px) {
   .selectFilter .selectFilter--inner {
-    padding: 0 6rem;
+    padding: 2rem 0rem;
     inline-size: 100%;
     padding-bottom: 0.875rem;
   }
@@ -223,7 +223,7 @@ body {
     inline-size: 100%;
     margin: auto;
     justify-content: space-between;
-    padding: 1rem 6rem 6rem 6rem;
+    padding: 1rem 0rem 6rem 0rem;
   }
 }
 @media screen and (min-width: 1023px) {

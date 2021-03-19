@@ -7,6 +7,9 @@ let sortMedia = (target)=>{
        sortDataMedia(sortBy_customSelect)
        const elementToEmpty = document.querySelector('.photography')
        elementToEmpty.querySelectorAll('*').forEach(n => n.remove());
+
+       document.querySelector('#photography').remove()
+
        factory.injectMedia()
 
         

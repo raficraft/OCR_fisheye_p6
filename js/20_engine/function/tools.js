@@ -151,26 +151,18 @@ const sortDataMedia = (sortBy) => {
 			data.media.sort(function(a,b){
 				return b.likes - a.likes
 			})
-
 		break;
 
 		case 'date':
-
 			data.media.sort(function(a,b){
 				return new Date(b.date) - new Date(a.date);
 			})
-
 		break;
 
 
-		case 'title':
-		
+		case 'title':		
 			data.media.sort((a, b) => a.alt.localeCompare(b.alt, 'fr', {ignorePunctuation: true}));
-
 		break;
-
-
-
 
 	}
 }

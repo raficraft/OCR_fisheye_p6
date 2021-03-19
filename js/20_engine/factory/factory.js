@@ -2,21 +2,21 @@
 
         constructor(){
 
+            this.targetHeader = document.querySelector("header");
             this.targetMain = document.getElementById("main__wrapper");
             this.targetIdentity = document.getElementById("main__wrapper");
-            this.targetMedia = document.querySelector('.photography');  
             this.targetRoot = document.getElementById('body')    
             this.getComponent = new workshopComponent() 
-
         }
-
-
+        
         //index.html
 
-        injectIdentities = () =>{        
-            //On récupère l'identités liés au TAG passé en url   {?tags=tag}        
+        injectHeader = () =>{              
+            let identityComponent = this.getComponent.createComponents(new createHeader())
+            renderComponent(identityComponent,this.targetHeader)
+        }
+        injectIdentities = () =>{              
             let dataJSON = GetData.getIdentities() 
-            //on passe l'identité dans la factory
             let identityComponent = this.getComponent.createComponents(new createSticker(dataJSON))
             renderComponent(identityComponent,this.targetMain)
         }
@@ -25,28 +25,28 @@
         injectIdentityByTag = () =>{
 
             let dataJSON = GetData.getIdentitiesByTag(browserInfo.request.tagURL)
-            //on passe l'identité dans la factory
             let identityComponent = this.getComponent.createComponents(new createSticker(dataJSON)) 
             renderComponent(identityComponent,this.targetMain)
         }
 
         //gallery.html
 
-        injectIdentity = () => {
-            //On récupère l'identités liés à l'id passé en url   {?id=id}     
+        injectIdentity = () => {    
             let dataJSON = GetData.getIdentity()
-            //On passe le JSON dans la factory
             const identityComponent = this.getComponent.createComponents(new createSticker(dataJSON)) 
             renderComponent(identityComponent,this.targetIdentity)
         }
 
+        injectCustomSelect = () => {    
+            const customSelectComponent = this.getComponent.createComponents(new createCustomElement())             
+            renderComponent(customSelectComponent,this.targetIdentity)
+        }
+
         injectMedia = () => {   
             
-            //On récupère les media liés à l'ID du photographe passé en URL,trié selon leur popularité {?id=id} 
             let dataJSON = GetData.getMediaByIdentity()
-            //On passe le JSON dans la factory
             let mediaComponent =  this.getComponent.createComponents(new createMedia(dataJSON))
-            renderComponent(mediaComponent,this.targetMedia)
+            renderComponent(mediaComponent,this.targetIdentity)
         }
 
 
@@ -57,7 +57,6 @@
         }
 
         injectModalForm = () => {    
-            let dataJSON = ''
             let modalFormComponent = this.getComponent.createComponents(new createModalForm())
             renderComponent(modalFormComponent,this.targetRoot)
         }
@@ -72,7 +71,5 @@
             renderComponent(carouselComponent,this.targetRoot)
         }
     
-
-
     }
 

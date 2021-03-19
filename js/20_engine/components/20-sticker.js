@@ -17,7 +17,7 @@ let createSticker = function(thisData){
                 <header>`
 
                 if(browserInfo.request.idURL === false){
-                this.elHTML  +=`<a class="identity" href="gallery.html?id=${data.id}" >
+                this.elHTML  +=`<a class="identity" href="index.html?id=${data.id}" >
                                         <p class=" flexImg">
                                         <img class="identity__img imgFlex" src="img/Photographers_photo/${data.portrait}"
                                         alt="Photographe affilié au site Fisheye : ${data.name}"  /></p>

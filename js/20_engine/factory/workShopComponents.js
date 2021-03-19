@@ -14,8 +14,6 @@ function workshopComponent(){
         let makeComponent = []; 
         makeComponent = callback
 
-        console.log(makeComponent);
-
         return makeComponent
     }
 }
