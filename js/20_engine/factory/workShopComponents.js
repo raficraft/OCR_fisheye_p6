@@ -26,7 +26,7 @@ function workshopComponent(){
 function renderComponent(injectThis,target){
 
     if(!injectThis.length){
-         target.insertAdjacentHTML("beforeend",injectThis.elHTML)
+        target.insertAdjacentHTML("beforeend",injectThis.elHTML)
 
     }else{
         injectThis.map(function(injectThis){

@@ -7,11 +7,15 @@ if(browserInfo.request.idURL === false){
 
     //Injection dans la page Index 
     
-    if(browserInfo.request.tagURL !== false){
-        
+    if(browserInfo.request.tagURL){
+
         factory.injectHeader()    
         factory.injectIdentityByTag()
         redifineDistribution_StickerIdentity() //voir function/tools.js NB : écrire la doc dans tools.js
+        // On filtre les photographes par Tag on positionnne le focus sur le lien correspondant
+        // En ajoutant un style on peut obtenir un pseudo genre de class CSS 'active'
+        document.querySelector(`header nav A[href='index.html?tags=${browserInfo.request.tagURL}']`).focus() 
+       
 
     }else{
 

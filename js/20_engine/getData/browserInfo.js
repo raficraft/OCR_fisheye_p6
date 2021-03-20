@@ -44,10 +44,8 @@ class BrowserInfo{
         console.log(`la hauteur de la fenêtre est de  : ${window.innerHeight}`);
 
 
-        // Si l'on filtre les photographes on positionnne le focus sur le lien correspondant
-        // En ajoutant un style on peut obtenir un pseudo genre de class CSS 'active'
+        // Si l'on filtre les photographes on stock le focus sur le lien correspondant
         if(this.request.params !== false && this.request.params === 'tags'){
-            document.querySelector(`header nav A[href='index.html?tags=${this.request.tagURL}']`).focus() 
             localStorage.setItem('eventSource' , 'linkNav')
             localStorage.setItem('eventValue' , this.params)
         }else{
