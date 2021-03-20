@@ -6,7 +6,7 @@ let createSticker = function(thisData){
                 tmpData.push(thisData)
                 console.log(tmpData)
                 thisData = tmpData
-            }
+        }
 
         this.elHTML = ''
 

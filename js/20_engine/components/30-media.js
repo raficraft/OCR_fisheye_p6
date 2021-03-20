@@ -4,7 +4,7 @@ const createMedia = function(thisData){
 
 
   alterateMediaObject(thisData) //NB ecrire la doc dans tools   
-  this.elHTML = `<section id="photography" class="photography">`
+  this.elHTML = `<section id="photography" class="photography" data-spy>`
 
   thisData.forEach((media,key) => {
 
