@@ -1,5 +1,4 @@
 const ratio = .3
-let observer = null
 
 
 /**
@@ -50,12 +49,9 @@ spies.push(document.querySelector('[data-spy]'))
  * @param {NodeListOf.<Element} els 
  */
 const observe = (els) => {    
-    if(observer !== null){
-        els.forEach(elem => observer.unobserve(els))
-    }
     const y = Math.round(window.innerHeight * ratio)
     console.log(spies);
-    observer  = new IntersectionObserver(callBack,{
+    const observer  = new IntersectionObserver(callBack,{
         rootMargin : `-${window.innerHeight - y -1}px 0px -${y}px 0px`
     })
     spies.forEach(function (spy) {
