@@ -1,39 +1,35 @@
-
-
-class ModalForm {
+class ModalEvents {
   constructor() {
-    this.openFormContact();
+
+    console.error('ON CHARGE LES EVENTS DE LA MODAL');
+
+    this.submitBtn = document.querySelector('[data-js="submitModal"]')
+    this.closeBtn = document.querySelector('.dialogBox__close')
+    console.log(this.submitBtn);
+   
     this.keyBoardControl();
-    this.createNavigation();
+    this.createNavigation();   
 
 
-     this.tabEl = {
-       cross: document.querySelector(".dialogBox__close"),
-       submit: document.querySelector(".btn--modal"),
-     };  
+     this.submitBtn.addEventListener('click',(e)=>{
+       this.submitModal()
+     })
+
+     
+
+     this.closeBtn.addEventListener('click',(e)=>{
+         e.preventDefault(); e.stopPropagation()
+        this.closeModal()
+       })
+    
+     
   }
 
   /**
    *
    */
 
-  openFormContact() {
-    factory.injectModalForm();
-    //On passe le main avec un attribut Aria-hidden
-    document.querySelector("#main").setAttribute("aria-hidden", true);
-    document.querySelector("#dialog").setAttribute("aria-hidden", false);
-    hiddenScrollBar();
-    //on focus sur le premier champ de saisie
-    document.querySelector("#firstname").focus();
-    // On active les event click sur la modal
-    new EventsDispatcher("#dialog[data-js], #dialog [data-js]");
-  }
-
-  /**
-   *
-   */
-
-  static closeModal() {
+  closeModal() {
     restoreScrollBar();
     document.querySelector("#main").setAttribute("aria-hidden", false);
     document.querySelector("#dialog").remove();
@@ -50,7 +46,6 @@ class ModalForm {
 
   keyBoardControl(){
     document.addEventListener("keydown", (e) => {
-      console.log(e);
 
       if (document.querySelector("#dialog")) {
         if (e.key === "Escape") {
@@ -72,7 +67,7 @@ class ModalForm {
    *
    */
 
-  static submitModal() {
+  submitModal() {
     let submit = false;
     let dataForm = {};
 
@@ -99,19 +94,19 @@ class ModalForm {
   }
 
   createNavigation(){
-       document.addEventListener("keydown", (e) => {
-         console.log(e);
 
-         if (document.querySelector("#dialog")) {
-           if (e.key === "Tab") {
+   
 
+    this.submitBtn.addEventListener('keydown', (e)=>{
 
 
-            
-            
-           }
-         }
-       });
+      if(e.key === 'Tab'){ 
+        e.preventDefault(); e.stopPropagation();
+        console.log("tab");
+        this.closeBtn.focus()
+      }
+
+    })
 
   }
 

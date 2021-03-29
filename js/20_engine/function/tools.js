@@ -78,9 +78,6 @@ const setAttributes = (el, options) => {
 	})
  }
 
-
-
-
  /**
  * Altere le tableau pour lui rajouter des entrées 
  * @param {objet} dataMedia // Contient tous les photographes
@@ -136,9 +133,6 @@ const redifineDistribution_StickerIdentity = () =>{
 					stickerEl[i].style.marginRight  = '2rem'
 				}
 			}
-
-
-
 }
 
 const sortDataMedia = (sortBy) => {

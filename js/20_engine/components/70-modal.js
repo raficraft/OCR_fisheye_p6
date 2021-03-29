@@ -1,7 +1,7 @@
 class createModalForm{
   
   constructor(){
-  thisData = GetData.getIdentity();
+  const thisData = GetData.getIdentity();
 
   this.elHTML = `<div 
                   id="dialog"

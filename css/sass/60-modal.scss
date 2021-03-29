@@ -50,16 +50,16 @@
                 content : '';
                 width : 2px;
                 background-color: white;
-                height: rem(28);
+                height: rem(26);
                 display: block;
                 transform: rotate(45deg);
                 position: absolute;
-                top:0;
-                left: rem(14);
+                top:-2px;
+                left: rem(11);
                 cursor : pointer;
 
                 @media screen and (min-width : 1439px){         
-                    top :-4px;        
+                    top :-2px;        
                     height: rem(50);
                     width : 5px;
                     left :18px;
@@ -70,21 +70,25 @@
                 content : '';
                 width : 2px;
                 background-color: rgb(255, 255, 255);
-                height: rem(28);
+                height: rem(26);
                 display: block;
                 transform: rotate(135deg);
                 position: absolute;
-                top:0;
-                left: rem(14);
+                top:-2px;
+                left: rem(11);
                 cursor : pointer;
                 @media screen and (min-width : 1439px){ 
-                    top :-4px;        
+                    top :-2px;        
                     height: rem(50);
                     width : 5px;
                     left :18px;
                 }
             }
 
+            &:focus{
+               border: 2px solid white;
+               border-radius: 50%;
+            }
 
         }
 

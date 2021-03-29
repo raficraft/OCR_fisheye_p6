@@ -62,9 +62,11 @@
             this.getComponent.renderComponent(counterComponent,this.targetRoot)
         }
 
-        injectModalForm = () => {                 
+        injectModalForm = () => {      
             let modalFormComponent = this.getComponent.createComponents(new createModalForm())
             this.getComponent.renderComponent(modalFormComponent,this.targetRoot)
+            new ModalEvents()
+
         }
 
 
