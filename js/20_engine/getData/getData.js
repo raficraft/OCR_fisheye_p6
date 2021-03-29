@@ -5,10 +5,8 @@ class GetData {
        */
 
         constructor(data,idURL = browserInfo.request.idURL) {
-
           this.data = data;
           this.idURL = idURL;
-
         }
 
         /**
@@ -61,7 +59,6 @@ class GetData {
          * Recupère le profil du photographe selon l'ID passer dans l'URL
          */
         static getIdentity() {
-
             let   thisData = data.photographers.find(el => el.id === browserInfo.request.idURL)
             
             if(Object.size(thisData) === 0){
@@ -69,14 +66,12 @@ class GetData {
             }
             
             return thisData
-
         }
 
         /**
          * Récupère les photos du photographe selon l'ID passer dans l'url
          */      
-        static getMediaByIdentity(){
-         
+        static getMediaByIdentity(){         
             let thisMedia =  data.media.filter(el => el.photographerId === browserInfo.request.idURL)          
             return thisMedia
         }
@@ -97,8 +92,6 @@ class GetData {
           let thisData = { countLike : countLike , price : thisPrice}
   
           return thisData
-
-
         }
 
 }

@@ -78,51 +78,6 @@ h1 {
   transition: 0.3s;
 }
 
-/*Repères vertical*/
-.repere--X {
-  position: fixed;
-  content: "";
-  width: 1px;
-  height: 100%;
-  background-color: red;
-  z-index: 1000;
-}
-
-/*Repères horizontal*/
-.repere--Y {
-  position: fixed;
-  content: "";
-  width: 100%;
-  height: 1px;
-  background-color: red;
-  z-index: 1000;
-}
-
-/*Repères page index*/
-/*Repère vertical*/
-/*   .repere__1--X{
-        left : 6rem;
-    }
-
-    .repere__2--X{     
-        left: rem(1320);     
-    }
-*/
-/*Repère horizontal*/
-.repere__1--Y {
-  top: 40%;
-  /*Utilisez bottom pour ce repérer par les bas*/
-}
-
-/*
-    .repere__2--Y{
-        top : rem(189); /*Utilisez bottom pour ce repérer par les bas*/
-/*      
-    }
-    .repere__3--Y{
-        top : rem(74); /*Utilisez bottom pour ce repérer par les bas*/
-/*   }
-*/
 body {
   font-size: 16px;
   display: flex;
@@ -234,6 +189,7 @@ body {
 .selectFilter {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 @media screen and (max-width: 767px) {
   .selectFilter {
@@ -245,6 +201,8 @@ body {
     padding: 2rem 0rem;
     inline-size: 100%;
     padding-bottom: 0.875rem;
+    display: relative;
+    margin: auto;
   }
 }
 @media screen and (min-width: 1023px) {
@@ -1365,115 +1323,99 @@ figure .media__Rhode--7 {
   object-position: 0% 35%;
 }
 
-.selectFilter--inner {
+.customSelect {
   display: flex;
-  align-items: center;
+  padding-top: 0.5625rem;
+  padding-bottom: 1.25rem;
 }
-.selectFilter--inner label {
+.customSelect label {
   font-weight: bold;
-  margin-right: 1rem;
-  margin-top: 0.375rem;
   font-size: 1.125rem;
+  padding-top: 1.5rem;
+  padding-right: 2rem;
 }
-.selectFilter--inner button {
-  background-color: #901C1C;
+.customSelect__body--btn:first-child {
+  border-top-left-radius: 0.3125rem;
+  border-top-right-radius: 0.3125rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  position: relative;
+}
+.customSelect__body--btn:nth-child(3n) {
+  border-bottom-left-radius: 0.3125rem;
+  border-bottom-right-radius: 0.3125rem;
+}
+
+.customSelect__box {
+  position: relative;
+}
+
+.customSelect__body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1000;
+  opacity: 1;
+  left: 0px;
+  position: absolute;
+}
+.customSelect__body--btn {
+  padding: 0 0.625rem;
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
   border: none;
+  border-radius: none;
+  background-color: #901C1C;
+  cursor: pointer;
+}
+.customSelect__body--btn[data-context=swap] span {
+  border-top: 1px solid white;
+}
+.customSelect__body--btn:focus {
+  background-color: #DB8876;
+}
+.customSelect__body span {
+  padding: 1rem 0;
   color: white;
   font-size: 1.125rem;
-  padding: 0.875rem 0.625rem;
+  width: 100%;
+  text-align: left;
+  text-indent: 0.625rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.selectFilter--inner .customSelect__wrapper {
-  position: relative;
-  width: 170px;
-  display: block;
+.customSelect__body .fas {
+  color: white;
+  font-size: 1.75rem;
+  transform: scaleX(1.1);
+  margin-right: 0.5rem;
+  position: absolute;
+  right: 0.5rem;
+  top: 30%;
 }
-.selectFilter--inner .customSelect__wrapper .open {
+
+.customSelect__body[data-status=close] .customSelect__body--btn {
+  border-bottom-left-radius: 0.3125rem;
+  border-bottom-right-radius: 0.3125rem;
+}
+.customSelect__body[data-status=close] .arrowUp {
+  display: none;
+}
+.customSelect__body[data-status=close] [data-context=swap] {
+  display: none;
+}
+
+.customSelect__body[data-status=openList] .customSelect__body--btn {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-.selectFilter--inner .customSelect__wrapper .open .arrow:after {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "";
-}
-.selectFilter--inner .custom-select {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background-color: #901C1C;
-  border-radius: 0.3125rem;
-  padding: 0.3125rem 0.625rem 0;
-  width: 170px;
-}
-.selectFilter--inner .customSelect--trigger {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
-  background-color: #901C1C;
-  border: none;
-}
-.selectFilter--inner .customOptions {
-  position: absolute;
-  display: block;
-  top: 100%;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  transition: all 0.3s;
-  pointer-events: none;
-  z-index: 1;
-  background-color: #901C1C;
-  padding: 0rem 0.625rem;
-  border-bottom-left-radius: 0.3125rem;
-  border-bottom-right-radius: 0.3125rem;
-  cursor: pointer;
-}
-.selectFilter--inner .custom-select.open .customOptions {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: all;
-}
-.selectFilter--inner .customOption {
-  position: relative;
-  display: block;
-  cursor: pointer;
-  transition: all 0.5s;
-  border-top: 1px solid white;
-  width: 150px;
-  text-align: left;
-}
-.selectFilter--inner .customOption span {
-  pointer-events: none;
-}
-.selectFilter--inner .customOption:nth-child(1), .selectFilter--inner .customOption:nth-child(2) {
-  padding-top: 0.9375rem;
-  padding-bottom: 0.9375rem;
-}
-.selectFilter--inner .customOption:nth-child(3) {
-  padding-top: 0.9375rem;
-  padding-bottom: 1.1875rem;
-}
-.selectFilter--inner .custom-option.selected {
-  color: #ffffff;
-}
-.selectFilter--inner .arrow:after {
-  position: relative;
-  height: 15px;
-  width: 15px;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "";
-  height: 16px;
-  width: 16px;
-  color: white;
-}
-.selectFilter--inner .customHidden {
+.customSelect__body[data-status=openList] .arrowDown {
   display: none;
 }
-.selectFilter--inner .customOption:focus, .selectFilter--inner .customSelect--trigger:focus {
-  background-color: #DB8876;
+.customSelect__body[data-status=openList] .arrowUp {
+  display: block;
 }
 
 .btn {

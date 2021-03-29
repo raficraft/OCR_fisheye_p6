@@ -116,6 +116,7 @@ body{
 .selectFilter{
     display: flex;
     justify-content: center;
+    width : 100%;
 
         @media screen and (max-width : 767px) {
             display : none;
@@ -126,7 +127,9 @@ body{
         @media screen and (min-width : 767px) { 
             padding : rem(32) rem(0);
             inline-size: 100%;  
-            padding-bottom : rem(14)    
+            padding-bottom : rem(14) ;
+            display : relative;   
+            margin : auto;
         }
         @media screen and(min-width : 1023px) {
             inline-size: 1024px; 

@@ -144,6 +144,7 @@ const redifineDistribution_StickerIdentity = () =>{
 const sortDataMedia = (sortBy) => {
 
 
+	console.error(sortBy);
 	switch (sortBy){
 
 		case 'popularity':

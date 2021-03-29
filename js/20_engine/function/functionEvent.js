@@ -1,9 +1,17 @@
-let addlike = (target) => {
-
- // get innerText
-
+const manageLike = (target,behavior) => {
+   
     let like = parseInt(target.textContent)
-    let newCount = like + 1
+
+    let newCount = 0
+    
+    console.log(behavior);
+    if(behavior === 'add'){
+        newCount = like + 1
+    }else if(behavior === 'del'){
+        newCount = like - 1
+    }
+
+
     target.innerHTML = `${newCount}<i class="fas fa-heart fontIcon"></i>`
     target.removeAttribute('data-js')
 
@@ -16,8 +24,8 @@ let addlike = (target) => {
         sumLike = sumLike + parseInt(allLikeElement[i].textContent)
     }
 
-
     const sumLikeElement = document.querySelector('.sumLike')
     sumLikeElement.innerHTML = `${sumLike}<i class="fas fa-heart fontIcon"></i>`
 
 }
+

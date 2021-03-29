@@ -18,10 +18,8 @@ if(browserInfo.request.idURL === false){
        
 
     }else{
-
         factory.injectHeader()
         factory.injectIdentities()
-
     }
 
 }else{
@@ -34,11 +32,10 @@ if(browserInfo.request.idURL === false){
         factory.injectIdentity()
         factory.injectCustomSelect()
         factory.injectMedia()
-        factory.injectCounter()
+       
+        factory.injectCounter()        
         
-
-        new EventsDispatcher('[data-js]')
-        new CustomSelect('.customSelect__wrapper')
+        //new CustomSelect('.customSelect__wrapper')
 
 }
 

@@ -1,20 +1,16 @@
+class createModalForm{
+  
+  constructor(){
+  thisData = GetData.getIdentity();
 
-  let createModalForm = function(){
-
-
-    thisData = GetData.getIdentity()
-
-
-    this.elHTML = 
-                `<div 
+  this.elHTML = `<div 
                   id="dialog"
                   role="dialog" 
-                  aria-modal="false"
+                  aria-modal="true"
                   aria-hidden="true"
                   tabindex="-1" 
                   class="dialogBox"           
                   data-js="closeModal">
-                
                 
                     <form id="sendMessage"  method="dialog">
                       <button 
@@ -22,6 +18,7 @@
                       type="button" 
                       aria-label="Fermer le formulaire" 
                       title="Fermer cette fenêtre de contact"
+                      data-dismiss="dialog"
                       data-js="closeModal">
                     </button>
                     <fieldset>
@@ -29,7 +26,6 @@
                         <h1 id="dialog-desc">${thisData.name}</h1>
 
                         <div class="form__content">
-
                           <div class="brick">
                             <label for="lastname">Prénom</label>
                             <input id="lastname" type="text" name="lastname" class="brickInput" required//>
@@ -50,7 +46,7 @@
                             <textarea  id="message"  name="message" class="brickInput brickInput--textarea" required/></textarea>
                           </div>
 
-                          <button type="submit" class="btn btn--modal" formnovalidate="formnovalidate" data-js="submitModal" aria-label="soumettre">Envoyer</button>
+                          <button type="submit" class="btn btn--modal" data-js="submitModal" aria-label="soumettre">Envoyer</button>
 
                       
                         
@@ -59,7 +55,6 @@
 
                     </fieldset>
                     </form>
-                </div>` 
+                </div>`;
   }
-  
-  
+};

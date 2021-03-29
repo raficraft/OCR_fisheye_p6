@@ -1,8 +1,11 @@
+class createCounter{
 
-  let createCounter = function (thisData){
+constructor (thisData){
 
-    this.elHTML = `<div id="counterLike" class="counterLike">
+  this.elHTML = `<div id="counterLike" class="counterLike">
                     <p class="sumLike" aria-label="likes">${thisData.countLike}<i class="fas fa-heart"></i></p>
                     <p>${thisData.price}€ / jour</>
-                  </div>`
-  }
+                  </div>`;
+}
+                  
+};

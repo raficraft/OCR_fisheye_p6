@@ -11,22 +11,26 @@
         
         //index.html
 
+        /**
+         * GetData 
+         * CreateComponent
+         * injectComponent
+         */
+
         injectHeader = () =>{              
             let identityComponent = this.getComponent.createComponents(new createHeader())
-            renderComponent(identityComponent,this.targetHeader)
+            this.getComponent.renderComponent(identityComponent,this.targetHeader)
         }
         injectIdentities = () =>{              
             let dataJSON = GetData.getIdentities() 
             let identityComponent = this.getComponent.createComponents(new createSticker(dataJSON))
-            renderComponent(identityComponent,this.targetMain)
+            this.getComponent.renderComponent(identityComponent,this.targetMain)
         }
 
-
         injectIdentityByTag = () =>{
-
             let dataJSON = GetData.getIdentitiesByTag(browserInfo.request.tagURL)
             let identityComponent = this.getComponent.createComponents(new createSticker(dataJSON)) 
-            renderComponent(identityComponent,this.targetMain)
+            this.getComponent.renderComponent(identityComponent,this.targetMain)
         }
 
         //gallery.html
@@ -34,31 +38,33 @@
         injectIdentity = () => {    
             let dataJSON = GetData.getIdentity()
             const identityComponent = this.getComponent.createComponents(new createSticker(dataJSON)) 
-            renderComponent(identityComponent,this.targetIdentity)
+            this.getComponent.renderComponent(identityComponent,this.targetIdentity)
         }
 
         injectCustomSelect = () => {    
-            const customSelectComponent = this.getComponent.createComponents(new createCustomElement())             
-            renderComponent(customSelectComponent,this.targetIdentity)
+            //const customSelectComponent = this.getComponent.createComponents(new createCustomSelect())             
+            const customSelectComponent = this.getComponent.createComponents(new CreateCustomSelect())             
+            this.getComponent.renderComponent(customSelectComponent,this.targetIdentity)
+            window.customSelectEvent = new CustomSelectEvent()
         }
 
-        injectMedia = () => {   
-            
+        injectMedia = () => {               
             let dataJSON = GetData.getMediaByIdentity()
             let mediaComponent =  this.getComponent.createComponents(new createMedia(dataJSON))
-            renderComponent(mediaComponent,this.targetIdentity)
+            this.getComponent.renderComponent(mediaComponent,this.targetIdentity)
+            new mediaEvents
         }
 
 
         injectCounter = () => {     
             let dataJSON = GetData.getCountLike()
             let counterComponent = this.getComponent.createComponents(new createCounter(dataJSON))
-            renderComponent(counterComponent,this.targetRoot)
+            this.getComponent.renderComponent(counterComponent,this.targetRoot)
         }
 
-        injectModalForm = () => {    
+        injectModalForm = () => {                 
             let modalFormComponent = this.getComponent.createComponents(new createModalForm())
-            renderComponent(modalFormComponent,this.targetRoot)
+            this.getComponent.renderComponent(modalFormComponent,this.targetRoot)
         }
 
 
@@ -68,7 +74,7 @@
             }
             let dataJSON = GetData.getMediaByIdentity()    
             let carouselComponent = this.getComponent.createComponents(new createCarousel(dataJSON))
-            renderComponent(carouselComponent,this.targetRoot)
+            this.getComponent.renderComponent(carouselComponent,this.targetRoot)
         }
     
     }
