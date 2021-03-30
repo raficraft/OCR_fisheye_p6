@@ -1,7 +1,6 @@
 class ModalEvents {
   constructor() {
 
-    console.error('ON CHARGE LES EVENTS DE LA MODAL');
 
     this.submitBtn = document.querySelector('[data-js="submitModal"]')
     this.closeBtn = document.querySelector('.dialogBox__close')
@@ -15,7 +14,6 @@ class ModalEvents {
        this.submitModal()
      })
 
-     
 
      this.closeBtn.addEventListener('click',(e)=>{
          e.preventDefault(); e.stopPropagation()
@@ -93,12 +91,9 @@ class ModalEvents {
     }
   }
 
-  createNavigation(){
-
-   
+  createNavigation(){   
 
     this.submitBtn.addEventListener('keydown', (e)=>{
-
 
       if(e.key === 'Tab'){ 
         e.preventDefault(); e.stopPropagation();
@@ -107,7 +102,6 @@ class ModalEvents {
       }
 
     })
-
   }
 
 }

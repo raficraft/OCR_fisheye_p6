@@ -61,20 +61,35 @@
         }        
 
         &--title{
-            flex : 1;
+            flex : 3;
             text-align: left;
         }
         &--price{
             margin-left : 1rem;
             margin-right : 1rem;
+            text-align: left;
         }
 
         &--like{
             cursor : pointer;
+            text-align: right;
+            @media screen and (min-width : 767px){
+            }
+            
             i{
-                margin-left : rem(6);
+                color :rgb(95, 95, 95); 
+                margin-left: 6px;
+            }
+        &[data-status="false"]{
+
+            i{
+                color : $first_background
             }
         }
+           
+        }
+
+       
        
 
         &--video{
@@ -84,6 +99,7 @@
                 justify-content: center;
                 align-content: center;
                 align-items: center;
+                position : relative;
                 &:before{
                     position : absolute;
                     content : '';

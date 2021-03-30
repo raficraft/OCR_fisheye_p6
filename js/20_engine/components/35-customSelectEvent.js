@@ -31,8 +31,10 @@ class CustomSelectEvent{
               });
 
               window.addEventListener('click', (e) => {
-                e.preventDefault(); e.stopPropagation();
+                  console.log(e);
+                if(e.target !== 'img' || e.target !== 'a'){
                 this.closeSelect()
+                }
             });
 
     }

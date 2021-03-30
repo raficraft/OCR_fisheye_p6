@@ -200,7 +200,6 @@ body {
   .selectFilter .selectFilter--inner {
     padding: 2rem 0rem;
     inline-size: 100%;
-    padding-bottom: 0.875rem;
     display: relative;
     margin: auto;
   }
@@ -516,6 +515,10 @@ body {
   flex-direction: column;
   margin-top: 1.125rem;
 }
+.main__wrapper--gallery .sticker__info h1 {
+  color: #d3573c;
+  font-size: 2.25rem;
+}
 @media screen and (min-width: 768px) {
   .main__wrapper--gallery .sticker__info {
     align-self: flex-start;
@@ -538,20 +541,30 @@ body {
   .main__wrapper--gallery .sticker header {
     align-self: flex-start;
   }
-  .main__wrapper--gallery .sticker header .identity {
-    margin-right: 3rem;
-    width: 200px;
-    height: 200px;
-  }
-  .main__wrapper--gallery .sticker header img {
-    width: 200px;
-    height: 200px;
-  }
+}
+.main__wrapper--gallery .sticker .flexImg {
+  width: 100px;
+}
+.main__wrapper--gallery .sticker .identity {
+  margin: 0;
+  padding: 0;
+  margin-right: 1.5rem;
 }
 .main__wrapper--gallery .sticker .identity img {
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
   border-radius: 50%;
+}
+@media screen and (min-width: 768px) {
+  .main__wrapper--gallery .sticker .identity {
+    margin-right: 3rem;
+    height: 200px;
+    width: 200px;
+  }
+  .main__wrapper--gallery .sticker .identity img {
+    height: 200px;
+    width: 200px;
+  }
 }
 .main__wrapper--gallery .sticker .nav {
   justify-content: flex-start;
@@ -650,24 +663,31 @@ body {
   overflow: hidden;
 }
 .sticker__media--title {
-  flex: 1;
+  flex: 3;
   text-align: left;
 }
 .sticker__media--price {
   margin-left: 1rem;
   margin-right: 1rem;
+  text-align: left;
 }
 .sticker__media--like {
   cursor: pointer;
+  text-align: right;
 }
 .sticker__media--like i {
-  margin-left: 0.375rem;
+  color: #5f5f5f;
+  margin-left: 6px;
+}
+.sticker__media--like[data-status=false] i {
+  color: #901C1C;
 }
 .sticker__media--video .flexImg {
   display: flex;
   justify-content: center;
   align-content: center;
   align-items: center;
+  position: relative;
 }
 .sticker__media--video .flexImg:before {
   position: absolute;
@@ -897,12 +917,12 @@ body {
 .slider .sliderBox__close {
   position: absolute;
   top: 44px;
-  right: 26px;
+  right: 18px;
   height: 22px;
   width: 22px;
   border: none;
-  background-color: transparent;
-  z-index: 30;
+  background-color: white;
+  z-index: 100;
   transition: 0.3s;
   cursor: pointer;
   transform-origin: center;
@@ -1077,10 +1097,10 @@ body {
   left: 5px;
 }
 .slider .carousel__prev {
-  left: 20px;
+  left: 10px;
 }
 .slider .carousel__next {
-  right: 20px;
+  right: 10px;
 }
 @media screen and (min-width: 1439px) {
   .slider .carousel__prev {

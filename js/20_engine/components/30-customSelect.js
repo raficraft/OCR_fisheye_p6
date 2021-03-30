@@ -34,13 +34,15 @@ class CreateCustomSelect{
 
                             <button class="customSelect__body--btn" data-context="swap"  role="option"
                             aria-labelledby="listox-label">
-                                <span id="titleBtn"      class="customSelect--btn"  data-value="title">Titre</span>
+                                <span id="dateBtn"       class="customSelect--btn"  data-value="date">Date</span>
                             </button>
 
                             <button class="customSelect__body--btn" data-context="swap"  role="option"
                             aria-labelledby="listox-label">
-                                <span id="dateBtn"       class="customSelect--btn"  data-value="date">Date</span>
+                                <span id="titleBtn"      class="customSelect--btn"  data-value="title">Titre</span>
                             </button>
+
+                           
 
                         <div>
                     </div>

@@ -4,10 +4,22 @@ class createMedia {
 
 
       alterateMediaObject(thisData); //NB ecrire la doc dans tools
+
       this.elHTML = `<section id="photography" class="photography" data-spy>`;
       thisData.forEach((media, key) => {
+
+        let thisClass= ''
+
+        if(media.video){
+          thisClass = "sticker__media--video"
+        }else{
+          thisClass = "sticker__media--img"
+        }
+
+
+
         this.elHTML += `
-        <article class="sticker__media sticker__media--img" >             
+        <article class="sticker__media ${thisClass}" >             
                           <a href="#" class="flexImg"  data-js="openCarousel" data-item="${key}">`;
 
         if (media.image) {

@@ -262,7 +262,7 @@ let data = {
         "likes": 23,
         "date": "2017-03-18",
         "price": 45,
-        "alt" : 'A fleur de crète'
+        "alt" : 'Sur la crète'
       },
       {
         "id": 343423425,
@@ -312,7 +312,7 @@ let data = {
         "likes": 66,
         "date": "2018-05-24",
         "price": 45,
-        "alt" : 'Sourire à la vie'
+        "alt" : 'Joyeuse'
       },
       {
         "id": 34513453,
@@ -343,7 +343,7 @@ let data = {
         "likes": 25,
         "date": "2019-01-02",
         "price": 45,
-        "alt" : "Animaux en bois"
+        "alt" : "Pause clope"
       },
   
       {
@@ -425,7 +425,7 @@ let data = {
         "likes": 77,
         "date": "2019-06-28",
         "price": 45,
-        "alt" : "Mariés heureux"
+        "alt" : "Non, merci"
       },
       {
         "id": 5234343,

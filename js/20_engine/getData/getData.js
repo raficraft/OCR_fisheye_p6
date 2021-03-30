@@ -19,10 +19,10 @@ class GetData {
 
 
         /**
-         * Recupère tous les profils des photographe pour la page index.
-         * @param {string} sortValue valeur de trie (travel,sports,events...)
+         * Recupère tous les profils des photographe pour la page principal.
+         * @param {string} tags valeur de trie (travel,sports,events...)
          */
-        static getIdentitiesByTag(sortValue){
+        static getIdentitiesByTag(tags){
 
             let x = 0;
             // Données de sorties
@@ -38,7 +38,7 @@ class GetData {
             /* Si la longueur du résultat de la requête est supérieur à zero
               On stock l'identité concerné */
           
-            if(thisIdentity.tags.filter(el => el === sortValue).length > 0){      
+            if(thisIdentity.tags.filter(el => el === tags).length > 0){      
                 sortIdentity[x] = thisIdentity;
                 x++
               }
