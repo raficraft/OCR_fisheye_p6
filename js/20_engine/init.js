@@ -3,7 +3,6 @@
 const factory = new Factory()
 
 
-
 if(browserInfo.request.idURL === false){ 
 
     //Injection dans la page Index 
@@ -30,12 +29,9 @@ if(browserInfo.request.idURL === false){
        
         //Injection dans la page dédié à un photographe
         factory.injectHeader()
-
         factory.injectIdentity()
-
         factory.injectCustomSelect()
         factory.injectMedia()
-
         factory.injectCounter()     
 
 

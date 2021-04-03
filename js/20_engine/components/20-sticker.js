@@ -13,7 +13,6 @@ class createSticker {
   this.elHTML = "";
 
   thisData.forEach((data, key) => {
-    console.log(data);
     this.elHTML += `<article class="sticker">
                 <header>`;
 

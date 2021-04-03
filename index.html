@@ -25,6 +25,7 @@
     <script src="js/20_engine/getData/getData.js" defer></script>
     <script src="js/20_engine/getData/browserInfo.js" defer></script>
     
+    <script src="js/20_engine/components/05-scrollSpyEvents.js" defer></script>
     <script src="js/20_engine/components/10-header.js" defer></script>
     <script src="js/20_engine/components/20-sticker.js" defer></script>
     <script src="js/20_engine/components/30-customSelect.js" defer></script>
@@ -55,13 +56,12 @@
 
 
   <body id="body">
-    <div class="redirect__link">
-      <a href="#main">Passer au contenu</a>
-    </div>
+ 
+      <a class="redirect__link sr__only" href="#main">Passer au contenu</a>  
 
     <main id="main" class="main">
       <header class="header"></header>
-      <section id="main__wrapper" class="main__wrapper main__wrapper--index"></section>
+      <section id="main__wrapper" class="main__wrapper main__wrapper--index" data-spy></section>
 
       <button class="btn btn--smartphone" type="button" data-js="openFormContact">
         Contactez-moi

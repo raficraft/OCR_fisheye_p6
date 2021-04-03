@@ -40,7 +40,11 @@ class CustomSelectEvent{
     }
 
     openSelect(){
+        if(this.bodyEl.dataset.status === 'close'){
         this.bodyEl.setAttribute('data-status','openList')
+        }else if(this.bodyEl.dataset.status === 'openList'){
+        this.bodyEl.setAttribute('data-status','close')
+        }
     }
 
     closeSelect(){

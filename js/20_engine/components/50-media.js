@@ -31,9 +31,9 @@ class createMedia {
                 alt="Cette photo ce nomme ${ucFirst(
                   media.alt
                 )}                        
-                à un prix de ${media.price} euro et à actuellement eu ${
+                a un prix de ${media.price} euro et a actuellement eu ${
             media.likes
-          } like. "/> `;
+          } mentions j'aime. "/> `;
         }
 
         if (media.video) {
@@ -45,9 +45,9 @@ class createMedia {
             media.video
           }" type="video/mp4"></video>              
                   <span class="sr__only">Cette vidéo ce nomme ${ucFirst(media.alt)},
-                  à un prix de ${media.price} euro et à actuellement eu ${
+                  a un prix de ${media.price} euro et a actuellement eu ${
             media.likes
-          } mention j'aime. </span>`;
+          } mentions j'aime. </span>`;
         }
 
         this.elHTML += `   </a>

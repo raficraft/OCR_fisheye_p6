@@ -21,21 +21,15 @@ body{
     position : fixed;
     top : 9px;
     left : calc((100% - 182px) / 2);
-    display:none;
+    font-size: 18px;
+    font-weight : bold;
+    color : black;   
+       
     
-    
-    a{
-        font-size: 18px;
-        font-weight : bold;
-        color : black;
+    &:focus{
+        color: white;
+        border : 2px solid black;
     }
-
-    @media screen and(max-width : 727px) {
-
-        display: none;
-        
-    }
-
 }
 
 .imgFlex{
