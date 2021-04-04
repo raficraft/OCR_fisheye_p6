@@ -47,7 +47,7 @@ class GetData {
             //redirection si le tableau de trie ne contient aucune valeur
 
             if(Object.size(sortIdentity) === 0){
-              redirectTo('404.html')
+             // redirectTo('404.html')
             }
           
             return sortIdentity;

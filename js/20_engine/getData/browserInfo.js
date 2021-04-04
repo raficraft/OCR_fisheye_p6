@@ -42,6 +42,7 @@ class BrowserInfo{
         console.log(`this.paramsURL : ${this.request.paramsURL}`);
         console.log(`la largeur de la fenêtre est de  : ${window.innerWidth}`);
         console.log(`la hauteur de la fenêtre est de  : ${window.innerHeight}`);
+        console.log(window.screen);
 
 
         // Si l'on filtre les photographes on stock le focus sur le lien correspondant

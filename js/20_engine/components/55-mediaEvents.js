@@ -30,7 +30,7 @@ class mediaEvents{
         let item = parseInt(target.dataset.item); 
         document.querySelector('.slider').setAttribute('aria-hidden', false);                    
         document.querySelector('#main').setAttribute('aria-hidden', true);
-        document.querySelector('.sliderBox__close').focus()
+        document.querySelector('.carousel__next').focus()
 
         hiddenScrollBar()  
     

@@ -28,25 +28,29 @@ class createModalForm{
                         <div class="form__content">
                           <div class="brick">
                             <label for="lastname">Prénom</label>
-                            <input id="lastname" type="text" name="lastname" class="brickInput" required//>
+                            <input id="lastname" type="text" name="lastname" class="brickInput" pattern="^[A-Za-z]+$" required/>
+                            <span>Veuillez saisir votre prénom</span>
                           </div>
 
                           <div class="brick">
-                            <label for="firstname">nom</label>
-                            <input id="firstname" type="text" name="firstname" class="brickInput" min-length="2" required/>
+                            <label for="firstname">Nom</label>
+                            <input id="firstname" type="text" name="firstname" class="brickInput" pattern="^[A-Za-z]+$" required/>
+                            <span>Veuillez saisir votre nom</span>
                           </div>
 
                           <div class="brick">
                             <label for="email">Email</label>
-                            <input  id="email" type="email" name="email" class="brickInput" required//>
+                            <input  id="email" type="email" name="email" class="brickInput" required/>
+                            <span>Veuillez saisir votre email</span>
                           </div>
 
                           <div class="brick">
                             <label for="message">Message</label>
                             <textarea  id="message"  name="message" class="brickInput brickInput--textarea" required/></textarea>
+                            <span>Veuillez saisir votre message</span>
                           </div>
 
-                          <button type="submit" class="btn btn--modal" data-js="submitModal" aria-label="soumettre">Envoyer</button>
+                          <button type="submit" class="btn btn--modal" data-js="submitModal"  aria-label="soumettre">Envoyer</button>
 
                       
                         

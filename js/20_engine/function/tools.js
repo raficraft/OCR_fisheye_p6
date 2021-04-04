@@ -102,7 +102,7 @@ const hiddenScrollBar= () => {
 
 const restoreScrollBar = () => {
 	let bodyElt = document.body
-        bodyElt.style.overflow = "scroll";
+        bodyElt.style.overflow = "";
 }
 
 const toggleAttribute = (element,attributes,oldAttr,newAttr) =>{

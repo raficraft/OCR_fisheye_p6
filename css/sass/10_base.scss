@@ -23,10 +23,11 @@ body{
     left : calc((100% - 182px) / 2);
     font-size: 18px;
     font-weight : bold;
-    color : black;   
+    color : black;
+    z-index : 500;   
        
     
-    &:focus{
+    &:focus,&:hover{
         color: white;
         border : 2px solid black;
     }

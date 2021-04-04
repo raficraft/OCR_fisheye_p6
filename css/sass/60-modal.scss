@@ -21,10 +21,12 @@
         height : 812px;
 
        
-        @media screen and (min-width : 1439px){         
-            width : 668px;    
-            padding : rem(32) rem(35) rem(38) rem(35);
+        @media screen and (min-width : 426px){         
+            width : 520px;    
+            padding : rem(24) rem(35) rem(38) rem(35);
             margin-top : rem(32);
+            height : 94%;
+
         }  
 
 
@@ -41,10 +43,10 @@
             transition: 0.5s;
             border: 2px solid transparent;
 
-            @media screen and (min-width : 1439px){
+            @media screen and (min-width : 427px){
          
-                height: rem(52);
-                width : rem(52); 
+                height: rem(41);
+                width : rem(41); 
                 right : rem(35);
                 top : rem(35);
             }
@@ -66,10 +68,10 @@
                 cursor : pointer;
                 background-color: white;
                 
-                @media screen and (min-width : 1439px){
-                    top : -1px;
-                    left : 22px;       
-                    height: rem(50);
+                @media screen and (min-width : 427px){
+                    top : 2px;
+                    left : 16px;       
+                    height: rem(31);
                     width : 5px;
                 }
             }
@@ -95,7 +97,7 @@
         }
 
         legend{
-            margin-bottom: rem(20);
+            margin-bottom: rem(8);
         }
 
         h1{
@@ -103,25 +105,25 @@
         }
 
         legend,h1{
-            font-size: rem(36);   
-            @media screen and (min-width : 1439px){         
-                font-size: rem(36);
+            font-size: rem(32);   
+            @media screen and (min-width : 427px){         
+                font-size: rem(42);
             }          
         }
 
         label{
             color: #312E2E;
             font-size: rem(24);
-            padding-bottom: rem(9);
+            padding-bottom: rem(3);
+            line-height: rem(22);
         }
 
         .brick{
             display: flex;
             flex-direction: column;
-            padding-bottom: rem(18);
             width : 100%;
-            @media screen and (min-width : 1439px){         
-                padding-bottom: rem(10);
+            @media screen and (min-width : 427px){  
+                padding-bottom: rem(6);
             } 
 
             &Input{
@@ -129,21 +131,61 @@
                 border-radius : rem(5);
                 border : none;
                 padding : 6px;
+                background: url('../img/_ui/asterisk.png') 98% center no-repeat;
+                background-color: white ; 
+                color : #312E2E;  
+                transition: border , shadow ,  0.5s;
+                margin-bottom: 2px;
+                
+                border : 2px solid transparent;
 
-                @media screen and (min-width : 1439px){
+                &:hover{                    
+                    box-shadow: 0 0 5px #00aadb;
+                    border : 2px solid #00aadb;
+                }
+                
+                &:focus:invalid{
+                    background-image: none;
+                    background-color: white ; 
+                    box-shadow: 0 0 5px $first_background;
+                    border : 2px solid $first_background
+                }
+
+                &:focus:invalid +span {
+                    opacity: 1;
+                    color: $first_background;
+                    font-weight: bold;
+                }
+
+                &:valid{
+                    background-image: none;
+                    background-color: white ; 
+                    box-shadow: 0 0 5px #56c93f;
+                    border : 2px solid #56c93f;
+
+                }
+                
+           
+            &+span{
+                opacity: 0;
+                transition: 0.5s;
+                font-size: rem(12);
+            }
+
+                @media screen and (min-width : 427px){
          
-                    height: rem(68);    
+                    height: rem(52); 
+                    font-size: rem(18);   
                 }
 
                 
 
                 &--textarea{
-                    height: 184px;
+                    height: 170px;
                     border : none;
                     padding : 6px;
-                    margin-bottom: rem(26);
-                    @media screen and (min-width : 1439px){ 
-                        height: 170px;  
+                    @media screen and (min-width : 427px){ 
+                        height: 120px;  
                     }
                 }
             }
@@ -152,11 +194,13 @@
         }
 
         .btn--modal{
+            
+            margin-top: rem(26);
             width : 170px;
-            @media screen and (min-width : 1439px){
+            @media screen and (min-width : 427px){
          
                 align-self: flex-start; 
-                height: 69px;  
+                height: 56px;  
             }
 
         }

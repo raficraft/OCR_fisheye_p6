@@ -3,7 +3,8 @@
         constructor(){
 
             this.targetHeader = document.querySelector("header");
-            this.targetMain = document.getElementById("main__wrapper");
+            this.targetMain = document.getElementById("main");
+            this.targetMainWrapper = document.getElementById("main__wrapper");
             this.targetIdentity = document.getElementById("main__wrapper");
             this.targetRoot = document.getElementById('body')    
             this.getComponent = new workshopComponent() 
@@ -24,13 +25,13 @@
         injectIdentities = () =>{              
             let dataJSON = GetData.getIdentities() 
             let identityComponent = this.getComponent.createComponents(new createSticker(dataJSON))
-            this.getComponent.renderComponent(identityComponent,this.targetMain)
+            this.getComponent.renderComponent(identityComponent,this.targetMainWrapper)
         }
 
         injectIdentityByTag = () =>{
             let dataJSON = GetData.getIdentitiesByTag(browserInfo.request.tagURL)
             let identityComponent = this.getComponent.createComponents(new createSticker(dataJSON)) 
-            this.getComponent.renderComponent(identityComponent,this.targetMain)
+            this.getComponent.renderComponent(identityComponent,this.targetMainWrapper)
         }
 
         //gallery.html
@@ -60,6 +61,11 @@
             let dataJSON = GetData.getCountLike()
             let counterComponent = this.getComponent.createComponents(new createCounter(dataJSON))
             this.getComponent.renderComponent(counterComponent,this.targetRoot)
+        }
+
+        injectContactBtn = () => {     
+            let contactBtnComponent = this.getComponent.createComponents(new CreateContactBtn())
+            this.getComponent.renderComponent(contactBtnComponent,this.targetMain)
         }
 
         injectModalForm = () => {      

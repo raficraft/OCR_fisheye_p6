@@ -37,17 +37,31 @@ const redifineDistribution_StickerIdentity = () =>{
 
         let stickerEl = document.querySelectorAll('.sticker')
 
+        console.log(stickerEl);
+
         let size = stickerEl.length
         
+        const mainParent = document.querySelector('.main__wrapper--index')
 
         if(multipleOfThree(size) === false || stickerEl.length === 1){
 
-            document.querySelector('.main__wrapper--index').classList.toggle('orderSticker__mainCenter')
+            console.error("on redistribue");
+
+
+            if(!mainParent.classList.contains('orderSticker__mainCenter')){
+                mainParent.classList.add('orderSticker__mainCenter')
+            }
 
             for(let i = 0; i < size; i++){
                 stickerEl[i].style.marginLeft  = '2rem'
                 stickerEl[i].style.marginRight  = '2rem'
             }
+        }else{
+
+            if(mainParent.classList.contains('orderSticker__mainCenter')){
+                mainParent.classList.remove('orderSticker__mainCenter')
+            }
+
         }
 }
 

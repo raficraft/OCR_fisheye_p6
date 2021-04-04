@@ -2,6 +2,7 @@ class IndexEvent{
 
     constructor(){
 
+     
 
         this.openBtn = document.querySelectorAll('[data-js="openFormContact"]')
         this.skipLink = document.querySelector('.redirect__link')
@@ -23,11 +24,31 @@ class IndexEvent{
         })
         this.skipLink.addEventListener('click', (e)=>{
 
+            e.preventDefault()
+            if(browserInfo.request.idURL === false){ 
+                const firstMainEL = document.querySelectorAll('.sticker A')
+                firstMainEL[0].focus()
+                this.skipLink.classList.add('sr__only')
+            }else{                
+                const firstMainEL = document.querySelectorAll('.sticker__media A')
+                firstMainEL[0].focus()
+                this.skipLink.classList.add('sr__only')
+
+            }
+
+
+
             //On focus sur le premier sticker
+            //Si page index sticker[0]
+            //Si gallery sticker__media[0]
+            console.log('YOLO');
         })
     }
 
     openFormContact() {
+
+    
+   
         factory.injectModalForm();
         //On squizz le main avec un attribut Aria-hidden
         document.querySelector("#main").setAttribute("aria-hidden", true);
@@ -35,7 +56,7 @@ class IndexEvent{
         hiddenScrollBar();
         //on focus sur le premier champ de saisie
         document.querySelector("#firstname").focus();
-        // On active les event click sur la modal
+        // On active les event click sur la modal*/
     }
 
 

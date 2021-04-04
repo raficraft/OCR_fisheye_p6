@@ -4,6 +4,11 @@ class createSticker {
   constructor(thisData){
 
 
+    console.error('Construction sticker');
+
+    console.log(thisData);
+    console.log(thisData.length);
+
   if (!thisData.length) {
     let tmpData = [];
     tmpData.push(thisData);
@@ -47,7 +52,7 @@ class createSticker {
                         <footer class="nav nav__filter">`;
 
     data.tags.forEach((tag) => {
-      this.elHTML += `<span class="filter"><a href="index.html?tags=${tag}">#${ucFirst(
+      this.elHTML += `<span class="filter"><a href="index.html?tags=${tag}" data-js="sortByTag" data-tag="${tag}">#${ucFirst(
         tag
       )}</a></span>`;
     });
