@@ -84,6 +84,33 @@
             let carouselComponent = this.getComponent.createComponents(new createCarousel(dataJSON))
             this.getComponent.renderComponent(carouselComponent,this.targetRoot)
         }
+
+
+        //Construction des pages
+
+        injectIndex(){
+            this.injectHeader()
+            this.injectIdentities()
+        }
+
+        injectIndexByTag(){
+            this.injectHeader()
+            this.injectIdentityByTag()
+        }
+
+        injectGallery(){
+            
+            document.querySelector('.main__wrapper').classList.remove('main__wrapper--index')
+            document.querySelector('.main__wrapper').classList.toggle('main__wrapper--gallery')
+
+            this.injectHeader()
+            this.injectIdentity()    
+            this.injectCustomSelect()
+            this.injectMedia()    
+            this.injectCounter()  
+            this.injectContactBtn() 
+
+        }
     
     }
 
