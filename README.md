@@ -1,5 +1,7 @@
 # # Créez un site accessible pour une plateforme de photographes
 
+Branche de travail actuelle, SPA.
+
 
 ## Objectif :
 
