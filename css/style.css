@@ -495,11 +495,15 @@ body {
   background-color: #d6d6d6;
 }
 .sticker .flexImg {
-  width: 200px;
-  height: 200px;
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 1.75rem;
+}
+@media screen and (min-width: 768px) {
+  .sticker .flexImg {
+    width: 200px;
+    height: 200px;
+  }
 }
 .sticker h2 {
   color: #d3573c;
