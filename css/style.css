@@ -783,7 +783,7 @@ body {
 }
 @media screen and (min-width: 426px) {
   .dialogBox form {
-    width: 599px;
+    width: 700px;
     padding: 1.5rem 2.1875rem 2.375rem 2.1875rem;
     margin-top: 2rem;
     height: 94%;
