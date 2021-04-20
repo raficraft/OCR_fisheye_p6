@@ -667,13 +667,13 @@ body {
 .sticker__media img, .sticker__media video {
   border-radius: 0.3125rem;
 }
-.sticker__media a, .sticker__media .flexImg, .sticker__media .flexImg video {
+.sticker__media .flexImg, .sticker__media .flexImg video {
   display: flex;
   height: 190px;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
-  .sticker__media a, .sticker__media .flexImg, .sticker__media .flexImg video {
+  .sticker__media .flexImg, .sticker__media .flexImg video {
     height: 300px;
   }
 }

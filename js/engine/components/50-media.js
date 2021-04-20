@@ -56,8 +56,8 @@ class createMedia {
           media.alt
         )}</h2>
         <p class="sticker__media--price"  aria-hidden="true">${media.price} €</p>
-        <p class="sticker__media--like" data-js="addLike" data-status="true">${media.likes}
-        <i class="fas fa-heart fontIcon" aria-hidden="true"></i></p>
+        <a class="sticker__media--like" data-js="addLike" data-status="true">${media.likes}
+        <i class="fas fa-heart fontIcon" aria-hidden="true"></i></a>
         <span class="sr__only">Bouton vous permettant d'ajouter une mention j'aime</span>  
     </article>
     </article>`;

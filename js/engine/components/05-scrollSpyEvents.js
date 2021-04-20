@@ -15,8 +15,12 @@ class ScrollSpy{
 
             entries.forEach(entry => {
                 if(entry.intersectionRatio > 0 ){
+
+                const skipThisEl = document.activeElement
+                if(!skipThisEl.classList.contains('flexImg')){
                     skipLink.classList.remove('sr__only')
                     skipLink.focus()
+                }
                 }else{
                     skipLink.classList.add('sr__only')
                 }
