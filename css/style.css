@@ -674,7 +674,7 @@ body {
 .sticker__media a:focus {
   outline: 5px solid black;
 }
-.sticker__media:hover {
+.sticker__media:hover, .sticker__media:focus {
   transform: scale(1.05);
 }
 .sticker__media img, .sticker__media video {

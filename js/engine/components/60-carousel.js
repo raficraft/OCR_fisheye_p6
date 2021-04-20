@@ -11,8 +11,14 @@ class createCarousel{
       this.elHTML = `<div class="slider" data-js="closeCarousel" aria-hidden="true" >
                 <div class="marquise" >
                   <button class="sliderBox__close" data-index="1" data-js="closeCarousel" aria-label="bouton de fermeture du carousel"></button>
+                  <button class="carousel__nav carousel__prev" arial-label="image précédente" >
+                      <i class="fas fa-chevron-left"  arial-label="image précédente"></i>
+                  </button>
+                  <button class="carousel__nav carousel__next" arial-label="image suivante">
+                    <i class="fas fa-chevron-right" arial-label="image suivante"></i>
+                  </button>
                   <div id="carousel" class="carousel" >
-                    <div class="carousel__container" style="width: 0%;" >`;
+                    <div class="carousel__container">`;
 
       let limit = thisData.length;
       for (var i = 0; i < limit; i++) {
@@ -60,12 +66,7 @@ class createCarousel{
 
       this.elHTML += `</div>
                     </div>
-                      <button class="carousel__nav carousel__prev" arial-label="image précédente" aria-labelledby="carousel" tabindex="2">
-                        <i class="fas fa-chevron-left" aria-hidden="true" ></i>
-                      </button>
-                      <button class="carousel__nav carousel__next" arial-label="image suivante" aria-labelledby="carousel" tabindex="4">
-                        <i class="fas fa-chevron-right" aria-hidden=true ></i>
-                      </button>
+                   
                     </div>
                   </div>`;
   }

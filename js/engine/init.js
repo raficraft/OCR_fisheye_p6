@@ -20,7 +20,6 @@ class Init {
                 }
 
             }else{
-
             
                 //Injection de la page dédié à un photographe
                 factory.injectGallery()

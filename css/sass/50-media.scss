@@ -9,12 +9,10 @@
 
 
         a:focus{
-            outline: 5px solid black;           
-            
-          
+            outline: 5px solid black; 
         }
 
-        &:hover{
+        &:hover,&:focus{
             transform: scale(1.05);
         }
       
