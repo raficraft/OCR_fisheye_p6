@@ -669,9 +669,13 @@ body {
   display: flex;
   flex-direction: column;
   padding: 0 0 1rem;
+  transition: 0.3s;
 }
 .sticker__media a:focus {
   outline: 5px solid black;
+}
+.sticker__media:hover {
+  transform: scale(1.05);
 }
 .sticker__media img, .sticker__media video {
   border-radius: 0.3125rem;

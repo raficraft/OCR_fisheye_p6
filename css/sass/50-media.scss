@@ -5,10 +5,17 @@
         display: flex;
         flex-direction: column;
         padding : 0 0 1rem;
+        transition: 0.3s;
 
 
         a:focus{
-            outline: 5px solid black;
+            outline: 5px solid black;           
+            
+          
+        }
+
+        &:hover{
+            transform: scale(1.05);
         }
       
       
