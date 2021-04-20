@@ -184,6 +184,7 @@
 
             .imgFlex{
                 height: 248px;
+                border-radius: rem(5);
                 @media screen and (min-width : 1439px){                
                     height : 685px;
                 }

@@ -7,10 +7,8 @@ class IndexEvent{
         this.openBtn = document.querySelectorAll('[data-js="openFormContact"]')
         this.skipLink = document.querySelector('.redirect__link')
 
-        console.log(this.skipLink);
 
         this.openBtn.forEach(btn => {
-            console.log('click');
             btn.addEventListener('click',(e) => {
               this.openFormContact()
             })
@@ -18,7 +16,6 @@ class IndexEvent{
         });
        
         this.skipLink.addEventListener('focus', (e)=>{
-            console.log('lol');
             e.preventDefault(); e.stopPropagation();
             this.skipLink.classList.remove("sr__only")
         })
@@ -36,12 +33,6 @@ class IndexEvent{
 
             }
 
-
-
-            //On focus sur le premier sticker
-            //Si page index sticker[0]
-            //Si gallery sticker__media[0]
-            console.log('YOLO');
         })
     }
 
@@ -55,7 +46,7 @@ class IndexEvent{
         document.querySelector("#dialog").setAttribute("aria-hidden", false);
         hiddenScrollBar();
         //on focus sur le premier champ de saisie
-        document.querySelector("#firstname").focus();
+        document.querySelector("#lastname").focus();
         // On active les event click sur la modal*/
     }
 

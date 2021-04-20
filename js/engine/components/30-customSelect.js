@@ -20,7 +20,7 @@ class CreateCustomSelect{
                         class="customSelect__body" 
                         data-status="close"
                         aria-labelledby="listox-label" 
-                        aria-activedescendant="listbox1-1"
+                        aria-activedescendant="customSelect--trigger"
                         aria-haspopup="listbox"
                         aria-selected="true"
                         aria-expanded="false">     

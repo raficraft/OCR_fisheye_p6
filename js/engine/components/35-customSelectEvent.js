@@ -6,14 +6,9 @@ class CustomSelectEvent{
               /** */
 
               this.bodyEl  = document.querySelector('#otherCustomSelect')
-              this.openBtn = document.querySelector('#customSelect--trigger')
-              
+              this.openBtn = document.querySelector('#customSelect--trigger')              
               this.swapBtn = document.querySelectorAll('.customSelect__body--btn[data-context="swap"]')
-
-              this.lastBtn = document.querySelector('.customSelect__body--btn[data-order="2"]')
-      
-              console.log(this.noSwapEl);
-              
+              this.lastBtn = document.querySelector('.customSelect__body--btn[data-order="2"]')              
             
               this.openBtn.addEventListener('click',(e)=>{ 
                 e.preventDefault(); e.stopPropagation()
@@ -31,7 +26,6 @@ class CustomSelectEvent{
               });
 
               window.addEventListener('click', (e) => {
-                  console.log(e);
                 if(e.target !== 'img' || e.target !== 'a'){
                 this.closeSelect()
                 }
@@ -52,9 +46,6 @@ class CustomSelectEvent{
     }
 
     swap(btn){
-
-
-        console.log(btn);
 
         const childrenBtn = btn.firstElementChild
         const filter = childrenBtn.dataset.value
@@ -79,8 +70,7 @@ class CustomSelectEvent{
         factory.injectCarousel()
         factory.injectMedia()
 
-        const firstMedia = document.querySelector('.flexImg[data-item="0"]')
-        firstMedia.focus()
+        this.openBtn.focus()
         this.closeSelect()
 
 

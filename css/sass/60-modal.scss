@@ -12,7 +12,7 @@
     opacity: 0;
     }
     form{
-        width : 375px;
+        width : 100%;
         margin : auto;
         background-color: #db8876;
         padding : rem(27) rem(20) rem(75) rem(16);
@@ -22,7 +22,7 @@
 
        
         @media screen and (min-width : 426px){         
-            width : 520px;    
+            width : 599px;    
             padding : rem(24) rem(35) rem(38) rem(35);
             margin-top : rem(32);
             height : 94%;
@@ -107,7 +107,7 @@
         legend,h1{
             font-size: rem(32);   
             @media screen and (min-width : 427px){         
-                font-size: rem(42);
+                font-size: rem(64);
             }          
         }
 
@@ -116,6 +116,10 @@
             font-size: rem(24);
             padding-bottom: rem(3);
             line-height: rem(22);
+            @media screen and (min-width : 427px){ 
+                font-size: rem(36);
+                padding-bottom: rem(16);
+            }
         }
 
         .brick{
@@ -174,8 +178,8 @@
 
                 @media screen and (min-width : 427px){
          
-                    height: rem(52); 
-                    font-size: rem(18);   
+                    height: rem(69); 
+                    font-size: rem(24);   
                 }
 
                 
@@ -184,9 +188,7 @@
                     height: 170px;
                     border : none;
                     padding : 6px;
-                    @media screen and (min-width : 427px){ 
-                        height: 120px;  
-                    }
+                   
                 }
             }
 

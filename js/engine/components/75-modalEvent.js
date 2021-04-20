@@ -3,9 +3,7 @@ class ModalEvents {
 
 
     this.submitBtn = document.querySelector('[data-js="submitModal"]')
-    this.closeBtn = document.querySelector('.dialogBox__close')
-    console.log(this.submitBtn);
-   
+    this.closeBtn = document.querySelector('.dialogBox__close')   
     this.keyBoardControl();
     this.createNavigation();   
 
@@ -83,7 +81,6 @@ class ModalEvents {
       }
     });
 
-    console.log(dataForm);
     //Les informations collectés dans dataForm seront transmit au fichier de validation
 
     if (submit !== false) {
@@ -97,7 +94,6 @@ class ModalEvents {
 
       if(e.key === 'Tab'){ 
         e.preventDefault(); e.stopPropagation();
-        console.log("tab");
         this.closeBtn.focus()
       }
 

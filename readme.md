@@ -86,3 +86,18 @@ doit être configurée (utilisez KeyboardEvent.key ou KeyboardEvent.code.).
   - Utilisez un lecteur d'écran gratuit pour vous faire une idée de ce que représente
 l'utilisation du site pour une personne malvoyante
   
+## Review du projet
+
+Gap techniques très important entre ce projet et le précédent. Je m'inquiète pour les apprenants qui débutent totalement dans l'aventure de la programmation WEB.
+Pour ma part une fois assimilée la factory method , je n'ai pas eu de difficulté à intégrer les exigences requises. Ayant plusieurs milliers d'heures de vol en autodidacte, les problématiques soulevées par le projet on été assez facile à relevé, bien que c'était mon premier projet de cette envergure en JS pure. J'ai codé durant des années en ne me servant que de Jquey. Et je n'avais auparavant jamais utilisé le système de Classe ni la POO. Et c'est un vrai bonheur d'avoir su obtenir une vraie maîtrise de ses deux concepts au travers de ce projet.
+
+Mon principal axe de réflexion, c'est donc porter sur l'optimisation de mon code et l'exploitation (abusive ?) de la factory Method. Dans les exigences qui m'étaient imposées. Il y été défini d'utiliser le système de factoy pour dissocier la création des "fiches média" entre les vidéos et les images. Ce qui en soit et une bonne approche pour ce familiariser avec ce desgin pattern. Mais pas vraiment utile, car l'on peut faire le distinguo avec une simple condition dans la construction de ce component.
+
+J'ai donc préférer en faire usage pour créer et injecter tout le contenu du site avec des components HTML.
+
+Ce qui m'a permit d'aboutir à une forme de Single Page Application, je dis bien à une forme et non une SPA totale. Car la requête pour la construction des pages ne ce fait pas totalement en Javasctipt, mais via la requête GET passé en URL.
+
+Il est dommage que l'on nous ait interdit de modifier le fichier JSON au-delà de la balise ALT. En effet, il manque dans ce dernier une balise Title pour les medias. Il a fallu donc ruser pour réussir à obtenir une solution satisfaisante dans les deux cas. Je me suis donc servit de la balise ALT comme d'une balise Title et j'ai construit une balise ALT au sein de mes images en agrégeant les différentes données présentes dans le JSON pour créer une balise pertinente.
+
+L'accessibilité fut pour moi aussi une découverte et je ne peux dire que je suis totalement satisfait de mon travail sur ce point. Je trouve dommage que l'on a pas eu un projet qui aurait laissé l'aspect Javascript en arrière-plan et sur lequel j'aurais pu me focaliser essentiellement sur la partie accessibilité. Ce point au final, vu la quantité de travail n'étant qu'une feature supplémentaire.
+

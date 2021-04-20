@@ -33,7 +33,7 @@ class createMedia {
                 )}                        
                 a un prix de ${media.price} euro et a actuellement eu ${
             media.likes
-          } mentions j'aime. "/> `;
+          } mentions j'aime.Lien ouvrant le carousel "/> `;
         }
 
         if (media.video) {
@@ -47,7 +47,7 @@ class createMedia {
                   <span class="sr__only">Cette vidéo ce nomme ${ucFirst(media.alt)},
                   a un prix de ${media.price} euro et a actuellement eu ${
             media.likes
-          } mentions j'aime. </span>`;
+          } mentions j'aime.Lien ouvrant le carousel </span>`;
         }
 
         this.elHTML += `   </a>

@@ -77,9 +77,7 @@
 
 
         injectCarousel = () => {
-            if(document.querySelector('.slider')){
-                document.querySelector('.slider').remove()
-            }
+        
             let dataJSON = GetData.getMediaByIdentity()    
             let carouselComponent = this.getComponent.createComponents(new createCarousel(dataJSON))
             this.getComponent.renderComponent(carouselComponent,this.targetRoot)

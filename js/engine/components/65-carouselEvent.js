@@ -60,11 +60,19 @@ class Carousel{
 
         document.querySelector('.slider').addEventListener('keyup',e =>{
 
+            console.log(e.key);
+
             if(e.key === 'ArrowRight' || e.key === 'Right'){
-                this.next(); console.log('next');
+                this.next();
             }else  if(e.key === 'ArrowLeft' || e.key === 'Left'){
-                this.prev(); console.log('prev');
+                this.prev(); 
             }
+
+            if(e.key === 'Escape'){
+                this.closeCarousel()
+            }
+
+
         })
 
        this.createTabNav(this.btn)
@@ -113,8 +121,7 @@ class Carousel{
 
         let translateX = index * (-100 / this.item.length)
         this.container.style.transform = 'translate3d('+translateX+'%,0,0)'
-        this.options.currentItem = index  
-        console.log(this.options.currentItem)  
+        this.options.currentItem = index   
         this.options.imgView = document.querySelector(`.slider [data-inc="${this.options.currentItem}"]`)
         
     }

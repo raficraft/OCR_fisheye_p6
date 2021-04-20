@@ -2,6 +2,10 @@ class createCarousel{
 
   constructor(thisData){
 
+    if(document.querySelector('.slider')){
+      document.querySelector('.slider').remove()
+    }
+
       sortDataMedia(localStorage.getItem("sortDataMedia"));
 
       this.elHTML = `<div class="slider" data-js="closeCarousel" aria-hidden="true" >

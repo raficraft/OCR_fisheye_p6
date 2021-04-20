@@ -223,6 +223,11 @@ body{
     line-height: 1rem;
     font-weight: bold;
 
+    &:before{
+        content : '#';
+
+    }
+
     &:focus,&:hover{
     background-color: $first_background;
     color : white !important;

@@ -37,15 +37,11 @@ const redifineDistribution_StickerIdentity = () =>{
 
         let stickerEl = document.querySelectorAll('.sticker')
 
-        console.log(stickerEl);
-
         let size = stickerEl.length
         
         const mainParent = document.querySelector('.main__wrapper--index')
 
         if(multipleOfThree(size) === false || stickerEl.length === 1){
-
-            console.error("on redistribue");
 
 
             if(!mainParent.classList.contains('orderSticker__mainCenter')){
@@ -68,7 +64,6 @@ const redifineDistribution_StickerIdentity = () =>{
 const sortDataMedia = (sortBy) => {
 
 
-console.error(sortBy);
 switch (sortBy){
 
     case 'popularity':
