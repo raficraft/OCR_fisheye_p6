@@ -134,27 +134,32 @@ body {
 }
 
 .redirect__link {
-  width: 100%;
-  height: 30px;
-  width: 182px;
-  border-radius: 5px;
-  background: #DB8876;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 9px;
-  left: calc((100% - 182px) / 2);
-  font-size: 18px;
-  font-weight: bold;
-  color: black;
-  z-index: 500;
-}
-.redirect__link:focus, .redirect__link:hover {
-  color: white;
-  border: 2px solid black;
+  display: none;
 }
 
+@media screen and (min-width: 467px) {
+  .redirect__link {
+    width: 100%;
+    height: 30px;
+    width: 182px;
+    border-radius: 5px;
+    background: #DB8876;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 9px;
+    left: calc((100% - 182px) / 2);
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    z-index: 500;
+  }
+  .redirect__link:focus, .redirect__link:hover {
+    color: white;
+    border: 2px solid black;
+  }
+}
 .imgFlex {
   width: 100%;
   height: 100%;
