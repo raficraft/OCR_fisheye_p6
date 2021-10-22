@@ -33,7 +33,7 @@ class BrowserInfo {
     }
 
     //Rapport de chargement de la page
-
+    /*
     console.log(`this pathArray :`);
     console.log(this.pathArray);
     console.log(`this.path : ${this.path}`);
@@ -45,7 +45,7 @@ class BrowserInfo {
     console.log(`this.paramsURL : ${this.request.paramsURL}`);
     console.log(`la largeur de la fenêtre est de  : ${window.innerWidth}`);
     console.log(`la hauteur de la fenêtre est de  : ${window.innerHeight}`);
-    console.log(window.screen);
+    console.log(window.screen);*/
 
     // Si l'on filtre les photographes on stock le focus sur le lien correspondant
     if (this.request.params !== false && this.request.params === "tags") {
@@ -56,37 +56,7 @@ class BrowserInfo {
       localStorage.setItem("eventValue", false);
       localStorage.setItem("sortDataMedia", "popularity");
     }
-
-    console.log(localStorage);
   }
 }
 
 const browserInfo = new BrowserInfo();
-
-/*
-Doc MDN perso sur le locale storage
-
--L'extrait de code suivant accède à l'objet local Storage du domaine 
- courant et lui ajoute une entrée en utilisant Storage.setItem() [https://developer.mozilla.org/fr/docs/Web/API/Storage/setItem]
-
-    {localStorage.setItem('monChat', 'Tom');}
-
--La syntaxe pour la lecture de l'article localStorage est la suivante :
-
-    {var cat = localStorage.getItem('myCat');}
-
--La syntaxe pour la suppression de l'élément localStorage est la suivante :
-
-    {localStorage.removeItem('myCat');}
-
--La syntaxe pour supprimer tous les éléments de localStorage est la suivante :
-
-    // Effacer tous les éléments
-    {localStorage.clear();}
-
-
--Note: Se référer à l'article Using the Web Storage API pour voir un exemple complet. 
- [https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API]
-
-
-*/

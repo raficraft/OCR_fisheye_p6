@@ -20,7 +20,6 @@ class mediaEvents {
       });
 
       btn.addEventListener("keyup", (e) => {
-        console.log(e.key);
         e.preventDefault();
         if (e.key === "Enter" || e.key === "Space") {
           this.manageVote(e.target);

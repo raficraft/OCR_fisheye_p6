@@ -3,7 +3,6 @@ const manageLike = (target, behavior) => {
 
   let newCount = 0;
 
-  console.log(behavior);
   if (behavior === "add") {
     newCount = like + 1;
   } else if (behavior === "del") {
