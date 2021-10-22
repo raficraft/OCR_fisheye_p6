@@ -45,7 +45,6 @@ body {
 }
 
 /*Positionnemt Structurelle des élements ce trouvant à la racine du DOM*/
-
 /*HEADER*/
 
 .header__wrapper {
@@ -59,12 +58,15 @@ body {
     inline-size: 100%;
     padding: rem(36) rem(120) rem(36) rem(96);
   }
+
   @media screen and(min-width : 1023px) {
     inline-size: 1024px;
   }
+
   @media screen and(min-width : 1439px) {
     inline-size: 1440px;
   }
+
   /*Gallery page*/
   &--gallery {
     padding-bottom: rem(11);
@@ -86,13 +88,16 @@ body {
     align-items: flex-start;
     inline-size: 100%;
   }
+
   @media screen and(min-width : 1023px) {
     inline-size: 1024px;
     padding: rem(64) rem(24) rem(64) rem(16);
   }
+
   @media screen and(min-width : 1439px) {
     inline-size: 1440px;
   }
+
   &--gallery {
     padding: 0rem rem(20);
 
@@ -145,6 +150,7 @@ body {
   @media screen and (min-width: 1023px) {
     inline-size: 1024px;
   }
+
   @media screen and (min-width: 1439px) {
     inline-size: 1440px;
   }
@@ -209,7 +215,7 @@ body {
   line-height: 1rem;
   font-weight: bold;
 
-  &:before {
+  &::before {
     content: "#";
   }
 
@@ -219,25 +225,3 @@ body {
     color: white !important;
   }
 }
-
-/*
-
-.header__wrapper{
-    background-color: rgb(182, 182, 182);
-}
-.main__wrapper{
-    background-color: pink
-}
-.sticker{    
-    background-color: rgb(0, 137, 190);
-}
-
-.selectFilter--inner{
-    background-color: rgb(100, 102, 255);
-}
-
-.photography{
-    background-color: rgb(0, 128, 90);
-}
-
-*/
