@@ -2,7 +2,7 @@
 
 ## Objectif
 
--   Créer un site web respectant les normes d'accéssibilité
+-   Créer un site web respectant les normes d'accéssibilité.
 
 ![Lien](https://user.oc-static.com/upload/2020/08/18/15977571210897_image2.png).
 
@@ -15,7 +15,7 @@
 
 ## Contraintes du projet
 
--   Ajout d'une balises Alt pour les images (seul modification accépté)
+-   Ajout d'une balises Alt pour les images (seul modification accépté).
 -   Utiliser le pattern Factory Method.
 
 ## Fonctionnalités
@@ -56,7 +56,7 @@ reste.
 message.
 -   Plus tard, le bouton de contact enverra un message au photographe.
 Pour l'instant, seulement afficher le contenu des trois champs dans
-les logs de la console
+les logs de la console.
 
 ## Exigences design supplémentaires
 
