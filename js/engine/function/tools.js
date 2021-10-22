@@ -26,7 +26,7 @@ Object.size = (obj) => {
  */
 
 const isEven = (value) => {
-  if (value % 2 == 0) return true;
+  if (value % 2 === 0) return true;
   else return false;
 };
 
@@ -36,12 +36,11 @@ const isEven = (value) => {
  */
 
 const multipleOfThree = (value) => {
-  if (value % 3 == 0) return true;
+  if (value % 3 === 0) return true;
   else return false;
 };
 
 /**
- *
  * @param {string} goTo
  */
 
