@@ -20,51 +20,49 @@ class createCarousel {
 
     let limit = thisData.length;
     for (var i = 0; i < limit; i++) {
-      if (thisData[i].image) {
+      let currentData = thisData[i];
+      if (currentData.image) {
         this.elHTML += `<div class="carousel__item" >
-                                  <figure class"figure__img flexImg" >
-                                      <img  src="${thisData[i].dirMedia}/1050/${
-          thisData[i].image
+                          <figure class"figure__img flexImg" >
+                              <img  src="${currentData.dirMedia}/1050/${
+          currentData.image
         }" 
-                                            class="${thisData[i].class} imgFlex"
-                                            alt="${thisData[i].alt}"
-                                            aria-labelledby="carousel"
-                                            data-inc="${i}"
-                                            />  
-                                                                                                        
-                                            <figcaption >${ucFirst(
-                                              thisData[i].alt
-                                            )}</figcaption>
-                                  </figure>
-                              </div>`;
-      } else if (thisData[i].video) {
+                                    class="${currentData.class} imgFlex"
+                                    alt="${currentData.alt}"
+                                    aria-labelledby="carousel"
+                                    data-inc="${i}"
+                                    />  
+                                                                                                
+                                    <figcaption >${ucFirst(
+                                      currentData.alt
+                                    )}</figcaption>
+                          </figure>
+                        </div>`;
+      } else if (currentData.video) {
         this.elHTML += `<div class="carousel__item" >
-                                  <figure class="figure__video flexImg" >
-                                      <video controls data-inc="${i}" tabindex="3">
-
-                                          <source 
-                                          src="${thisData[i].dirMedia}/video/${
-          thisData[i].video
+                            <figure class="figure__video flexImg" >
+                                <video controls data-inc="${i}" tabindex="3">
+                                    <source 
+                                    src="${currentData.dirMedia}/video/${
+          currentData.video
         }"
-                                          class="${thisData[i].class}"
-                                          type="video/mp4" 
-                                          aria-label="${thisData[i].alt}"
-                                          aria-labelledby="carousel"
-                                          >
-
-                                      </video>  
-                                      <span class="maskVideo"></span>                                                             
-                                      </figure>
-                                      <figcaption >${ucFirst(
-                                        thisData[i].alt
-                                      )}</figcaption>
-                              </div>`;
+                                    class="${currentData.class}"
+                                    type="video/mp4" 
+                                    aria-label="${currentData.alt}"
+                                    aria-labelledby="carousel"
+                                    >
+                                </video>  
+                                <span class="maskVideo"></span>                                                             
+                            </figure>
+                                <figcaption >${ucFirst(
+                                  currentData.alt
+                                )}</figcaption>
+                        </div>`;
       }
     }
 
     this.elHTML += `</div>
-                    </div>
-                   
+                    </div>                   
                     </div>
                   </div>`;
   }
