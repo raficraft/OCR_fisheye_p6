@@ -1,0 +1,112 @@
+.customSelect{
+    display : flex;
+    padding-top : rem(9);
+    padding-bottom : rem(20);
+
+    label{
+        font-weight: bold;
+        font-size : rem(18);
+        padding-top : 1.5rem;
+        padding-right : 2rem
+    } 
+
+    &__body--btn:first-child{       
+        border-top-left-radius: rem(5);
+        border-top-right-radius: rem(5);
+        padding-top: rem(5);
+        padding-bottom: rem(5); 
+        position: relative;      
+    }
+   
+    &__body--btn:nth-child(3n){
+        border-bottom-left-radius: rem(5);
+        border-bottom-right-radius: rem(5); 
+    }
+}
+
+.customSelect__box{
+    position: relative;
+}
+
+.customSelect__body{
+    display: flex;
+    flex-direction : column; 
+    position : relative;
+    z-index : 1;
+    opacity: 1;
+    left : 0px;
+    position: absolute;
+       
+    &--btn{
+        padding : 0 rem(10);
+        width: 170px;
+        display: flex;
+        justify-content: space-between;
+        border:none;
+        border-radius: none;
+        background-color: $first_background;
+        cursor: pointer;
+
+        &[data-context="swap"] span{
+            border-top: 1px solid white;
+        }
+
+        &:focus{
+            background-color: $second_background;
+        }
+    }
+
+    span{
+        padding : 1rem 0 ;
+        color : white;
+        font-size: rem(18); 
+        width : 100%;
+        text-align: left;
+        text-indent: rem(10);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .fas{
+        color : white;
+        font-size: rem(28);
+        transform: scaleX(1.1);
+        margin-right: rem(8);
+        position: absolute;
+        right : rem(8);
+        top : 30%
+    }
+
+}
+
+.customSelect__body[data-status="close"]{
+    
+    .customSelect__body--btn{
+        border-bottom-left-radius: rem(5);
+        border-bottom-right-radius: rem(5);
+    }
+
+    .arrowUp{
+        display: none;
+    }
+
+    [data-context="swap"]{
+        display : none;
+    }
+}
+
+.customSelect__body[data-status="openList"]{    
+    .customSelect__body--btn{
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;    
+    }
+    .arrowDown{
+        display: none;
+    }
+    .arrowUp{
+        display: block;
+    }
+}
+
+

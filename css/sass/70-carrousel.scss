@@ -1,0 +1,320 @@
+.slider{
+    position: fixed;        
+    background-color: white;
+    padding : 0;
+    z-index : 60;
+    top : 0;
+     bottom :0;
+    left : 0;
+    right :0;
+    display: flex;
+    z-index: 90;
+    border : none;
+    cursor : pointer;
+
+    &[aria-hidden="true"] {
+        visibility: hidden;
+        opacity: 0;
+      }
+      @media screen and (min-width:1439px){
+        
+        background-color: rgba(0,0,0,0.5); 
+      }
+    
+
+    .marquise{
+        width : 400px;
+        height : 340px;
+        position : relative;
+        margin : auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+
+        @media screen and (min-width:1439px){
+            width: 980px;
+            height:800px;
+        }
+
+    }
+
+    .sliderBox__close{
+        position: absolute;
+        top : 44px;
+        right : 18px;
+        height: 22px;
+        width : 22px;
+        border : none;
+        background-color: white;
+        z-index: 100;
+        transition : 0.3s;
+        cursor : pointer;
+        transform-origin: center;        
+        border: 2px solid transparent;
+        border-radius: 50%;
+
+      
+        &:active{
+            transform : scale(1.3);
+        }
+
+        &:hover,&:focus{
+            transform : scale(1.1);
+            border-radius: 50%;
+            border: 2px solid $second_color;
+            box-shadow: $box-shadow;
+        }
+    
+
+        &:before,&:after{
+            position : absolute;
+            content : '';              
+            background-color : $first_background;
+            display: block;
+            z-index : 20;
+            height: 13px;
+            width: 2px;
+            top : 2.5px;
+            right : 8px ;
+           
+        }
+
+
+
+
+        @media screen and (min-width : 1439px){
+            right :30px;
+            top : 44px;
+            height: 54px;
+            width: 54px;
+
+            &:focus{
+                border-radius: 50%;
+                border: 2px solid $second_color;
+                box-shadow: $box-shadow;
+            }
+        
+
+            &:before,&:after{
+                position : absolute;
+                content : '';              
+                background-color : $first_background;
+                display: block;
+                z-index : 20;
+                height: 44px;
+                width: 6px;
+                top : 3px;
+                left : 22px 
+            }
+        }
+
+       
+
+        &:before{           
+            transform: rotate(45deg);          
+        }
+
+        &:after{         
+            transform: rotate(135deg);                   
+        }
+    }
+
+      //Un problème survient sur la hauteur du carousel
+      // et fait disparaite le titre de l'image 
+      //si le dimensionnment est trop petit
+      //excentre l'élément de la marquise
+            
+
+    .carousel{
+        
+        position : relative;     
+        margin : auto;
+        border-radius: 5px;
+        width : 289px;
+        height : 268px;
+        z-index: 40;
+        box-sizing: content-box;
+        overflow : hidden;
+        margin-top : 40px; // 10px de perdu
+        
+        @media screen and (min-width : 1439px){
+
+            width : 800px;
+            height : 720px;
+            margin-top : 40px
+
+        }
+
+        &__container{           
+            position: relative;
+            z-index: 50;
+            transition : transform 0.3s;
+            transform : translate3d(0,0,0);  
+            display: flex;
+            height:100%;
+            //background-color: yellow;
+        }
+
+        &__item{
+            
+            height : 248px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height:100%;
+            
+
+            video{
+                height:162px;
+                transform: translateY(27%);
+                
+                @media screen and (min-width : 1439px){                
+                    transform: translateY(25%);
+                    height: 450px;                    
+                }
+            }
+
+            .flexImg{
+                justify-content: center;
+                background-color: $second_background;
+                height : 100%;
+              
+            }
+
+            .imgFlex{
+                height: 248px;
+                border-radius: rem(5);
+                @media screen and (min-width : 1439px){                
+                    height : 685px;
+                }
+            }
+
+            figcaption{
+                font-size: rem(14);
+                line-height: 18px;
+                color : $first_background !important;
+                @media screen and (min-width : 1439px){
+                    font-size: rem(24);
+                    margin-top: rem(12);
+                    height : 35px;
+                }
+            } 
+        }     
+
+       
+
+        &__prev,&__next{
+            position : absolute;           
+            cursor : pointer;
+            border : none;
+            background-color: transparent;  
+            font-size : rem(13); 
+            z-index :70;
+            width : 30px;
+            height : 30px;  
+            top : calc(50% - 28px);
+            transform-origin: center;          
+            transition: 0.3s;
+            border : 2px solid transparent;
+            border-radius : 50%;
+            background-color: rgb(255, 255, 255);
+
+            &:hover,&:focus{
+                border : 2px solid $second_color;
+                border-radius : 50%;
+                box-shadow: $box-shadow;
+                transform: scale(1.1);
+                
+            } 
+            
+            &:active{ 
+                transform: scale(1.4); 
+            }   
+           
+            
+            @media screen and (min-width : 1439px){
+                height: 50px;
+                width : 50px;
+                top : calc(50% - 60px);
+                font-size :rem(48);
+            } 
+            .fas{
+                color : $first_background;
+                transform-origin: center;
+                @media screen and (min-width : 1439px){
+                    position: absolute; 
+                    top : 0px             
+                }
+            }
+
+            .fa-chevron-right{
+                right : 5px;
+            }
+            .fa-chevron-left{
+                left : 5px;
+            }
+        }
+
+        &__prev{            
+            left: 10px;
+        }
+
+        &__next{
+             right : 10px;          
+        }  
+       
+        @media screen and (min-width : 1439px){
+            &__prev{            
+                left: 30px;
+            }
+
+            &__next{
+                right : 30px;          
+            }  
+        }
+    }
+}
+
+
+
+
+
+
+.figure__video{
+    position :relative;
+}
+
+.figure__video video:focus ~.maskVideo{
+
+    position : absolute;
+    top : 0;
+    bottom: 0;
+    left:0;
+    bottom: 0;
+    display: block;
+    background-color:rgba(144,28,28,0);
+    border: 6px solid rgba(144,28,28,1);
+    z-index: 500;
+    content: '';
+    width : 100%;
+    height: 100%;
+}
+
+
+/*
+
+
+.figure__video video:focus,.figure__video video:hover{
+
+    border : 1px solid red;
+    object-fit: cover;
+
+
+
+}*/
+
+
+
+
+

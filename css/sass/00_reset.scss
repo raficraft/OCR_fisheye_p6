@@ -28,6 +28,11 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+html,body{
+	scroll-behavior: smooth;
+}
+
 body {
 	line-height: 1;
 	position:relative;
@@ -59,4 +64,12 @@ h1{
 	font-family: 'DM sans', sans-serif;
 }
 
-*{box-sizing: border-box;}
+*, *:after, *:before {
+	box-sizing: border-box;
+	outline : 0;
+}
+
+:focus{
+	transition: 0.3s;
+}
+

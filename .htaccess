@@ -1,0 +1,13 @@
+Options +FollowSymLinks -MultiViews
+# Turn mod_rewrite on
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-d   # `!-d` means if directory doesn't exist
+RewriteCond %{REQUEST_FILENAME} !-f   # if file doesn't  ... 
+RewriteCond %{REQUEST_FILENAME} !-l   # if link doesn't
+
+# L = last rule, stop processing
+# QSA = Query String Append
+# R = Redirect (default is 302, temporary)
+RewriteRule ^ err404.html?url=%{REQUEST_URI}&refr=%{HTTP_REFERER} [L,QSA,R]
