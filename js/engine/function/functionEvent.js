@@ -17,7 +17,8 @@ const manageLike = (target, behavior) => {
 
   let sumLike = 0;
   for (let i = 0; i < limit; i++) {
-    sumLike = sumLike + parseInt(allLikeElement[i].textContent);
+      let currentLike = allLikeElement[i];
+      sumLike = sumLike + parseInt(currentLike.textContent);
   }
 
   const sumLikeElement = document.querySelector(".sumLike");

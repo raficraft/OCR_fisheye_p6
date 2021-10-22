@@ -39,8 +39,9 @@ const redifineDistribution_StickerIdentity = () => {
     }
 
     for (let i = 0; i < size; i++) {
-      stickerEl[i].style.marginLeft = "2rem";
-      stickerEl[i].style.marginRight = "2rem";
+        let currentSticker = stickerEl[i];
+        currentSticker.style.marginLeft = "2rem";
+        currentSticker.style.marginRight = "2rem";
     }
   } else {
     if (mainParent.classList.contains("orderSticker__mainCenter")) {
