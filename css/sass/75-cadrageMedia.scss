@@ -1,205 +1,191 @@
-//Recadrage des photo du 
+//Recadrage des photo du
 
+figure {
+  //Photographe Mimi Keel
 
-figure{
+  .media__Mimi--0 {
+    object-position: 70% 0%;
+  }
+  .media__Mimi--2 {
+    object-position: 0% 44%;
+  }
+  .media__Mimi--4 {
+    object-position: 0% 20%;
+  }
+  .media__Mimi--6 {
+    object-position: 0% 20%;
+  }
+  .media__Mimi--9 {
+    object-position: 0% 40%;
+  }
 
-    //Photographe Mimi Keel
+  //Ellie-Rose Wilkens
 
-    .media__Mimi--0{
-        object-position: 70% 0%;
-    }
-    .media__Mimi--2{
-        object-position: 0% 44%;
-    }
-    .media__Mimi--4{
-        object-position: 0% 20%;
-    }
-    .media__Mimi--6{
-        object-position: 0% 20%;
-    }
-    .media__Mimi--9{
-        object-position: 0% 40%;
-    }
+  .media__Ellie-Rose--5 {
+    object-position: 0% 20%;
+  }
+  .media__Ellie-Rose--6 {
+    object-position: 100% 0%;
+  }
 
-    //Ellie-Rose Wilkens
+  //tracy Galindo{
+  .media__Tracy--0 {
+    object-position: 0% 8%;
+  }
+  .media__Tracy--2 {
+    object-position: 0% 15%;
+  }
+  .media__Tracy--3 {
+    object-position: 0% 60%;
+  }
+  .media__Tracy--4 {
+    object-position: 60% 0%;
+  }
+  .media__Tracy--7 {
+    object-position: 0% 0%;
+  }
+  .media__Tracy--8 {
+    object-position: 40% 0%;
+  }
 
-    .media__Ellie-Rose--5{
-        object-position: 0% 20%;
-    }
-    .media__Ellie-Rose--6{
-      
-        object-position: 100% 0%;
-    }
+  //Nabeel Bradford
 
-    //tracy Galindo{
-    .media__Tracy--0{
-        object-position: 0% 8%;
-    }
-    .media__Tracy--2{
-        object-position: 0% 15%;
-    }
-    .media__Tracy--3{
-        object-position: 0% 60%;
-    }
-    .media__Tracy--4{
-        object-position: 60% 0%;
-    }
-    .media__Tracy--7{
-        object-position: 0% 0%;
-    }
-    .media__Tracy--8{
-        object-position: 40% 0%;
-    }
-
-    
-
-    //Nabeel Bradford
-
-    .media__Nabeel--8{
-        object-position: 0% 70%;
-    }
-    // Rhode dubois
-    .media__Rhode--1{
-        object-position: 0% 10%;
-    }
-    .media__Rhode--2{
-        object-position: 0% 30%;
-    }
-    .media__Rhode--5{
-        object-position: 0% 30%;
-    }
-    .media__Rhode--6{
-        object-position: 0% 0%;
-    }
-    .media__Rhode--7{
-        object-position: 0% 70%;
-    }
-
+  .media__Nabeel--8 {
+    object-position: 0% 70%;
+  }
+  // Rhode dubois
+  .media__Rhode--1 {
+    object-position: 0% 10%;
+  }
+  .media__Rhode--2 {
+    object-position: 0% 30%;
+  }
+  .media__Rhode--5 {
+    object-position: 0% 30%;
+  }
+  .media__Rhode--6 {
+    object-position: 0% 0%;
+  }
+  .media__Rhode--7 {
+    object-position: 0% 70%;
+  }
 }
-
 
 //Recadrage des photo des miniatures
 
-
-.media__Mimi--1{
-    object-position: 0% 50%;
+.media__Mimi--1 {
+  object-position: 0% 50%;
 }
-.media__Mimi--2{
-    object-position: 0% 50%;
+.media__Mimi--2 {
+  object-position: 0% 50%;
 }
-.media__Mimi--5{
-    object-position: 0% 20%;
+.media__Mimi--5 {
+  object-position: 0% 20%;
 }
-.media__Mimi--6{
-    object-position: 0% 16%;
+.media__Mimi--6 {
+  object-position: 0% 16%;
 }
-.media__Mimi--7{
-    object-position: 0% 46%;
+.media__Mimi--7 {
+  object-position: 0% 46%;
 }
-.media__Mimi--8{
-    object-position: 0% 38%;
-}
-
-
-
-.media__Ellie-Rose--2{
-    object-position: 0% 63%;
-}
-.media__Ellie-Rose--3{
-    object-position: 0% 23%;
-}
-.media__Ellie-Rose--4{
-    object-position: 0% 43%;
-}
-.media__Ellie-Rose--7{
-    object-position: 0% 56%;
-}
-.media__Ellie-Rose--10{
-    object-position: 0% 16%;
+.media__Mimi--8 {
+  object-position: 0% 38%;
 }
 
-.media__Tracy--0{
-    object-position: 0% 0%;
+.media__Ellie-Rose--2 {
+  object-position: 0% 63%;
 }
-.media__Tracy--2{
-    object-position: 0% 12%;
+.media__Ellie-Rose--3 {
+  object-position: 0% 23%;
 }
-.media__Tracy--3{
-    object-position: 0% 82%;
+.media__Ellie-Rose--4 {
+  object-position: 0% 43%;
 }
-.media__Tracy--4{
-    object-position: 0% 8%;
+.media__Ellie-Rose--7 {
+  object-position: 0% 56%;
 }
-.media__Tracy--7{
-    object-position: 30% 70%;
-}
-.media__Tracy--8{
-    object-position: 0% 50%;
-}
-.media__Tracy--9{
-    object-position: 0% 0%;
+.media__Ellie-Rose--10 {
+  object-position: 0% 16%;
 }
 
-
-
-
-.media__Nabeel--0{
-    object-position: 0% 67%;
+.media__Tracy--0 {
+  object-position: 0% 0%;
 }
-.media__Nabeel--1{
-    object-position: 0% 0%;
+.media__Tracy--2 {
+  object-position: 0% 12%;
 }
-.media__Nabeel--2{
-    object-position: 0% 26%;
+.media__Tracy--3 {
+  object-position: 0% 82%;
 }
-.media__Nabeel--3{
-    object-position: 0% 70%;
+.media__Tracy--4 {
+  object-position: 0% 8%;
 }
-.media__Nabeel--5{
-    object-position: 0% 100%;
+.media__Tracy--7 {
+  object-position: 30% 70%;
 }
-.media__Nabeel--6{
-    object-position: 0% 70%;
+.media__Tracy--8 {
+  object-position: 0% 50%;
 }
-.media__Nabeel--8{
-    object-position: 0% 15%;
+.media__Tracy--9 {
+  object-position: 0% 0%;
 }
 
+.media__Nabeel--0 {
+  object-position: 0% 67%;
+}
+.media__Nabeel--1 {
+  object-position: 0% 0%;
+}
+.media__Nabeel--2 {
+  object-position: 0% 26%;
+}
+.media__Nabeel--3 {
+  object-position: 0% 70%;
+}
+.media__Nabeel--5 {
+  object-position: 0% 100%;
+}
+.media__Nabeel--6 {
+  object-position: 0% 70%;
+}
+.media__Nabeel--8 {
+  object-position: 0% 15%;
+}
 
-.media__Rhode--0{
-    object-position: 0% 10%;
+.media__Rhode--0 {
+  object-position: 0% 10%;
 }
-.media__Rhode--1{
-    object-position: 0% 46%;
+.media__Rhode--1 {
+  object-position: 0% 46%;
 }
-.media__Rhode--2{
-    object-position: 0% 16%;
+.media__Rhode--2 {
+  object-position: 0% 16%;
 }
-.media__Rhode--3{
-    object-position: 0% 54%;
+.media__Rhode--3 {
+  object-position: 0% 54%;
 }
-.media__Rhode--5{
-    object-position: 0% 0%;
+.media__Rhode--5 {
+  object-position: 0% 0%;
 }
-.media__Rhode--6{
-    object-position: 0% 20%;
+.media__Rhode--6 {
+  object-position: 0% 20%;
 }
-.media__Rhode--7{
-    object-position: 0% 0%;
+.media__Rhode--7 {
+  object-position: 0% 0%;
 }
 
-.media__Marcel--0{
-    object-position: 0% 0%;
+.media__Marcel--0 {
+  object-position: 0% 0%;
 }
-.media__Marcel--1{
-    object-position: 0% 0%;
+.media__Marcel--1 {
+  object-position: 0% 0%;
 }
-.media__Marcel--2{
-    object-position: 0% 100%;
+.media__Marcel--2 {
+  object-position: 0% 100%;
 }
-.media__Marcel--6{
-    object-position: 0% 82%;
+.media__Marcel--6 {
+  object-position: 0% 82%;
 }
-.media__Marcel--7{
-    object-position: 0% 35%;
+.media__Marcel--7 {
+  object-position: 0% 35%;
 }

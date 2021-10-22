@@ -1,14 +1,10 @@
-class CreateCustomSelect{
+class CreateCustomSelect {
+  constructor() {
+    /**
+     * status : close || openList
+     */
 
-
-    constructor(){
-
-        /**
-         * status : close || openList
-         */
-
-        this.elHTML =  
-        `<section class="selectFilter" aria-hidden="true">
+    this.elHTML = `<section class="selectFilter" aria-hidden="true">
           
             <div id="customSelect" class="customSelect selectFilter--inner" aria-hidden="true"> 
             
@@ -48,8 +44,6 @@ class CreateCustomSelect{
                     </div>
             </div>
             
-        </section>`  
-
-    }
-
+        </section>`;
+  }
 }

@@ -1,8 +1,6 @@
-class createHeader{
-
-  constructor(){
-    this.elHTML = 
-            `<div class="header__wrapper" role="banner">                    
+class createHeader {
+  constructor() {
+    this.elHTML = `<div class="header__wrapper" role="banner">                    
               <div class="header__logo">
               <a href="index.html" alt="Fisheye Home page" aria-current="page">
                   <img src="img/logo/fisheye.png" alt="Logo du site de photographe Fisheye.Lien menant à la page d'accueil.">                            
@@ -24,5 +22,4 @@ class createHeader{
 
     this.elHTML += `</div>`;
   }
-
-};
+}

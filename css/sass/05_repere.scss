@@ -1,30 +1,26 @@
-
 /*Repères vertical*/
-    .repere--X{
-        position: fixed;
-        content : '';
-        width: 1px;
-        height : 100%;
-        background-color: red;
-        z-index : 1000;
-    }
+.repere--X {
+  position: fixed;
+  content: "";
+  width: 1px;
+  height: 100%;
+  background-color: red;
+  z-index: 1000;
+}
 /*Repères horizontal*/
-    .repere--Y{
-        position: fixed;
-        content : '';
-        width: 100%;
-        height : 1px;
-        background-color: red;
-        z-index : 1000;
-    }
-
-
+.repere--Y {
+  position: fixed;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: red;
+  z-index: 1000;
+}
 
 /*Repères page index*/
 
-
-    /*Repère vertical*/
- /*   .repere__1--X{
+/*Repère vertical*/
+/*   .repere__1--X{
         left : 6rem;
     }
 
@@ -32,18 +28,16 @@
         left: rem(1320);     
     }
 */
-    /*Repère horizontal*/
-    .repere__1--Y{       
-        top : 10%; /*Utilisez bottom pour ce repérer par les bas*/
-    }
+/*Repère horizontal*/
+.repere__1--Y {
+  top: 10%; /*Utilisez bottom pour ce repérer par les bas*/
+}
 /*
     .repere__2--Y{
         top : rem(189); /*Utilisez bottom pour ce repérer par les bas*/
 /*      
     }
     .repere__3--Y{
-        top : rem(74); /*Utilisez bottom pour ce repérer par les bas*/  
- /*   }
+        top : rem(74); /*Utilisez bottom pour ce repérer par les bas*/
+/*   }
 */
-
-

@@ -1,34 +1,33 @@
-@use 'sass:math';
+@use "sass:math";
 
-$base-font-size : 16px!default;
+$base-font-size: 16px !default;
 
 //Supprime l'unité de mesure
 @function strip-unit($number) {
-    @if type-of($number) == 'number' and not unitless($number) {
-      @return $number / ($number * 0 + 1);
-    }
-  
-    @return $number;
+  @if type-of($number) == "number" and not unitless($number) {
+    @return $number / ($number * 0 + 1);
   }
 
+  @return $number;
+}
 
 //Convertit le dimesionnement pixel -> rem
-@function rem($size, $base : $base-font-size){
-    @return 1rem * $size / strip-unit($base)
+@function rem($size, $base: $base-font-size) {
+  @return 1rem * $size / strip-unit($base);
 }
 
 //Couleur de fond
 
-$first_background : #901C1C;
-$second_background : #DB8876;
-$third_background : #FAFAFA;
+$first_background: #901c1c;
+$second_background: #db8876;
+$third_background: #fafafa;
 
 //Couleur de texte
-$first_color : #d3573c;
-$first_color--other : #911c1c;
-$second_color : #525252;
-$third_color : #FFF;
+$first_color: #d3573c;
+$first_color--other: #911c1c;
+$second_color: #525252;
+$third_color: #fff;
 
-$primary-font : 'DM Sans', sans-serif;
+$primary-font: "DM Sans", sans-serif;
 
-$box-shadow : 0px 5px 5px 0px rgb(187, 187, 187);
+$box-shadow: 0px 5px 5px 0px rgb(187, 187, 187);

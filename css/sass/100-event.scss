@@ -1,68 +1,59 @@
 .btn {
+  padding: rem(4) rem(11);
+  font-family: $primary-font;
+  font-size: 1.25rem;
+  color: white;
+  font-weight: bold;
+  background-color: $first_background;
+  border: none;
+  border-radius: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+  border: 3px solid $first_background;
 
-    padding : rem(4) rem(11);
-    font-family: $primary-font;
-    font-size : 1.25rem;
-    color : white;
-    font-weight: bold;
-    background-color: $first_background;
-    border : none;
-    border-radius: 5px;
-    transition : 0.5s;
-    cursor: pointer;
-    border : 3px solid $first_background;
+  &:hover,
+  &:focus {
+    background-color: $second_background;
+    border: 3px solid black;
+    color: black;
+  }
 
-    &:hover,&:focus{
-        background-color: $second_background;
-        border : 3px solid black;
-        color: black;
+  &--smartphone {
+    @media screen and (max-width: 767px) {
+      position: fixed;
+      bottom: 30px;
+      left: calc((100% - 170px) / 2);
     }
-  
-    &--smartphone{
-        @media screen and (max-width : 767px){ 
-            position: fixed;
-            bottom : 30px;
-            left : calc((100% - 170px) /2);
-        }
 
-        @media screen and (min-width : 767px){ 
-            display: none;     
-        }
-    } 
-   
-    &--highRes{
-
-        @media screen and (max-width : 767px){        
-                display : none;               
-        }
-        @media screen and (min-width : 767px){
-            padding : 1.375rem 0.725rem;
-        
-        }
+    @media screen and (min-width: 767px) {
+      display: none;
     }
+  }
+
+  &--highRes {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+    @media screen and (min-width: 767px) {
+      padding: 1.375rem 0.725rem;
+    }
+  }
 }
 
 //Sur la page d'acceuil le bouton n'apparait pas
-.main__wrapper--index .btn{
-    display: none;
+.main__wrapper--index .btn {
+  display: none;
 }
 
-
-// Classe utilitare , si le nombre d'élément affiché 
-// n'est pas un multiple de 3. 
+// Classe utilitare , si le nombre d'élément affiché
+// n'est pas un multiple de 3.
 // Voir function/tools.js {fn.multipleOfthree} {fn.redifineDistribution_StickerIdentity}
 
-.orderSticker__mainCenter{
-    justify-content: center;
+.orderSticker__mainCenter {
+  justify-content: center;
 }
 
 // Class liées au scrollSpy. JS/event/05-scrollSpy.js
-.showThis{
-	display : flex;
+.showThis {
+  display: flex;
 }
-
-
-
-
-
-

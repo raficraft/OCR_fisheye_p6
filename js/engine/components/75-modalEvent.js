@@ -1,29 +1,20 @@
 class ModalEvents {
   constructor() {
-
-
-    this.submitBtn = document.querySelector('[data-js="submitModal"]')
-    this.closeBtn = document.querySelector('.dialogBox__close')   
+    this.submitBtn = document.querySelector('[data-js="submitModal"]');
+    this.closeBtn = document.querySelector(".dialogBox__close");
     this.keyBoardControl();
-    this.createNavigation();   
+    this.createNavigation();
 
+    this.submitBtn.addEventListener("click", (e) => {
+      this.submitModal();
+    });
 
-     this.submitBtn.addEventListener('click',(e)=>{
-       this.submitModal()
-     })
-
-
-     this.closeBtn.addEventListener('click',(e)=>{
-         e.preventDefault(); e.stopPropagation()
-        this.closeModal()
-       })
-    
-     
+    this.closeBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      this.closeModal();
+    });
   }
-
-  /**
-   *
-   */
 
   closeModal() {
     restoreScrollBar();
@@ -40,20 +31,19 @@ class ModalEvents {
    *
    */
 
-  keyBoardControl(){
+  keyBoardControl() {
     document.addEventListener("keydown", (e) => {
-
       if (document.querySelector("#dialog")) {
         if (e.key === "Escape") {
-            restoreScrollBar();
-            document.querySelector("#main").setAttribute("aria-hidden", false);
-            document.querySelector("#dialog").remove();
+          restoreScrollBar();
+          document.querySelector("#main").setAttribute("aria-hidden", false);
+          document.querySelector("#dialog").remove();
 
-            //On repositionne le focus sur le bouton de contact
-            let origineCall = document.querySelector(
-              'button[data-js="openFormContact"]'
-            );
-            origineCall.focus();
+          //On repositionne le focus sur le bouton de contact
+          let origineCall = document.querySelector(
+            'button[data-js="openFormContact"]'
+          );
+          origineCall.focus();
         }
       }
     });
@@ -67,9 +57,8 @@ class ModalEvents {
     let submit = false;
     let dataForm = {};
 
-    let inputsForm = document.forms["sendMessage"].querySelectorAll(
-      ".brickInput"
-    );
+    let inputsForm =
+      document.forms["sendMessage"].querySelectorAll(".brickInput");
 
     inputsForm.forEach((el) => {
       dataForm[el.name] = el.value;
@@ -88,16 +77,13 @@ class ModalEvents {
     }
   }
 
-  createNavigation(){   
-
-    this.submitBtn.addEventListener('keydown', (e)=>{
-
-      if(e.key === 'Tab'){ 
-        e.preventDefault(); e.stopPropagation();
-        this.closeBtn.focus()
+  createNavigation() {
+    this.submitBtn.addEventListener("keydown", (e) => {
+      if (e.key === "Tab") {
+        e.preventDefault();
+        e.stopPropagation();
+        this.closeBtn.focus();
       }
-
-    })
+    });
   }
-
 }

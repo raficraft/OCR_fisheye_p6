@@ -1,9 +1,8 @@
-class createModalForm{
-  
-  constructor(){
-  const thisData = GetData.getIdentity();
+class createModalForm {
+  constructor() {
+    const thisData = GetData.getIdentity();
 
-  this.elHTML = `<div 
+    this.elHTML = `<div 
                   id="dialog"
                   role="dialog" 
                   aria-modal="true"
@@ -61,4 +60,4 @@ class createModalForm{
                     </form>
                 </div>`;
   }
-};
+}

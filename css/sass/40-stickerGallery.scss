@@ -1,92 +1,85 @@
 // page gallery
-.main__wrapper--gallery{
+.main__wrapper--gallery {
+  .sticker {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    flex-basis: 100%;
+    margin-bottom: 0;
+    width: 100%;
+    text-align: left;
 
-    .sticker{
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        flex-basis: 100%;
-        margin-bottom : 0;
-        width : 100%;
-        text-align: left;
+    @media screen and (min-width: 768px) {
+      background-color: $third_background;
+      justify-content: flex-end;
+      padding-top: 4.5rem;
+      padding-bottom: 2.625rem;
+      border-radius: 5px;
+      background-color: #f4f4f4;
 
-       
-        
-        @media screen and (min-width : 768px){
-            background-color: $third_background ;
-            justify-content: flex-end;
-            padding-top : 4.5rem;
-            padding-bottom : 2.625rem;
-            border-radius: 5px;
-            background-color: #f4f4f4;
+      .btn--highRes {
+        align-self: flex-start;
+      }
+    }
 
-            .btn--highRes{
-                align-self: flex-start;              
-            }
+    &__info {
+      display: flex;
+      flex-direction: column;
+      margin-top: rem(18);
+
+      h1 {
+        color: $first_color;
+        font-size: rem(36);
+      }
+
+      @media screen and (min-width: 768px) {
+        align-self: flex-start;
+        margin: 0 4.5rem 0 2rem;
+        h1 {
+          display: flex;
+          margin-bottom: 1.5rem;
+          margin-left: 0.0625rem;
+          font-size: 4rem;
+          color: $first_color;
         }
+      }
+    }
 
+    header {
+      display: flex;
+      justify-content: flex-end;
+      flex: 1;
+      @media screen and (min-width: 768px) {
+        align-self: flex-start;
+      }
+    }
+    .flexImg {
+      width: 100px;
+    }
 
-        &__info{
-            display: flex;
-            flex-direction: column;
-            margin-top : rem(18);   
-            
-            h1{
-                color : $first_color;
-                font-size: rem(36);
-            }
-            
-            @media screen and (min-width : 768px){
-                align-self: flex-start;
-                margin: 0 4.5rem 0 2rem;
-                h1{
-                    display: flex;
-                    margin-bottom: 1.5rem;
-                    margin-left : 0.0625rem;
-                    font-size : 4rem;
-                    color : $first_color;
-                }
-            }
+    .identity {
+      margin: 0;
+      padding: 0;
+      margin-right: 1.5rem;
+
+      img {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+      }
+
+      @media screen and (min-width: 768px) {
+        margin-right: 3rem;
+        height: 200px;
+        width: 200px;
+        img {
+          height: 200px;
+          width: 200px;
         }
-
-
-        header{
-            display: flex;
-            justify-content: flex-end;
-            flex : 1;
-            @media screen and (min-width : 768px){
-               align-self: flex-start;
-               
-            }
-        }
-        .flexImg{
-
-            width : 100px
-        }
-
-        .identity{ 
-            margin : 0;
-            padding : 0;
-            margin-right: 1.5rem;
-
-            img{
-                height : 100px;
-                width : 100px;
-                border-radius: 50%;
-            }
-
-            @media screen and (min-width : 768px){
-                margin-right : 3rem;
-                height : 200px;
-                width : 200px;
-                img{
-                    height : 200px;
-                    width : 200px;
-                }
-            }
-        }
-        .nav{
-            justify-content: flex-start;
-/*
+      }
+    }
+    .nav {
+      justify-content: flex-start;
+      /*
             .filter{
                 margin-right : 5px;
                 margin-bottom : 8px;
@@ -103,32 +96,28 @@
                 }
             }
             */
-        }
-
-        .info__city{
-            font-weight: 400;
-            @media screen and (min-width : 768px){
-                margin-bottom: 1.5rem;
-                padding-bottom: 0;
-                font-size: 1.5rem;
-            }
-        }
-        .info__tagline{
-            font-size : 13px; 
-            color : #757575;
-            @media screen and (min-width : 768px){
-                padding-bottom : 1.5rem;
-                font-weight: 400;
-                font-size: 1.125rem;
-            }           
-        }
-
-        .info__price{
-            display: none;            
-        }
-
-
-    
     }
 
+    .info__city {
+      font-weight: 400;
+      @media screen and (min-width: 768px) {
+        margin-bottom: 1.5rem;
+        padding-bottom: 0;
+        font-size: 1.5rem;
+      }
+    }
+    .info__tagline {
+      font-size: 13px;
+      color: #757575;
+      @media screen and (min-width: 768px) {
+        padding-bottom: 1.5rem;
+        font-weight: 400;
+        font-size: 1.125rem;
+      }
+    }
+
+    .info__price {
+      display: none;
+    }
+  }
 }
